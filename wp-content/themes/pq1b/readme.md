@@ -1,20 +1,11 @@
-# Premium Quicklaunch 3 - Theme Documentation
+# Premium Quicklaunch 1B - Theme Documentation
 
 ## SCSS Structure
 
 SCSS is broken up into various folders and partials:
 
 - style.scss
-- scss
-  - main.scss
-  - imports
-    - base
-    - components
-    - global
-    - layout
-    - templates
-    - utils
-    - vendors
+- scss - main.scss - imports - base - components - global - layout - templates - utils - vendors
 
 Each folder inside **imports** contain specific partials along with specific **\_variable.scss** partials
 
@@ -85,7 +76,7 @@ This file is where you will can work side by side with the related **\_variables
 
 The designers are aware that margins and padding don't have to be perfect. The whole idea of building PQL Themes is to update fonts, colors, backgrounds, images etc and not spend time on every little positioning aspect. But if a margin etc needs to be adjusted thats totally fine too.
 
-Partials contain alot of `@includes`.
+Partials contain alot of `@includes`/mixins.
 
 Get familiar with **scss/imports/utils/\_mixins_do_not_edit.scss** to better understand all of the **@includes** throughout the theme. They include:
 
@@ -115,19 +106,6 @@ $secondaryfont: 'Martel', serif;
 
 Alternatively, there are options under Dashboard-> Theme Options -> Fonts to self host Goggle Fonts. I have found lately that this is actually speeding up load times pretty quickly.
 
-### Adding in New Features or Layouts
-
-If there is a big change on the mock up that isn't reflected in this build then its probably appropriate to make a second layout option on your site that we can merge in. Still working out the best way to do this but possibly something like this:
-
-1. Fork the repo
-2. Work locally on the entire theme except for the new major layout options
-3. When its time to make new layout options, set up git remote and point back to this PQ10 repo
-4. Create a “New Feature” Branch
-5. Create a pull request
-6. We look over and merge into the theme
-
-[Fork and Branch](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
-
 ### Page Speed
 
 Page speed is an ongoing endeavor as Google constantly updates their strategies. This theme does it's best to keep up with envolving trends, but will most likely need updates as we progress.
@@ -137,32 +115,39 @@ Overall some of the strategies (mostly on the homepage) involve:
 - Using picture tags at different browser window widths
 - Using Webp images in critical css areas
 - Lazy loading all images when scrolling
-- We are currently taking all of our js frameworks and combining, minifying and loading them after a few seconds on the homepage. This gets around some of the Google Lighthouse penalties. (can be found in the footer.php file)
+- We are currently taking most of our js frameworks and combining, minifying and loading them after a few seconds on the homepage. This gets around some of the Google Lighthouse penalties. (can be found in the footer.php file)
 - Sometimes loading fonts locally actually gets us a better score than pulling from Google fonts
+
+GZIP Compression
+
+GZIP Code can be found [here](https://gist.github.com/Garth619/e3ad7e60b0c6b84ddda5e9bc4804d227)
+
+### Adding in New Features or Layouts
+
+If there is a big change on the mock up that isn't reflected in this build then its probably appropriate to make a second layout option on your site that we can merge in. Still working out the best way to do this but possibly something like this:
+
+1. Fork the repo
+2. Work locally on the entire theme except for the new major layout options
+3. When its time to make new layout options, set up git remote and point back to this repo
+4. Create a “New Feature” Branch
+5. Create a pull request
+6. We look over and merge into the theme
+
+[Fork and Branch](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
 
 ### Using CSS Source Mapping in Inspector
 
 By default, this theme is taking **style.css** and injecting into the header for better page speed results. But this disables source mapping in the inspector which greatly helps with finding where code is in the partial files. To temporarily disable this, go to **functions.php** and uncomment:
 
-`wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css', '', 5, 'all' ); `
+`wp_enqueue_style( 'styles', get_template_directory_uri() . '/style.css', '', 5, 'all' );`
 
 Then go down a few lines and comment out:
 
 ```
-function internal_css_print() {
-   echo '<style>';
-
-   include_once get_template_directory() . '/style.css';
-
-   echo '</style>';
-}
-
-
-add_action( 'wp_head', 'internal_css_print' );
-
+add_action('wp_head', 'merge_include_css');
 ```
 
-Future builds will integrate our typical way of handling these files for page speed
+Future builds will integrate our typical way of handling these files for page speed when I get some free time. Sam's stragetgy works great.
 
 ## Feedback
 
