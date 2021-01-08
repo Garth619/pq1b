@@ -2,7 +2,7 @@
 /*
 !.gitignore
 !readme.md
-!local.sql
+!local.sql.gz
 !wp-content/
 
 # ignore everything in the "wp-content" directory, except:
