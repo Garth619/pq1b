@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*! Theme Name:PSB Law
+/*! Theme Name:PQ1B
 		Author: 1POINT21 */
 /*! 
 
@@ -20,6 +20,7 @@
   user-select: none;
   -webkit-touch-callout: none;
   -khtml-user-select: none;
+  -ms-touch-action: pan-y;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
 }
@@ -43,6 +44,10 @@
 
 .slick-slider .slick-track,
 .slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
@@ -121,6 +126,8 @@
   width: 20px;
   height: 20px;
   padding: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
   cursor: pointer;
   color: transparent;
@@ -287,6 +294,8 @@
   background: rgba(0, 0, 0, 0.9);
   outline: none !important;
   opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 
@@ -299,6 +308,8 @@
 }
 
 .lity * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -332,6 +343,8 @@
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
   opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 
@@ -354,12 +367,22 @@
 .lity-content {
   z-index: 9993;
   width: 100%;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
   transform: scale(1);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: -o-transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease, -o-transform 0.3s ease;
 }
 
 .lity-loading .lity-content,
 .lity-closed .lity-content {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
   transform: scale(0.8);
 }
 
@@ -374,6 +397,7 @@
   width: auto;
   height: auto;
   z-index: -1;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
 
@@ -402,6 +426,7 @@
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   border: 0;
   background: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -434,6 +459,7 @@
   padding-top: 56.25%;
   overflow: auto;
   pointer-events: auto;
+  -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-overflow-scrolling: touch;
 }
@@ -445,6 +471,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
   background: #000;
 }
@@ -474,6 +501,8 @@ textarea {
 *,
 *:before,
 *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -1758,8 +1787,6 @@ span#overlay-required span {
   position: relative;
   z-index: 1;
   display: block;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   margin-left: auto;
   margin-right: auto;
@@ -1943,8 +1970,6 @@ span#overlay-required span {
   position: relative;
   z-index: 1;
   display: block;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   margin-left: auto;
   margin-right: auto;
@@ -1986,8 +2011,6 @@ span#overlay-required span {
 
 .button-two {
   display: block;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   border-radius: 50px;
   border: 2px solid #bf7b30;
@@ -2027,8 +2050,6 @@ span#overlay-required span {
 
 .button-three {
   display: block;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   border-radius: 50px;
   border: 2px solid #f29b3b;
@@ -3570,8 +3591,7 @@ body.page-template-default #banner-descrip {
   height: 490px;
 }
 .internal-banner-slide .internal-banner-slide-inner img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   max-width: 100%;
   height: auto;
   display: block;
@@ -3814,8 +3834,6 @@ span#sidebar-required span {
 }
 @media screen and (min-width: 1170px) {
   .widget h3 {
-    width: -webkit-max-content;
-    width: -moz-max-content;
     width: max-content;
     margin-bottom: 35px;
     margin-left: auto;
@@ -4326,8 +4344,6 @@ span#footer-form-descrip {
 }
 #footer-top span#required {
   display: block;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   margin-top: -120px;
   font-size: 15px;
@@ -4503,8 +4519,6 @@ footer .gform_footer input[type=submit] {
   display: block;
 }
 .footer-bottom-col a {
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   margin-left: auto;
   margin-right: auto;
@@ -4734,8 +4748,6 @@ a.get-directions-button:hover {
 
 a#ilawyer {
   display: block;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   margin: 45px auto 0;
 }
@@ -4933,8 +4945,7 @@ a#ilawyer {
 }
 
 img.hero {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -5559,8 +5570,7 @@ span#sec-two-title {
   }
 }
 .sec-two-slide .sec-two-image-wrapper img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transform: scale(1);
   transition: all 800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
   width: 100%;
@@ -6683,8 +6693,7 @@ span#sec-four-title {
   }
 }
 .sec-four-slide-reg img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -7614,10 +7623,8 @@ span#sec-five-title br {
 }
 
 img#sec-six-hero {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 60% 0%;
-     object-position: 60% 0%;
+  object-fit: cover;
+  object-position: 60% 0%;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -7900,8 +7907,6 @@ span#sec-seven-title {
 
 span#sec-eight-title {
   display: block;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   text-align: center;
   margin-left: auto;
@@ -12186,5 +12191,3 @@ span.myshare {
     transition-delay: 0ms, 0ms;
   }
 }
-
-/*# sourceMappingURL=style.css.map */

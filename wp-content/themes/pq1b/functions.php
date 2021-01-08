@@ -6,7 +6,7 @@
 function load_my_styles_scripts()
 {
 
-    //wp_enqueue_style('styles', get_template_directory_uri() . '/style.css', '', 5, 'all');
+    wp_enqueue_style('styles', get_template_directory_uri() . '/style.css', '', 5, 'all');
 
     // disables jquery then registers it again to go into footer
 
@@ -20,64 +20,14 @@ function load_my_styles_scripts()
         wp_enqueue_script('jquery-custom', get_template_directory_uri() . '/js/custom-min.js', 'jquery', '', true);
     }
 
-    // wp_enqueue_script( 'jquery-mygravity', get_template_directory_uri() . '/js/gravityforms-min.js', 'jquery', '', true );
-
 }
 
 add_action('wp_enqueue_scripts', 'load_my_styles_scripts', 20);
 
-/* Defer JS for Lighthouse
--------------------------------------------------------------- */
-
-/*
-function add_defer_attribute($tag, $handle) {
-// add script handles to the array below
-$scripts_to_defer = array('jquery', 'jquery-addon', 'jquery-mygravity');
-
-foreach($scripts_to_defer as $defer_script) {
-if ($defer_script === $handle) {
-return str_replace(' src', ' defer="defer" src', $tag);
-}
-}
-return $tag;
-}
-
-add_filter('script_loader_tag', 'add_defer_attribute', 10, 2);
- */
-
-/* dequeue embed for lighthouse
--------------------------------------------------------------- */
-
-/*
-function my_deregister_scripts(){
-
-wp_deregister_script( 'wp-embed' );
-
-}
-
-add_action( 'wp_footer', 'my_deregister_scripts' );
- */
-
-/* dequeue gravity form files that effect critical chain page speed and defer them later in a combined file
--------------------------------------------------------------- */
-
-/*
-function deregister_scripts(){
-
-wp_deregister_script("gform_placeholder");
-wp_deregister_script("gform_masked_input");
-wp_deregister_script("gform_json");
-wp_deregister_script("gform_gravityforms");
-
-}
-
-add_action("gform_enqueue_scripts", "deregister_scripts");
- */
-
 /* CSS in Header for Lighthouse
 -------------------------------------------------------------- */
 
-add_action('wp_head', 'merge_include_css');
+//add_action('wp_head', 'merge_include_css');
 function merge_include_css()
 {
     $theme = wp_get_theme();
