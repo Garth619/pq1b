@@ -1,0 +1,171 @@
+#section-seven {
+  background: $color-light-two;
+  padding: 45px 38px 65px;
+  @include mq(small-tablet) {
+    padding: 65px 98px 85px;
+  }
+  @include mq(small-laptop) {
+    padding: 103px 116px 110px;
+  }
+  @include mq(large-laptop) {
+    padding: 124px 116px 125px;
+  }
+  @include mq(small-monitor) {
+    padding: 160px 116px 125px;
+  }
+}
+
+#sec-seven-inner {
+  @include mq(small-monitor) {
+    max-width: 1350px;
+    @include margin_lr;
+  }
+}
+
+#sec-seven-top {
+  padding-bottom: 13px;
+  border-bottom: 1px solid $color-bright-two;
+  @include mq(small-laptop) {
+    padding-bottom: 26px;
+    @include flex(space-between);
+  }
+  @include mq(small-monitor) {
+    padding-bottom: 50px;
+  }
+}
+
+span#sec-seven-title {
+  display: block;
+  margin-bottom: 27px;
+  @include type(
+    (
+      size: 35px,
+      height: 38px,
+      family: $secondaryfont,
+      color: $color-dark-one,
+      weight: 500,
+    )
+  );
+  @include mq(small-tablet) {
+    @include quick_type(50px, 55px, null);
+  }
+  @include mq(small-laptop) {
+    flex-basis: 417px;
+    flex-shrink: 0;
+    @include quick_type(60px, 65px, null);
+  }
+  @include mq(large-laptop) {
+    flex-basis: 595px;
+    @include quick_type(75px, 75px, null);
+  }
+  @include mq(small-monitor) {
+    flex-basis: 622px;
+  }
+}
+
+#sec-seven-content {
+  @include mq(small-laptop) {
+    flex-grow: 1;
+    padding-left: 45px;
+  }
+  @include mq(large-laptop) {
+    padding-left: 57px;
+  }
+  @include mq(small-monitor) {
+    padding-left: 90px;
+  }
+  &.content {
+    color: #62676d;
+  }
+}
+
+#sec-seven-bottom {
+  padding-top: 5px;
+  @include mq(small-laptop) {
+    padding-top: 36px;
+    @include flex(space-between);
+  }
+  @include mq(large-laptop) {
+    padding-top: 69px;
+  }
+}
+
+.sec-seven-faq-col {
+  @include mq(small-laptop) {
+    flex-basis: 45%;
+    @include mq(large-laptop) {
+      flex-basis: 47.5%;
+    }
+    @include mq(small-monitor) {
+      flex-basis: 44%;
+    }
+  }
+}
+
+.sec-seven-faq {
+  padding: 25px 0;
+  border-bottom: 1px solid #c6ced8;
+  @include mq(small-tablet) {
+    padding: 29px 0;
+  }
+  span.sec-seven-question {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    padding-right: 40px;
+    transition: all 200ms ease-in-out;
+    @include flex(space-between, center);
+    @include type(
+      (
+        size: 16px,
+        height: 20px,
+        spacing: 0,
+        family: $primaryfont,
+        color: $color-dark-one,
+        weight: 800,
+      )
+    );
+    @include mq(small-laptop) {
+      @include quick_type(18px, 25px, null);
+    }
+    @include mq(large-laptop) {
+      @include quick_type(20px, 30px, null);
+    }
+    &:hover {
+      color: $color-dark-three;
+    }
+    &.open {
+      color: $color-dark-three;
+      &:after {
+        @include contentdisplay(inline-block, "-");
+      }
+    }
+    &:after {
+      color: $color-bright-two;
+      position: relative;
+      left: 28px;
+      @include contentdisplay(inline-block, "+");
+    }
+  }
+  .sec-seven-answer {
+    display: none;
+    padding: 20px 0 0 0;
+    @include mq(small-tablet) {
+      padding-right: 50px;
+    }
+    @include mq(small-laptop) {
+      padding-right: 30px;
+    }
+    @include mq(large-laptop) {
+      padding: 25px 0 0 0;
+    }
+    &.content {
+      color: #62676d;
+      p {
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
