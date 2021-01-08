@@ -85,7 +85,5 @@ if (($paged >= 2 || $page >= 2) && !is_404()) {
 
 <body <?php body_class();?>>
 
-  <span>hello</span>
-
 
   <?php // wp_nav_menu(array('container_class' => 'menu-header', 'theme_location' => 'main_menu'));?>
