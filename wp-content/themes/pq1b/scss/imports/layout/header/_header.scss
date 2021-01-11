@@ -3,7 +3,9 @@ header {
 }
 
 .header-inner {
+  max-width: 1920px;
   @include flex();
+  @include margin_lr;
 }
 
 .header-left {
@@ -15,6 +17,7 @@ header {
   @include flex(flex-start, center);
   @include mq(small-laptop) {
     height: 121px;
+    padding: 0 32px;
   }
 }
 
@@ -25,6 +28,9 @@ a.logo {
     max-width: 260px;
     @include mq(small-laptop) {
       max-width: 278px;
+    }
+    @include mq(large-laptop) {
+      max-width: 435px;
     }
   }
 }
@@ -42,10 +48,30 @@ a.logo {
   @include mq(small-laptop) {
     display: none;
   }
+  &.active {
+    span {
+      &.menu-bar {
+        &:nth-of-type(1) {
+          transform: rotate(45deg);
+          transform-origin: 3px 6px 0px;
+        }
+        &:nth-of-type(2) {
+          opacity: 0;
+        }
+        &:nth-of-type(3) {
+          transform: rotate(-45deg);
+          transform-origin: 9px -1px 0px;
+        }
+      }
+    }
+  }
   span {
     &.menu-bar {
       background: $color-seven;
       margin-bottom: 6px;
+      transform-origin: 0 0 0;
+      transition: transform 500ms cubic-bezier(0.17, 0.66, 0.34, 0.98),
+        opacity 300ms ease-in-out;
       @include box(35px, 3px);
     }
     &.menu-title {

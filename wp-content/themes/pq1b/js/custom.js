@@ -674,6 +674,7 @@ $('.about-middle-att ul li').wrapInner("<span></span>");
   //$('nav ul.menu > li.current-menu-ancestor > a').addClass('active');
 
   $(".menu-wrapper").on("click", function (e) {
+    $(this).toggleClass('active');
     $("nav").toggleClass('nav-open');
   });
 

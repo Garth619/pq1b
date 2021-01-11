@@ -550,7 +550,10 @@ header {
 }
 
 .header-inner {
+  max-width: 1920px;
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header-left {
@@ -566,6 +569,7 @@ header {
 @media screen and (min-width: 1170px) {
   .header-left {
     height: 121px;
+    padding: 0 32px;
   }
 }
 
@@ -577,6 +581,11 @@ a.logo svg {
 @media screen and (min-width: 1170px) {
   a.logo svg {
     max-width: 278px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  a.logo svg {
+    max-width: 435px;
   }
 }
 
@@ -597,9 +606,22 @@ a.logo svg {
     display: none;
   }
 }
+.menu-wrapper.active span.menu-bar:nth-of-type(1) {
+  transform: rotate(45deg);
+  transform-origin: 3px 6px 0px;
+}
+.menu-wrapper.active span.menu-bar:nth-of-type(2) {
+  opacity: 0;
+}
+.menu-wrapper.active span.menu-bar:nth-of-type(3) {
+  transform: rotate(-45deg);
+  transform-origin: 9px -1px 0px;
+}
 .menu-wrapper span.menu-bar {
   background: #fff;
   margin-bottom: 6px;
+  transform-origin: 0 0 0;
+  transition: transform 500ms cubic-bezier(0.17, 0.66, 0.34, 0.98), opacity 300ms ease-in-out;
   width: 35px;
   height: 3px;
 }
@@ -643,6 +665,11 @@ nav {
     height: auto;
   }
 }
+@media screen and (min-width: 1380px) {
+  nav {
+    padding: 38px 85px 0 40px;
+  }
+}
 nav ul {
   list-style: none;
 }
@@ -656,6 +683,12 @@ nav ul li {
   text-transform: uppercase;
   font-style: normal;
   text-decoration: none;
+}
+@media screen and (min-width: 1380px) {
+  nav ul li {
+    font-size: 17px;
+    line-height: 20px;
+  }
 }
 nav ul li.menu-item-has-children.active > a {
   color: #00afcc;
@@ -700,6 +733,11 @@ nav ul li.menu-item-has-children > a:after {
     margin-left: 5px;
   }
 }
+@media screen and (min-width: 1380px) {
+  nav ul li.menu-item-has-children > a:after {
+    margin-top: 7px;
+  }
+}
 nav ul li.current-menu-ancestor > a {
   color: #00afcc;
 }
@@ -736,6 +774,11 @@ nav ul.menu {
     position: relative;
     margin-left: 35px;
     padding-bottom: 34px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  nav ul.menu > li {
+    padding-bottom: 31px;
   }
 }
 @media screen and (min-width: 1170px) {
@@ -783,8 +826,10 @@ nav ul.sub-menu {
     left: 50%;
   }
 }
-nav ul.sub-menu li:last-of-type a {
-  border-bottom: none;
+@media screen and (min-width: 1170px) {
+  nav ul.sub-menu li:last-of-type a {
+    border-bottom: none;
+  }
 }
 nav ul.sub-menu li a:hover {
   color: #00afcc;

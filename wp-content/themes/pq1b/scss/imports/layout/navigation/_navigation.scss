@@ -15,6 +15,9 @@ nav {
     overflow: visible;
     @include box(auto);
   }
+  @include mq(large-laptop) {
+    padding: 38px 85px 0 40px;
+  }
   ul {
     list-style: none;
     li {
@@ -29,6 +32,9 @@ nav {
           transform: uppercase,
         )
       );
+      @include mq(large-laptop) {
+        @include quick_type(17px, 20px, null);
+      }
       &.menu-item-has-children {
         &.active {
           > a {
@@ -59,6 +65,9 @@ nav {
               vertical-align: top;
               margin-top: 4px;
               margin-left: 5px;
+            }
+            @include mq(large-laptop) {
+              margin-top: 7px;
             }
           }
         }
@@ -97,6 +106,9 @@ nav {
         position: relative;
         margin-left: 35px;
         padding-bottom: 34px;
+      }
+      @include mq(large-laptop) {
+        padding-bottom: 31px;
       }
       &:hover {
         @include mq(small-laptop) {
@@ -142,7 +154,9 @@ nav {
     li {
       &:last-of-type {
         a {
-          border-bottom: none;
+          @include mq(small-laptop) {
+            border-bottom: none;
+          }
         }
       }
       a {
