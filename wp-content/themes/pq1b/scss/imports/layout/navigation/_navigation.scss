@@ -140,7 +140,7 @@ nav {
   ul.sub-menu {
     display: none;
     @include mq(small-laptop) {
-      display: block;
+      display: block !important;
       width: 306px;
       background: $color-four;
       padding: 15px 37px 12px;
