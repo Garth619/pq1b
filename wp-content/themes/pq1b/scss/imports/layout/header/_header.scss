@@ -1,5 +1,7 @@
 header {
   background: $color-four;
+  width: 100%;
+  @include fixed(0, null, null, 0, 5);
 }
 
 .header-inner {
