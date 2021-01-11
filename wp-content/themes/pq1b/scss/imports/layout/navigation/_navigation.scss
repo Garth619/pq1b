@@ -109,6 +109,11 @@ nav {
         }
       }
       &:last-of-type {
+        ul.sub-menu {
+          left: auto;
+          right: 0;
+          transform: translateX(0);
+        }
         a {
           border-bottom: none;
         }

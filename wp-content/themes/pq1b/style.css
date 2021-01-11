@@ -751,6 +751,11 @@ nav ul.menu {
     border-bottom: none;
   }
 }
+nav ul.menu > li:last-of-type ul.sub-menu {
+  left: auto;
+  right: 0;
+  transform: translateX(0);
+}
 nav ul.menu > li:last-of-type a {
   border-bottom: none;
 }
