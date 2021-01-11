@@ -8,6 +8,12 @@ nav {
   @include mq(small-tablet) {
     max-width: 307px;
   }
+  @include mq(small-laptop) {
+    position: static;
+    max-width: 100%;
+    padding: 38px 40px 0;
+    @include box(auto);
+  }
   ul {
     list-style: none;
     li {
@@ -38,6 +44,13 @@ nav {
             @include abs(21px, 10px, null, null);
             @include contentdisplay();
             @include tri(down, 4px, 7px, $color-seven);
+            @include mq(small-laptop) {
+              position: static;
+              display: inline-block;
+              vertical-align: top;
+              margin-top: 4px;
+              margin-left: 5px;
+            }
           }
         }
       }
@@ -61,12 +74,23 @@ nav {
         padding: 16px 0;
         transition: color 300ms ease-in-out;
         border-bottom: 1px solid $color-three;
+        @include mq(small-laptop) {
+          border-bottom: none;
+        }
       }
     }
   }
   ul.menu {
     padding-bottom: 100px;
+    @include mq(small-laptop) {
+      padding-bottom: 0;
+    }
     > li {
+      @include mq(small-laptop) {
+        display: inline-block;
+        position: relative;
+        margin-left: 35px;
+      }
       &:last-of-type {
         a {
           border-bottom: none;
@@ -76,6 +100,10 @@ nav {
   }
   ul.sub-menu {
     display: none;
+    @include mq(small-laptop) {
+      //display: block;
+      @include abs(0, null, null, 0);
+    }
   }
 }
 
