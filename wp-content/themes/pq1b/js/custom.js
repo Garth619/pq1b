@@ -674,7 +674,7 @@ $('.about-middle-att ul li').wrapInner("<span></span>");
   //$('nav ul.menu > li.current-menu-ancestor > a').addClass('active');
 
   $(".menu-wrapper").on("click", function (e) {
-    $("nav").addClass('nav-open');
+    $("nav").toggleClass('nav-open');
   });
 
   $("nav .close").on("click", function (e) {
@@ -698,7 +698,7 @@ $('.about-middle-att ul li').wrapInner("<span></span>");
   }
 
   function tabletClick() {
-    //$(this).next('ul.sub-menu').slideToggle(350);
+    $(this).next('ul.sub-menu').slideToggle(350);
 
     $(this).next("ul.sub-menu").toggleClass("active");
 

@@ -1,0 +1,94 @@
+nav {
+  background: $color-four;
+  padding: 40px 40px;
+  @include fixed(94px, null, null, 0);
+  @include box(100%, 100vh);
+  ul {
+    list-style: none;
+    li {
+      @include type(
+        (
+          size: 15px,
+          height: 17px,
+          spacing: 0.38px,
+          family: $primaryfont,
+          color: $color-seven,
+          weight: 700,
+          transform: uppercase,
+        )
+      );
+      &.menu-item-has-children {
+        &.active {
+          > a {
+            color: $color-two;
+            &:after {
+              @include tri(down, 4px, 7px, $color-two);
+            }
+          }
+        }
+        > a {
+          position: relative;
+          &:after {
+            transition: all 300ms ease-in-out;
+            @include abs(21px, 10px, null, null);
+            @include contentdisplay();
+            @include tri(down, 4px, 7px, $color-seven);
+          }
+        }
+      }
+      &.current-menu-ancestor {
+        > a {
+          color: $color-two;
+          &:after {
+            @include tri(down, 4px, 7px, $color-two);
+          }
+        }
+      }
+      &.current-menu-item {
+        > a {
+          color: $color-two;
+        }
+      }
+      a {
+        color: $color-seven;
+        text-decoration: none;
+        display: block;
+        padding: 16px 0;
+        transition: color 300ms ease-in-out;
+        border-bottom: 1px solid $color-three;
+      }
+    }
+  }
+  ul.menu {
+    > li {
+      &:last-of-type {
+        a {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  ul.sub-menu {
+    display: none;
+  }
+}
+
+.nav-tablet {
+  transform: translateY(-30px);
+  opacity: 0;
+  transition: opacity 300ms ease-in-out,
+    transform 500ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  ul.sub-menu {
+    li {
+      a {
+        &:hover {
+          color: $color-two;
+        }
+      }
+    }
+  }
+  &.nav-open {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

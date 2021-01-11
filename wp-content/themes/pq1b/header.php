@@ -106,10 +106,11 @@ if (($paged >= 2 || $page >= 2) && !is_404()) {
           <!-- / menu-title -->
         </div>
         <!-- / menu-wrapper -->
+        <nav>
+          <?php wp_nav_menu(array('container_class' => 'menu-header', 'theme_location' => 'main_menu'));?>
+        </nav>
       </div>
       <!-- /.header-right -->
     </div>
     <!-- /.header-inner -->
   </header>
-
-  <?php // wp_nav_menu(array('container_class' => 'menu-header', 'theme_location' => 'main_menu'));?>

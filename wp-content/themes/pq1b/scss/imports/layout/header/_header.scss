@@ -9,7 +9,13 @@ header {
 .header-left {
   flex-grow: 1;
   padding: 0 23px;
-  @include flex(center, center);
+  position: relative;
+  z-index: 1;
+  background: $color-four;
+  @include flex(flex-start, center);
+  @include mq(small-laptop) {
+    height: 121px;
+  }
 }
 
 a.logo {
@@ -17,6 +23,9 @@ a.logo {
     width: 100%;
     display: block;
     max-width: 260px;
+    @include mq(small-laptop) {
+      max-width: 278px;
+    }
   }
 }
 
@@ -26,6 +35,33 @@ a.logo {
 .menu-wrapper {
   background: $color-two;
   flex-shrink: 0;
+  position: relative;
+  z-index: 1;
   @include box(60px, 94px);
   @include flex(center, center, column);
+  @include mq(small-laptop) {
+    display: none;
+  }
+  span {
+    &.menu-bar {
+      background: $color-seven;
+      margin-bottom: 6px;
+      @include box(35px, 3px);
+    }
+    &.menu-title {
+      padding-top: 5px;
+      @include type(
+        (
+          size: 11px,
+          height: 13px,
+          spacing: 1.1px,
+          family: $primaryfont,
+          color: $color-seven,
+          weight: 700,
+          align: center,
+          transform: uppercase,
+        )
+      );
+    }
+  }
 }
