@@ -12,6 +12,7 @@ nav {
     position: static;
     max-width: 100%;
     padding: 38px 40px 0;
+    overflow: visible;
     @include box(auto);
   }
   ul {
@@ -34,6 +35,14 @@ nav {
             color: $color-two;
             &:after {
               @include tri(down, 4px, 7px, $color-two);
+            }
+          }
+        }
+        &:hover {
+          > ul.sub-menu {
+            @include mq(small-laptop) {
+              opacity: 1;
+              visibility: visible;
             }
           }
         }
@@ -74,9 +83,6 @@ nav {
         padding: 16px 0;
         transition: color 300ms ease-in-out;
         border-bottom: 1px solid $color-three;
-        @include mq(small-laptop) {
-          border-bottom: none;
-        }
       }
     }
   }
@@ -90,9 +96,25 @@ nav {
         display: inline-block;
         position: relative;
         margin-left: 35px;
+        padding-bottom: 34px;
+      }
+      &:hover {
+        @include mq(small-laptop) {
+          > a {
+            color: $color-two;
+            &:after {
+              @include tri(down, 4px, 7px, $color-two);
+            }
+          }
+        }
       }
       &:last-of-type {
         a {
+          border-bottom: none;
+        }
+      }
+      > a {
+        @include mq(small-laptop) {
           border-bottom: none;
         }
       }
@@ -101,8 +123,28 @@ nav {
   ul.sub-menu {
     display: none;
     @include mq(small-laptop) {
-      //display: block;
-      @include abs(0, null, null, 0);
+      display: block;
+      width: 306px;
+      background: $color-four;
+      padding: 15px 37px 12px;
+      border-top: 4px solid $color-two;
+      transform: translateX(-50%);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out;
+      @include abs(83px, null, null, 50%);
+    }
+    li {
+      &:last-of-type {
+        a {
+          border-bottom: none;
+        }
+      }
+      a {
+        &:hover {
+          color: $color-two;
+        }
+      }
     }
   }
 }
@@ -117,15 +159,6 @@ nav {
     transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out,
       transform 800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     transform: translate(100%, 0px);
-  }
-  ul.sub-menu {
-    li {
-      a {
-        &:hover {
-          color: $color-two;
-        }
-      }
-    }
   }
   &.nav-open {
     opacity: 1;
