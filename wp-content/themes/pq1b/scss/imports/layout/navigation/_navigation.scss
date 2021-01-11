@@ -1,8 +1,13 @@
 nav {
   background: $color-four;
-  padding: 40px 40px;
-  @include fixed(94px, null, null, 0);
+  padding: 12px 40px;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  @include fixed(94px, 0, null, null);
   @include box(100%, 100vh);
+  @include mq(small-tablet) {
+    max-width: 307px;
+  }
   ul {
     list-style: none;
     li {
@@ -60,6 +65,7 @@ nav {
     }
   }
   ul.menu {
+    padding-bottom: 100px;
     > li {
       &:last-of-type {
         a {
@@ -74,10 +80,16 @@ nav {
 }
 
 .nav-tablet {
-  transform: translateY(-30px);
+  transform: translate(0, -30px);
   opacity: 0;
-  transition: opacity 300ms ease-in-out,
+  visibility: hidden;
+  transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out,
     transform 500ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  @include mq(small-tablet) {
+    transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out,
+      transform 800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    transform: translate(100%, 0px);
+  }
   ul.sub-menu {
     li {
       a {
@@ -89,6 +101,7 @@ nav {
   }
   &.nav-open {
     opacity: 1;
-    transform: translateY(0px);
+    visibility: visible;
+    transform: translate(0px, 0px);
   }
 }
