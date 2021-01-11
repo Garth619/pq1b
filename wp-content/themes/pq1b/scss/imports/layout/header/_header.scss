@@ -1,1 +1,31 @@
+header {
+  background: $color-four;
+}
 
+.header-inner {
+  @include flex();
+}
+
+.header-left {
+  flex-grow: 1;
+  padding: 0 23px;
+  @include flex(center, center);
+}
+
+a.logo {
+  svg {
+    width: 100%;
+    display: block;
+    max-width: 260px;
+  }
+}
+
+.header-right {
+}
+
+.menu-wrapper {
+  background: $color-two;
+  flex-shrink: 0;
+  @include box(60px, 94px);
+  @include flex(center, center, column);
+}

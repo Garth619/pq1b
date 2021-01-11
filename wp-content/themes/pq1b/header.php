@@ -85,5 +85,31 @@ if (($paged >= 2 || $page >= 2) && !is_404()) {
 
 <body <?php body_class();?>>
 
+  <header>
+    <div class="header-inner">
+      <div class="header-left">
+        <a class='logo' href='<?php bloginfo('url');?>'>
+          <?php echo file_get_contents(get_template_directory() . '/images/logo.svg'); ?>
+        </a>
+        <!-- / logo -->
+      </div>
+      <!-- /.header-left -->
+      <div class="header-right">
+        <div class='menu-wrapper'>
+          <span class='menu-bar'></span>
+          <!-- / menu-bar -->
+          <span class='menu-bar'></span>
+          <!-- / menu-bar -->
+          <span class='menu-bar'></span>
+          <!-- / menu-bar -->
+          <span class='menu-title'>Menu</span>
+          <!-- / menu-title -->
+        </div>
+        <!-- / menu-wrapper -->
+      </div>
+      <!-- /.header-right -->
+    </div>
+    <!-- /.header-inner -->
+  </header>
 
   <?php // wp_nav_menu(array('container_class' => 'menu-header', 'theme_location' => 'main_menu'));?>

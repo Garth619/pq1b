@@ -545,4 +545,37 @@ input {
   -webkit-appearance: none;
 }
 
+header {
+  background: #031a28;
+}
+
+.header-inner {
+  display: flex;
+}
+
+.header-left {
+  flex-grow: 1;
+  padding: 0 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a.logo svg {
+  width: 100%;
+  display: block;
+  max-width: 260px;
+}
+
+.menu-wrapper {
+  background: #00afcc;
+  flex-shrink: 0;
+  width: 60px;
+  height: 94px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 /*# sourceMappingURL=style.css.map */
