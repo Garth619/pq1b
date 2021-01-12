@@ -1,3 +1,73 @@
 #section-one {
-  height: 1000px;
+  margin-top: 94px;
+  position: relative;
+}
+
+.sec-one-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 47px 50px 65px;
+  max-width: 470px;
+  @include margin_lr;
+  @include mq(small-tablet) {
+    max-width: 650px;
+    padding: 61px 50px 109px;
+  }
+  span {
+    display: block;
+    color: $color-seven;
+    &.sec-one-title {
+      @include type(
+        (
+          size: 27px,
+          height: 35px,
+          family: $primaryfont,
+          weight: 700,
+        )
+      );
+      @include mq(small-tablet) {
+        @include quick_type(40px, 50px, null);
+      }
+    }
+    &.sec-one-name {
+      @include type(
+        (
+          size: 20px,
+          height: 22px,
+          spacing: 0,
+          family: $primaryfont,
+          weight: 700,
+          style: italic,
+        )
+      );
+      @include mq(small-tablet) {
+        @include quick_type(25px, 27px, null);
+      }
+      &:before {
+        background: $color-two;
+        margin-top: 18px;
+        margin-bottom: 25px;
+        max-width: 68px;
+        @include margin_lr;
+        @include contentdisplay();
+        @include box(100%, 4px);
+        @include mq(small-tablet) {
+          max-width: 476px;
+          margin-top: 23px;
+        }
+      }
+    }
+  }
+}
+
+img#hero {
+  object-fit: cover;
+  object-position: 28% 0%;
+  @include abs(0, null, null, 0);
+  @include image();
+  @include box(100%);
+  @include mq(small-tablet) {
+    object-position: 100% 0%;
+  }
 }
