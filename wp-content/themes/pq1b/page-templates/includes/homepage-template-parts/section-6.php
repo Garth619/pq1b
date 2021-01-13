@@ -1,53 +1,87 @@
 <section id='section-six'>
 
-  <div id='sec-six-slider-wrapper' class="preload-section">
+  <div id='sec-six-inner'>
 
-    <div class='sec-six-arrow sec-six-arrow-left'>
+    <span id='sec-six-title'>Our Practice Areas</span><!-- sec-six-title -->
 
-      <?php echo file_get_contents(get_template_directory() . '/images/arrow-left.svg'); ?>
+    <div id='sec-six-pa-wrapper'>
 
-    </div><!-- sec-six-arrow sec-six-arrow-left -->
+      <a class='sec-six-single-pa' href=''>
 
-    <div id='sec-six-slider-outer'>
+        <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
 
-      <span id='sec-six-slide-title'><?php the_field('section_six_title');?></span><!-- sec-six-slide-title -->
+        <img src='<?php bloginfo('template_directory');?>/images/.jpg' alt='' />
 
-      <img id='stars' class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/test-stars-large.svg'
-        alt='' />
+      </a><!-- sec-six-single-pa -->
 
-      <div id='sec-six-slider' class="preload-slider">
+      <a class='sec-six-single-pa' href=''>
 
-        <?php if (have_rows('section_six_slider')): ?>
+        <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
 
-        <?php while (have_rows('section_six_slider')): the_row();?>
+        <img src='<?php bloginfo('template_directory');?>/images/.jpg' alt='' />
 
-        <div class='sec-six-slide'>
+      </a><!-- sec-six-single-pa -->
 
-          <span class='sec-six-slide-intro'><?php the_sub_field('intro');?></span><!-- sec-six-slide-intro -->
+      <a class='sec-six-single-pa' href=''>
 
-          <span class='sec-six-slide-title'><?php the_sub_field('case_name');?></span><!-- sec-six-slide-title -->
+        <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
 
-          <span class='sec-six-slide-descrip'><?php the_sub_field('description');?></span><!-- sec-six-slide-descrip -->
+        <img src='<?php bloginfo('template_directory');?>/images/.jpg' alt='' />
 
-        </div><!-- sec-six-slide -->
+      </a><!-- sec-six-single-pa -->
 
-        <?php endwhile;?>
+      <a class='sec-six-single-pa' href=''>
 
-        <?php endif;?>
+        <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
 
-      </div><!-- sec-six-slider -->
+        <img src='<?php bloginfo('template_directory');?>/images/.jpg' alt='' />
 
-    </div><!-- sec-six-slider-outer -->
+      </a><!-- sec-six-single-pa -->
 
-    <div class='sec-six-arrow sec-six-arrow-right'>
+      <a class='sec-six-single-pa' href=''>
 
-      <?php echo file_get_contents(get_template_directory() . '/images/arrow-right.svg'); ?>
+        <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
 
-    </div><!-- sec-six-arrow sec-six-arrow-right -->
+        <img src='<?php bloginfo('template_directory');?>/images/.jpg' alt='' />
 
-  </div><!-- sec-six-slider-wrapper -->
+      </a><!-- sec-six-single-pa -->
 
-  <img id='sec-six-hero' class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/test-bg.jpg'
-    alt='' />
+      <a class='sec-six-single-pa' href=''>
+
+        <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
+
+        <img src='<?php bloginfo('template_directory');?>/images/.jpg' alt='' />
+
+      </a><!-- sec-six-single-pa -->
+
+      <a class='sec-six-single-pa' href=''>
+
+        <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
+
+        <img src='<?php bloginfo('template_directory');?>/images/.jpg' alt='' />
+
+      </a><!-- sec-six-single-pa -->
+
+      <a class='sec-six-single-pa' href=''>
+
+        <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
+
+        <img src='<?php bloginfo('template_directory');?>/images/.jpg' alt='' />
+
+      </a><!-- sec-six-single-pa -->
+
+      <a class='sec-six-single-pa' href=''>
+
+        <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
+
+        <img src='<?php bloginfo('template_directory');?>/images/.jpg' alt='' />
+
+      </a><!-- sec-six-single-pa -->
+
+    </div><!-- sec-six-pa-wrapper -->
+
+    <a class='button-two' href=''>See All Practice Areas</a><!-- button-two -->
+
+  </div><!-- sec-six-inner -->
 
 </section><!-- section-six -->
