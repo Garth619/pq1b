@@ -2,122 +2,141 @@
 
   <div id='sec-four-inner'>
 
-    <span id='sec-four-subtitle'><?php the_field('section_four_subtitle');?></span><!-- sec-four-subtitle -->
+    <span id='sec-four-title'>Meet the Partners</span><!-- sec-four-title -->
 
-    <span id='sec-four-title'><?php the_field('section_four_title');?></span><!-- sec-four-title -->
+    <div id='sec-four-slider-wrapper'>
 
-    <div id='sec-four-descrip' class="content">
+      <div class='sec-four-tablet-arrow sec-four-tablet-arrow-left'></div><!-- sec-four-tablet-arrow -->
 
-      <?php the_field('section_four_description');?>
+      <div id='sec-four-slider'>
 
-    </div><!-- sec-four-descrip -->
+        <div class='sec-four-single-slide'>
 
-    <div id='sec-four-slider-wrapper' class="preload-section">
+          <a href="">
 
-      <div class='sec-four-arrow sec-four-arrow-left'>
+            <div class='sec-four-img-wrapper'>
 
-        <?php echo file_get_contents(get_template_directory() . '/images/arrow-left.svg'); ?>
+              <img src='<?php bloginfo('template_directory');?>/images/.jpg' alt='' />
 
-      </div><!-- sec-four-arrow -->
+            </div><!-- sec-four-img-wrapper -->
 
-      <div id='sec-four-slider' class="preload-slider">
+            <span class='sec-four-single-att-title'>Alan A. Greenberg</span><!-- sec-four-single-att-title -->
 
-        <?php if (have_rows('section_four_selling_points')): $i = 0;?>
+            <span class='sec-four-single-position-title'>Co-Founding Partner</span>
+            <!-- sec-four-single-position-title -->
 
-        <?php while (have_rows('section_four_selling_points')): the_row();
-        $i++;?>
+          </a>
 
-        <div class='sec-four-slide'>
+        </div><!-- sec-four-single-slide -->
 
-          <div class='sec-four-slide-reg'>
+        <div class='sec-four-single-slide'>
 
-            <span class='sec-four-slide-number'><?php if ($i < 10) {echo "0" . $i;} else {echo $i;}?></span>
-            <!-- sec-four-slide-number -->
+          <a href="">
 
-            <div class='sec-four-slide-title-wrapper'>
+            <div class='sec-four-img-wrapper'>
 
-              <span class='sec-four-slide-title'><?php the_sub_field('title');?></span><!-- sec-four-slide-title -->
+              <img src='<?php bloginfo('template_directory');?>/images/.jpg' alt='' />
 
-            </div><!-- sec-four-slide-title-wrapper -->
+            </div><!-- sec-four-img-wrapper -->
 
-            <?php $image = get_sub_field('image');?>
+            <span class='sec-four-single-att-title'>Alan A. Greenberg</span><!-- sec-four-single-att-title -->
 
-            <?php if ($image) {?>
+            <span class='sec-four-single-position-title'>Co-Founding Partner</span>
+            <!-- sec-four-single-position-title -->
 
-            <img class="lazyload" data-src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+          </a>
 
-            <?php }?>
+        </div><!-- sec-four-single-slide -->
 
-          </div><!-- sec-four-slide-reg -->
+        <div class='sec-four-single-slide'>
 
-          <div class='sec-four-hover-data'>
+          <a href="">
 
-            <div class='sec-four-hover-data-inner'>
+            <div class='sec-four-img-wrapper'>
 
-              <span class='sec-four-hover-subtitle'><?php the_sub_field('title');?></span><!-- sec-four-hover-title -->
+              <img src='<?php bloginfo('template_directory');?>/images/.jpg' alt='' />
 
-              <span class='sec-four-hover-title'><?php the_sub_field('overlay_title');?></span>
-              <!-- sec-four-hover-title -->
+            </div><!-- sec-four-img-wrapper -->
 
-              <div class='sec-four-content'>
+            <span class='sec-four-single-att-title'>Alan A. Greenberg</span><!-- sec-four-single-att-title -->
 
-                <?php the_sub_field('overlay_description');?>
+            <span class='sec-four-single-position-title'>Co-Founding Partner</span>
+            <!-- sec-four-single-position-title -->
 
-              </div><!-- sec-four-content -->
+          </a>
 
-            </div><!-- sec-four-data-inner -->
+        </div><!-- sec-four-single-slide -->
 
-          </div><!-- sec-four-hover-data -->
+        <div class='sec-four-single-slide'>
 
-        </div><!-- sec-four-slide -->
+          <a href="">
 
-        <?php endwhile;?>
+            <div class='sec-four-img-wrapper'>
 
-        <?php endif;?>
+              <img src='<?php bloginfo('template_directory');?>/images/.jpg' alt='' />
+
+            </div><!-- sec-four-img-wrapper -->
+
+            <span class='sec-four-single-att-title'>Alan A. Greenberg</span><!-- sec-four-single-att-title -->
+
+            <span class='sec-four-single-position-title'>Co-Founding Partner</span>
+            <!-- sec-four-single-position-title -->
+
+          </a>
+
+        </div><!-- sec-four-single-slide -->
+
+        <div class='sec-four-single-slide'>
+
+          <a href="">
+
+            <div class='sec-four-img-wrapper'>
+
+              <img src='<?php bloginfo('template_directory');?>/images/.jpg' alt='' />
+
+            </div><!-- sec-four-img-wrapper -->
+
+            <span class='sec-four-single-att-title'>Alan A. Greenberg</span><!-- sec-four-single-att-title -->
+
+            <span class='sec-four-single-position-title'>Co-Founding Partner</span>
+            <!-- sec-four-single-position-title -->
+
+          </a>
+
+        </div><!-- sec-four-single-slide -->
+
+        <div class='sec-four-single-slide'>
+
+          <a href="">
+
+            <div class='sec-four-img-wrapper'>
+
+              <img src='<?php bloginfo('template_directory');?>/images/.jpg' alt='' />
+
+            </div><!-- sec-four-img-wrapper -->
+
+            <span class='sec-four-single-att-title'>Alan A. Greenberg</span><!-- sec-four-single-att-title -->
+
+            <span class='sec-four-single-position-title'>Co-Founding Partner</span>
+            <!-- sec-four-single-position-title -->
+
+          </a>
+
+        </div><!-- sec-four-single-slide -->
 
       </div><!-- sec-four-slider -->
 
-      <div class='sec-four-arrow sec-four-arrow-right'>
+      <div class='sec-four-tablet-arrow sec-four-tablet-arrow-right'></div><!-- sec-four-tablet-arrow -->
 
-        <?php echo file_get_contents(get_template_directory() . '/images/arrow-right.svg'); ?>
+      <div id='sec-four-mobile-arrows'>
 
-      </div><!-- sec-four-arrow -->
+        <div class='sec-four-mobile-arrow sec-four-mobile-arrow-left'></div><!-- sec-four-mobile-arrow -->
+
+        <div class='sec-four-mobile-arrow sec-four-mobile-arrow-right'></div><!-- sec-four-mobile-arrow -->
+
+      </div><!-- sec-four-mobile-arrows -->
 
     </div><!-- sec-four-slider-wrapper -->
-
-    <div id='sec-four-tablet-arrows-wrapper'>
-
-      <div class='sec-four-tablet-arrow sec-four-tablet-arrow-left'>
-
-        <?php echo file_get_contents(get_template_directory() . '/images/arrow-left.svg'); ?>
-
-        <span>See More</span>
-
-      </div><!-- sec-four-tablet-arrow-left -->
-
-      <span class="sec-four-arrow-divider"></span>
-
-      <div class='sec-four-tablet-arrow sec-four-tablet-arrow-right'>
-
-        <span>See More</span>
-
-        <?php echo file_get_contents(get_template_directory() . '/images/arrow-right.svg'); ?>
-
-      </div><!-- sec-four-tablet-arrow-right -->
-
-    </div><!-- sec-four-tablet-arrows-wrapper -->
-
-    <div class='sec-four-hover-overlay'>
-
-      <div class='sec-four-hover-overlay-inner'>
-
-        <div class='sec-four-overlay-close'>X</div><!-- sec-four-overlay-close -->
-
-        <div class='sec-four-hover-clone'></div><!-- sec-four-hover-clone -->
-
-      </div><!-- sec-four-hover-overlay-inner -->
-
-    </div><!-- sec-four-hover-overlay -->
 
   </div><!-- sec-four-inner -->
 

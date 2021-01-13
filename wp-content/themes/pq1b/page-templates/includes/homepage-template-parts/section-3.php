@@ -2,137 +2,66 @@
 
   <div id='sec-three-inner'>
 
-    <div id='sec-three-header-wrapper'>
+    <h1 id='sec-three-header'>Trial Lawyers for High-Stakes Cases</h1><!-- sec-three-header -->
 
-      <span id='sec-three-subtitle'><?php the_field('section_three_subtitle');?></span><!-- sec-three-subtitle -->
+    <div id='sec-three-intro' class="content">
 
-      <h1 id='sec-three-header'><?php the_field('section_three_title');?></h1><!-- sec-three-header -->
+      <p>Greenberg Gross LLP is a boutique trial law firm that represents public and private companies, prominent law
+        firms, high net worth individuals, and celebrities in their most significant matters.</p>
 
-    </div><!-- sec-three-header-wrapper -->
+    </div><!-- sec-three-intro -->
 
-    <div id='sec-three-content'>
+    <div id='sec-three-sidebar'>
 
-      <div class='sec-three-col content'>
+      <div id='sec-three-video' class="video">
 
-        <?php if (get_field('section_three_wistia_id')) {?>
+        <div class='mywistia'></div><!-- mywistia -->
 
-        <div id='sec-three-video-wrapper'>
+        <img src='<?php bloginfo('template_directory');?>/images/.jpg' alt='' />
 
-          <div id='sec-three-video-thumbnail'>
+        <div class='video-overlay'>
 
-            <?php $section_three_video_image = get_field('section_three_video_image');?>
+          <span class='play-button'></span><!-- play-button -->
 
-            <?php if ($section_three_video_image) {?>
+        </div><!-- video-overlay -->
 
-            <img class="lazyload" data-src="<?php echo $section_three_video_image['url']; ?>"
-              alt="<?php echo $section_three_video_image['alt']; ?>" />
+      </div><!-- sec-three-video -->
 
-            <?php }?>
+      <div id='sec-three-sidebar-quote' class="content">
 
-            <div id="mywistia"
-              class='wistia_embed wistia_async_<?php the_field('section_three_wistia_id');?> popover=true popoverContent=html'>
-            </div><!-- mywistia -->
+        <p><strong>We listen to people.</strong> We have taken and prevailed on cases that other lawyers have dismissed
+          because we put in
+          the work and <strong>are not afraid to fight for our clients.</strong></p>
 
-            <div id='sec-three-video-overlay'>
+      </div><!-- sec-three-sidebar-quote -->
 
-              <div class='play-button'></div><!-- play-button -->
+    </div><!-- sec-three-sidebar -->
 
-            </div><!-- sec-three-video-overlay -->
+    <div id='sec-three-content' class="content">
 
-          </div><!-- sec-three-video-thumbnail -->
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 
-          <span id='sec-three-video-descrip'><?php the_field('section_three_video_description');?></span>
-          <!-- sec-three-video-descrip -->
+      <h2>Why choose us?</h2>
 
-        </div><!-- sec-three-video-wrapper -->
+      <ul>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua.</li>
+        <li>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</li>
+        <li>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</li>
+      </ul>
 
-        <?php }?>
+      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+      <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+        eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+        consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam
+        quaerat voluptatem.</p>
 
-        <?php if (get_field('section_three_intro')) {?>
-
-        <div id='sec-three-intro'>
-
-          <?php the_field('section_three_intro');?>
-
-        </div><!-- sec-three-intro -->
-
-        <?php }?>
-
-        <?php the_field('section_three_content');?>
-
-      </div><!-- sec-three-col -->
-
-      <div class='sec-three-col preload-section'>
-
-        <div id='sec-three-slider' class="preload-slider">
-
-          <?php if (have_rows('section_three_awards')): ?>
-
-          <?php while (have_rows('section_three_awards')): the_row();?>
-
-          <div class='sec-three-slide'>
-
-            <img class='sec-three-desktop-img lazyload'
-              data-src='<?php bloginfo('template_directory');?>/images/awards-bestlawfirms.jpg' alt='' />
-
-            <span class='sec-three-slide-title'><?php the_sub_field('title');?></span><!-- sec-three-slide-title -->
-
-            <span class='sec-three-descrip'><?php the_sub_field('description');?></span><!-- sec-three-descrip -->
-
-            <div class='sec-three-extended-descrip'>
-
-              <div class="sec-three-mobile-img-wrapper">
-
-                <?php $img = get_sub_field('img');?>
-
-                <?php if ($img) {?>
-
-                <img class='sec-three-mobile-img lazyload' data-src="<?php echo $img['url']; ?>"
-                  alt="<?php echo $img['alt']; ?>" />
-
-                <?php }?>
-
-              </div><!-- sec-three-mobile-img-wrapper -->
-
-              <div class='sec-three-extended-content'>
-
-                <?php the_sub_field('content');?>
-
-                <a class='button sec-three-button'
-                  href='<?php the_sub_field('learn_more_button_link');?>'><?php the_sub_field('learn_more_button_verbiage');?></a>
-                <!-- button sec-three-button -->
-
-              </div><!-- sec-three-extended-content -->
-
-            </div><!-- sec-three-extended-descrip -->
-
-          </div><!-- sec-three-slide -->
-
-          <?php endwhile;?>
-
-          <?php endif;?>
-
-        </div><!-- sec-three-slider -->
-
-        <div id='sec-three-arrow-wrapper'>
-
-          <div class='sec-arrow-three sec-three-arrow-left'>
-
-            <?php echo file_get_contents(get_template_directory() . '/images/arrow-left.svg'); ?>
-
-          </div><!-- sec-arrow-three -->
-
-          <div class='sec-arrow-three sec-three-arrow-right'>
-
-            <?php echo file_get_contents(get_template_directory() . '/images/arrow-right.svg'); ?>
-
-          </div><!-- sec-arrow-three -->
-
-        </div><!-- sec-three-arrow-wrapper -->
-
-      </div><!-- sec-three-col -->
-
-    </div><!-- sec-three-content -->
+    </div><!-- sec-three-content  class="content"-->
 
   </div><!-- sec-three-inner -->
 

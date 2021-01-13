@@ -75,9 +75,25 @@
 
       <div id="sec-two-right-inner">
 
+        <span id='sec-two-title'>case results</span><!-- sec-two-title -->
+
         <div id="sec-two-slder-wrapper">
 
-          <div id="sec-two-slider"></div><!-- /#sec-two-slider -->
+          <div class="sec-two-tablet-arrow sec-two-tablet-arrow-left"></div><!-- /.sec-two-mobile-arrow -->
+
+          <div id="sec-two-slider">
+
+            <div class='sec-two-single-slide'>
+
+              <span class='sec-two-slide-title'>$17 Million Settlement</span><!-- sec-two-slide-title -->
+
+              <span class='sec-two-slide-content'>Nationwide Real Estate Kickback Class Action</span>
+              <!-- sec-two-slide-content -->
+
+            </div>
+            <!-- / sec-two-single-slide -->
+
+          </div><!-- /#sec-two-slider -->
 
           <div id="sec-two-mobile-arrows">
 
@@ -86,6 +102,8 @@
             <div class="sec-two-mobile-arrow sec-two-mobile-arrow-right"></div><!-- /.sec-two-mobile-arrow -->
 
           </div><!-- /#sec-two-mobile-arrows -->
+
+          <div class="sec-two-tablet-arrow sec-two-tablet-arrow-right"></div><!-- /.sec-two-mobile-arrow -->
 
         </div><!-- /#sec-two-slder-wrapper -->
 
