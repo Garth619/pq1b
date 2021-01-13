@@ -6,7 +6,7 @@
   </div>
   <!-- /.sec-one-inner -->
   <picture>
-    <source media='(min-width: 768px)' srcset='<?php bloginfo('template_directory');?>/images/main-hero-tablet.jpg'>
+    <source media='(min-width: 768px)' srcset='<?php bloginfo('template_directory');?>/images/hero-tablet.jpg'>
     <img id='hero' src='<?php bloginfo('template_directory');?>/images/main-hero-mobile.jpg' alt='' />
   </picture>
   <!-- remove 'data-' and 'lazyload' if needs to load on page load -->

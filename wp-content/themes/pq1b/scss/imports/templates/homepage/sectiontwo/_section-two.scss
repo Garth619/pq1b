@@ -1,3 +1,71 @@
 #section-two {
-  height: 1000px;
+  background: $color-six;
+  padding: 24px 32px;
+}
+
+#sec-two-inner {
+}
+
+#sec-two-left {
+}
+
+#sec-two-left-inner {
+  @include flex(space-between);
+}
+
+.sec-two-single-post {
+  flex-basis: 45%;
+  &:nth-of-type(3),
+  &:nth-of-type(4) {
+    display: none;
+  }
+  a.single-cat-title {
+    background: $color-two;
+    display: block;
+    padding: 7px 5px 5px;
+    @include box(110px, 24px);
+    @include type(
+      (
+        size: 10px,
+        height: 12px,
+        spacing: 1px,
+        family: $primaryfont,
+        color: $color-seven,
+        weight: 700,
+        transform: uppercase,
+      )
+    );
+  }
+  a.single-post-content {
+    @include type(
+      (
+        size: 12px,
+        height: 17px,
+        family: $primaryfont,
+        color: $color-eight,
+      )
+    );
+  }
+  span {
+    &.single-content {
+      margin-top: 8px;
+      display: block;
+    }
+    &.learn-more {
+      display: block;
+      margin: 11px 0 0 0;
+      padding-top: 9px;
+      border-top: 2px solid $color-one;
+      @include type(
+        (
+          size: 10px,
+          spacing: 1px,
+          family: $primaryfont,
+          color: $color-one,
+          weight: 700,
+          transform: uppercase,
+        )
+      );
+    }
+  }
 }
