@@ -1,0 +1,77 @@
+#section-six {
+  background: $color-four;
+  padding: 45px 40px 53px;
+}
+
+#sec-six-inner {
+  text-align: center;
+}
+
+span#sec-six-title {
+  display: block;
+  @include type(
+    (
+      size: 30px,
+      height: 33px,
+      family: $primaryfont,
+      color: $color-seven,
+      weight: 700,
+    )
+  );
+  &::after {
+    margin-top: 30px;
+    max-width: 285px;
+    background: $color-one;
+    @include margin_lr;
+    @include contentdisplay();
+    @include box(100%, 3px);
+  }
+}
+
+#sec-six-pa-wrapper {
+  margin-top: 30px;
+  a.sec-six-single-pa {
+    display: block;
+    position: relative;
+    padding: 19px 20px;
+    box-shadow: 0px 1px 20px #000000;
+    max-width: 290px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    @include margin_lr;
+    &:hover {
+      img {
+        opacity: 1;
+      }
+    }
+    span.sec-six-pa-title {
+      display: block;
+      position: relative;
+      z-index: 1;
+      @include type(
+        (
+          size: 14px,
+          height: 16px,
+          spacing: 1.12px,
+          family: $primaryfont,
+          color: $color-seven,
+          weight: 700,
+          align: center,
+          transform: uppercase,
+        )
+      );
+    }
+    img {
+      opacity: 0;
+      object-fit: cover;
+      transition: all 400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+      @include box(100%);
+      @include image();
+      @include abs(0, null, null, 0);
+    }
+  }
+}
+
+a.sec-six-button {
+  margin-top: 32px;
+}
