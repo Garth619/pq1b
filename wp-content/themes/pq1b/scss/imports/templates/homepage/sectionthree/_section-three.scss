@@ -1,0 +1,30 @@
+#sec-three-inner {
+  padding: 55px 40px;
+}
+
+h1#sec-three-header {
+  max-width: 260px;
+  @include margin_lr;
+  @include type(
+    (
+      size: 30px,
+      height: 35px,
+      family: $primaryfont,
+      color: $color-four,
+      weight: 700,
+      align: center,
+    )
+  );
+  &:after {
+    background: $color-one;
+    margin-top: 20px;
+    @include margin_lr;
+    @include box(233px, 3px);
+    @include contentdisplay();
+  }
+}
+
+#sec-three-intro {
+  &.content {
+  }
+}

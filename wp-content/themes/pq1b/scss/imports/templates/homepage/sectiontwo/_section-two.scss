@@ -136,21 +136,35 @@ span#sec-two-title {
 .sec-two-mobile-arrow {
   background: $color-seven;
   margin-top: 36px;
+  cursor: pointer;
   @include box(calc(50% - 1px), 26px);
   @include flex(center, center);
+
   &:after {
     @include contentdisplay();
   }
 }
 
 .sec-two-mobile-arrow-left {
+  &:hover {
+    &:after {
+      @include tri(left, 6px, 6px, $color-two);
+    }
+  }
   &:after {
+    transition: all 200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     @include tri(left, 6px, 6px, $color-one);
   }
 }
 
 .sec-two-mobile-arrow-right {
+  &:hover {
+    &:after {
+      @include tri(right, 6px, 6px, $color-two);
+    }
+  }
   &:after {
+    transition: all 200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     @include tri(right, 6px, 6px, $color-one);
   }
 }
