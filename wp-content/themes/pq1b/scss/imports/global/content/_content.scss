@@ -19,6 +19,18 @@
       )
     );
   }
+  h3 {
+    padding-bottom: 27px;
+    @include type(
+      (
+        size: 18px,
+        height: 25px,
+        family: $primaryfont,
+        weight: 700,
+        transform: uppercase,
+      )
+    );
+  }
   p,
   ul,
   ol {

@@ -150,6 +150,18 @@ $('.at-above-post').wrapInner('<span class="myshare">Share</span>');
     autoplaySpeed: 3000,
   });
 
+  $("#sec-four-slider").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    prevArrow:".sec-four-mobile-arrow-left",
+    nextArrow:".sec-four-mobile-arrow-right",
+    adaptiveHeight:true,
+    dots: false,
+    fade:true,
+  });
+
 //    $("#sec-one-slider").slick({
 //     infinite: true,
 //     slidesToShow: 1,

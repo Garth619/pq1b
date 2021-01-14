@@ -31,7 +31,9 @@
 
       <div id='sec-five-quote'>
 
-        <span id='sec-five-quote-character'>"</span><!-- quote-character -->
+        <span
+          id='sec-five-quote-character'><?php echo file_get_contents(get_template_directory() . '/images/quote.svg'); ?></span>
+        <!-- quote-character -->
 
         <span id='sec-five-quote-content'>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
           sed quia consequuntur magni

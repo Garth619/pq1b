@@ -1,0 +1,42 @@
+#section-five {
+  padding: 50px 40px 35px;
+}
+
+#sec-five-intro {
+  @include type(
+    (
+      size: 17px,
+      height: 25px,
+      family: $primaryfont,
+      color: $color-two,
+      weight: 700,
+    )
+  );
+}
+
+#sec-five-quote {
+  svg {
+    @include margin_lr;
+    @include image();
+  }
+  span#sec-five-quote-content {
+    display: block;
+    margin-top: -42px;
+    @include type(
+      (
+        size: 20px,
+        height: 30px,
+        family: $primaryfont,
+        weight: 700,
+        align: center,
+      )
+    );
+    &::after {
+      margin-top: 45px;
+      margin-bottom: 28px;
+      background: $color-one;
+      @include box(100%, 3px);
+      @include contentdisplay();
+    }
+  }
+}
