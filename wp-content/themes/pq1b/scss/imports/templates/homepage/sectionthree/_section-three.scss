@@ -40,11 +40,27 @@ h1#sec-three-header {
   }
 }
 
+#sec-three-sidebar {
+}
+
 #sec-three-video {
+  max-width: 355px;
+  @include margin_lr;
 }
 
 .pq-video {
   position: relative;
+  &:hover {
+    .pq-video-img {
+      .pq-video-overlay {
+        span.pq-play-button {
+          &::after {
+            @include tri(right, 8px, 9px, $color-two);
+          }
+        }
+      }
+    }
+  }
   .mywistia {
     @include box(100%);
     @include abs(0, null, null, 0, 1);
@@ -64,12 +80,41 @@ h1#sec-three-header {
         border-radius: 50%;
         @include flex(center, center);
         @include box(74px);
-        &:before {
+        &::before {
           background: $color-four;
           border-radius: 50%;
           @include box(59px);
           @include contentdisplay();
         }
+        &::after {
+          transition: all 200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+          @include abs(29px, null, null, 34px, 1);
+          @include contentdisplay();
+          @include tri(right, 8px, 9px, $color-one);
+        }
+      }
+    }
+  }
+}
+
+#sec-three-sidebar-quote {
+  margin-top: 21px;
+  &.content {
+    @include type(
+      (
+        size: 22px,
+        height: 30px,
+        family: $primaryfont,
+        weight: 700,
+        align: center,
+      )
+    );
+    strong {
+      &:nth-of-type(1) {
+        color: $color-one;
+      }
+      &:nth-of-type(2) {
+        color: $color-two;
       }
     }
   }

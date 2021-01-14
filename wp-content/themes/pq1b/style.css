@@ -1284,8 +1284,22 @@ h1#sec-three-header:after {
   text-decoration: none;
 }
 
+#sec-three-video {
+  max-width: 355px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .pq-video {
   position: relative;
+}
+.pq-video:hover .pq-video-img .pq-video-overlay span.pq-play-button::after {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 9px solid #00afcc;
+  border-right: none;
 }
 .pq-video .mywistia {
   width: 100%;
@@ -1321,13 +1335,47 @@ h1#sec-three-header:after {
   width: 74px;
   height: 74px;
 }
-.pq-video .pq-video-img .pq-video-overlay span.pq-play-button:before {
+.pq-video .pq-video-img .pq-video-overlay span.pq-play-button::before {
   background: #031a28;
   border-radius: 50%;
   width: 59px;
   height: 59px;
   content: "";
   display: block;
+}
+.pq-video .pq-video-img .pq-video-overlay span.pq-play-button::after {
+  transition: all 200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+  position: absolute;
+  top: 29px;
+  left: 34px;
+  z-index: 1;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 9px solid #cc0d29;
+  border-right: none;
+}
+
+#sec-three-sidebar-quote {
+  margin-top: 21px;
+}
+#sec-three-sidebar-quote.content {
+  font-size: 22px;
+  line-height: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-style: normal;
+  text-decoration: none;
+}
+#sec-three-sidebar-quote.content strong:nth-of-type(1) {
+  color: #cc0d29;
+}
+#sec-three-sidebar-quote.content strong:nth-of-type(2) {
+  color: #00afcc;
 }
 
 /*# sourceMappingURL=style.css.map */
