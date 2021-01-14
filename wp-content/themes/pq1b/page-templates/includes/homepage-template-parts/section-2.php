@@ -67,21 +67,63 @@
 
       </div><!-- /.sec-two-left-inner -->
 
+      <a href="" class="button sec-two-button">View More News</a>
+
     </div> <!-- /.sec-two-left -->
 
-    <a href="" class="button sec-two-button">View More News</a> <!-- /.button sec-two-button -->
+    <!-- /.button sec-two-button -->
 
-    <div class="sec-two-right">
+    <div id="sec-two-right">
 
       <div id="sec-two-right-inner">
 
         <span id='sec-two-title'>case results</span><!-- sec-two-title -->
 
-        <div id="sec-two-slder-wrapper">
+        <div id="sec-two-slider-wrapper">
 
           <div class="sec-two-tablet-arrow sec-two-tablet-arrow-left"></div><!-- /.sec-two-mobile-arrow -->
 
           <div id="sec-two-slider">
+
+            <div class='sec-two-single-slide'>
+
+              <span class='sec-two-slide-title'>$17 Million Settlement</span><!-- sec-two-slide-title -->
+
+              <span class='sec-two-slide-content'>Nationwide Real Estate Kickback Class Action</span>
+              <!-- sec-two-slide-content -->
+
+            </div>
+            <!-- / sec-two-single-slide -->
+
+            <div class='sec-two-single-slide'>
+
+              <span class='sec-two-slide-title'>$17 Million Settlement</span><!-- sec-two-slide-title -->
+
+              <span class='sec-two-slide-content'>Nationwide Real Estate Kickback Class Action</span>
+              <!-- sec-two-slide-content -->
+
+            </div>
+            <!-- / sec-two-single-slide -->
+
+            <div class='sec-two-single-slide'>
+
+              <span class='sec-two-slide-title'>$17 Million Settlement</span><!-- sec-two-slide-title -->
+
+              <span class='sec-two-slide-content'>Nationwide Real Estate Kickback Class Action</span>
+              <!-- sec-two-slide-content -->
+
+            </div>
+            <!-- / sec-two-single-slide -->
+
+            <div class='sec-two-single-slide'>
+
+              <span class='sec-two-slide-title'>$17 Million Settlement</span><!-- sec-two-slide-title -->
+
+              <span class='sec-two-slide-content'>Nationwide Real Estate Kickback Class Action</span>
+              <!-- sec-two-slide-content -->
+
+            </div>
+            <!-- / sec-two-single-slide -->
 
             <div class='sec-two-single-slide'>
 
@@ -105,7 +147,7 @@
 
           <div class="sec-two-tablet-arrow sec-two-tablet-arrow-right"></div><!-- /.sec-two-mobile-arrow -->
 
-        </div><!-- /#sec-two-slder-wrapper -->
+        </div><!-- /#sec-two-slider-wrapper -->
 
       </div><!-- /#sec-two-right-inner -->
 

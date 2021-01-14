@@ -1,12 +1,12 @@
 #section-two {
   background: $color-six;
-  padding: 24px 32px;
 }
 
 #sec-two-inner {
 }
 
 #sec-two-left {
+  padding: 24px 32px;
 }
 
 #sec-two-left-inner {
@@ -67,5 +67,90 @@
         )
       );
     }
+  }
+}
+
+#sec-two-right {
+  background: $color-four;
+}
+
+#sec-two-right-inner {
+  padding: 36px 21px 23px;
+}
+
+span#sec-two-title {
+  display: block;
+  @include type(
+    (
+      size: 14px,
+      height: 16px,
+      spacing: 2.52px,
+      family: $primaryfont,
+      weight: 700,
+      color: $color-one,
+      align: center,
+      transform: uppercase,
+    )
+  );
+  &:after {
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    @include margin_lr;
+    @include box(162px, 1px);
+    @include contentdisplay();
+  }
+}
+
+#sec-two-slider-wrapper {
+  margin-top: 25px;
+}
+
+#sec-two-slider {
+}
+
+.sec-two-single-slide {
+  span {
+    display: block;
+    color: $color-seven;
+    text-align: center;
+    font-family: $primaryfont;
+    &.sec-two-slide-title {
+      font-weight: 700;
+      @include quick_type(22px, 30px, 0);
+    }
+    &.sec-two-slide-content {
+      margin-top: 13px;
+      max-width: 207px;
+      @include margin_lr;
+      @include quick_type(13px, 17px, 0.26px);
+    }
+  }
+}
+
+#sec-two-mobile-arrows {
+  max-width: 318px;
+  @include margin_lr;
+  @include flex(space-between);
+}
+
+.sec-two-mobile-arrow {
+  background: $color-seven;
+  margin-top: 36px;
+  @include box(calc(50% - 1px), 26px);
+  @include flex(center, center);
+  &:after {
+    @include contentdisplay();
+  }
+}
+
+.sec-two-mobile-arrow-left {
+  &:after {
+    @include tri(left, 6px, 6px, $color-one);
+  }
+}
+
+.sec-two-mobile-arrow-right {
+  &:after {
+    @include tri(right, 6px, 6px, $color-one);
   }
 }
