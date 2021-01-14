@@ -1378,4 +1378,75 @@ h1#sec-three-header:after {
   color: #00afcc;
 }
 
+#section-four {
+  background: #031a28;
+  padding: 42px 40px;
+}
+
+span#sec-four-title {
+  display: block;
+  max-width: 260px;
+  margin-bottom: 33px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+  line-height: 33px;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  font-style: normal;
+  text-decoration: none;
+}
+span#sec-four-title:after {
+  margin-top: 22px;
+  background: #cc0d29;
+  width: 100%;
+  height: 3px;
+  content: "";
+  display: block;
+}
+
+.sec-four-single-slide {
+  padding: 30px 30px 40px;
+  box-shadow: 0px 1px 20px #000000;
+}
+.sec-four-single-slide a {
+  text-decoration: none;
+}
+.sec-four-single-slide a .sec-four-img-wrapper {
+  overflow: hidden;
+}
+.sec-four-single-slide a .sec-four-img-wrapper img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.sec-four-single-slide a span {
+  display: block;
+  text-align: center;
+}
+.sec-four-single-slide a span.sec-four-single-att-title {
+  margin-top: 30px;
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  line-height: 19px;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
+}
+.sec-four-single-slide a span.sec-four-single-position-title {
+  margin-top: 5px;
+  font-size: 13px;
+  line-height: 15px;
+  font-family: "Roboto", sans-serif;
+  color: #00afcc;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=style.css.map */
