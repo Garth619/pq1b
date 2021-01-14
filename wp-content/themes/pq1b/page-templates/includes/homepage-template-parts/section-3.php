@@ -13,17 +13,21 @@
 
     <div id='sec-three-sidebar'>
 
-      <div id='sec-three-video' class="video">
+      <div id='sec-three-video' class="pq-video">
 
         <div class='mywistia'></div><!-- mywistia -->
 
-        <img src='<?php bloginfo('template_directory');?>/images/.jpg' alt='' />
+        <div class='pq-video-img'>
 
-        <div class='video-overlay'>
+          <img src='<?php bloginfo('template_directory');?>/images/video-image.jpg' alt='' />
 
-          <span class='play-button'></span><!-- play-button -->
+          <div class='pq-video-overlay'>
 
-        </div><!-- video-overlay -->
+            <span class='pq-play-button'></span><!-- pq-play-button -->
+
+          </div><!-- pq-video-overlay -->
+
+        </div><!-- pq-video-img -->
 
       </div><!-- sec-three-video -->
 

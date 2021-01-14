@@ -1,0 +1,43 @@
+.content {
+  @include type(
+    (
+      size: 15px,
+      height: 25px,
+      family: $primaryfont,
+      color: $color-four,
+    )
+  );
+  h2 {
+    padding-bottom: 13px;
+    @include type(
+      (
+        size: 17px,
+        height: 20px,
+        family: $primaryfont,
+        color: $color-two,
+        weight: 700,
+      )
+    );
+  }
+  p,
+  ul,
+  ol {
+    margin-bottom: 25px;
+  }
+  ul {
+    list-style: none;
+    li {
+      font-weight: 700;
+      padding-left: 25px;
+      position: relative;
+      margin-bottom: 25px;
+      &:before {
+        background: $color-two;
+        border-radius: 50%;
+        @include abs(8px, null, null, 0);
+        @include box(7px);
+        @include contentdisplay();
+      }
+    }
+  }
+}

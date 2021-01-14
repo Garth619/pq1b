@@ -25,6 +25,52 @@ h1#sec-three-header {
 }
 
 #sec-three-intro {
+  padding-top: 30px;
   &.content {
+    @include type(
+      (
+        size: 17px,
+        height: 25px,
+        family: $primaryfont,
+        color: $color-two,
+        weight: 700,
+        align: center,
+      )
+    );
+  }
+}
+
+#sec-three-video {
+}
+
+.pq-video {
+  position: relative;
+  .mywistia {
+    @include box(100%);
+    @include abs(0, null, null, 0, 1);
+  }
+  .pq-video-img {
+    img {
+      @include image();
+    }
+    .pq-video-overlay {
+      @include box(100%);
+      @include abs(0, null, null, 0);
+      @include flex(center, center);
+      span.pq-play-button {
+        display: block;
+        position: relative;
+        background: rgba(255, 255, 255, 50%);
+        border-radius: 50%;
+        @include flex(center, center);
+        @include box(74px);
+        &:before {
+          background: $color-four;
+          border-radius: 50%;
+          @include box(59px);
+          @include contentdisplay();
+        }
+      }
+    }
   }
 }
