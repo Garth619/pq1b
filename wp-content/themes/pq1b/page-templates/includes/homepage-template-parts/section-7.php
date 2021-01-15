@@ -2,13 +2,13 @@
 
   <div id='sec-seven-inner'>
 
-    <span id='sec-seven-title'>We’ll see you in court. Our court</span><!-- sec-seven-title -->
+    <span id='sec-seven-title'>We’ll see you in court. <i>Our</i> court</span><!-- sec-seven-title -->
 
     <div id='sec-seven-top'>
 
       <div id='sec-seven-img-wrapper'>
 
-        <img src='<?php bloginfo('template_directory');?>/images/.jpg' alt='' />
+        <img src='<?php bloginfo('template_directory');?>/images/homepage-court-image.jpg' alt='' />
 
       </div><!-- sec-seven-img-wrapper -->
 

@@ -1,3 +1,56 @@
 #section-seven {
   background: $color-six;
+  padding: 55px 25px 35px;
+}
+
+#sec-seven-inner {
+}
+
+span#sec-seven-title {
+  display: block;
+  @include type(
+    (
+      size: 30px,
+      height: 40px,
+      family: $primaryfont,
+      color: $color-four,
+      weight: 700,
+      align: center,
+    )
+  );
+  &::after {
+    margin-top: 25px;
+    background: $color-one;
+    @include box(100%, 3px);
+    @include contentdisplay();
+  }
+}
+
+#sec-seven-top,
+#sec-seven-bottom {
+  // padding: 0px 15px;
+}
+
+#sec-seven-top {
+  margin-top: 22px;
+}
+
+#sec-seven-intro {
+  margin-top: 25px;
+  @include type(
+    (
+      size: 17px,
+      height: 25px,
+      family: $primaryfont,
+      color: $color-two,
+      weight: 700,
+    )
+  );
+}
+
+#sec-seven-img-wrapper {
+  overflow: hidden;
+  img {
+    @include image();
+  }
 }
