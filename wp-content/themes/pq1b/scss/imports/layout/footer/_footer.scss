@@ -9,12 +9,16 @@ footer {
 #footer-form-wrapper {
   box-shadow: 0px 1px 20px #000000;
   padding: 0px 22px;
+  padding-bottom: 22px;
   ul {
     margin-top: 35px;
     list-style: none;
     li {
       display: block;
       margin-bottom: 20px;
+      &#field_3_7 {
+        display: none;
+      }
       label {
         display: block;
         margin-bottom: 10px;
@@ -32,7 +36,8 @@ footer {
           color: $color-two;
         }
       }
-      input {
+      input,
+      textarea {
         width: 100%;
         border-radius: 5px;
         padding: 17px 9px;
@@ -44,6 +49,55 @@ footer {
           )
         );
       }
+      textarea {
+        height: 132px;
+      }
+    }
+  }
+  input[type="submit"] {
+    display: block;
+    color: $color-seven;
+    background: $color-two;
+    font-size: 20px;
+    padding: 27px 30px;
+    margin-top: 65px;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    &:hover {
+      background: $color-one;
+    }
+  }
+  .gfield_description,
+  .validation_message {
+    color: $color-two;
+    margin-top: 10px;
+    @include type(
+      (
+        size: 16px,
+        height: 18px,
+        family: $primaryfont,
+        color: $color-two,
+        weight: 700,
+      )
+    );
+  }
+  span#required {
+    display: block;
+    margin-top: -123px;
+    margin-bottom: 130px;
+    @include type(
+      (
+        size: 16px,
+        height: 18px,
+        spacing: 0.8px,
+        family: $primaryfont,
+        color: $color-seven,
+        weight: 700,
+        transform: lowercase,
+      )
+    );
+    span {
+      color: $color-two;
     }
   }
 }

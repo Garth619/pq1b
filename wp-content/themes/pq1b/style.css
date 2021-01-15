@@ -1014,6 +1014,7 @@ footer {
 #footer-form-wrapper {
   box-shadow: 0px 1px 20px #000000;
   padding: 0px 22px;
+  padding-bottom: 22px;
 }
 #footer-form-wrapper ul {
   margin-top: 35px;
@@ -1022,6 +1023,9 @@ footer {
 #footer-form-wrapper ul li {
   display: block;
   margin-bottom: 20px;
+}
+#footer-form-wrapper ul li#field_3_7 {
+  display: none;
 }
 #footer-form-wrapper ul li label {
   display: block;
@@ -1038,7 +1042,8 @@ footer {
 #footer-form-wrapper ul li label span.gfield_required {
   color: #00afcc;
 }
-#footer-form-wrapper ul li input {
+#footer-form-wrapper ul li input,
+#footer-form-wrapper ul li textarea {
   width: 100%;
   border-radius: 5px;
   padding: 17px 9px;
@@ -1048,6 +1053,51 @@ footer {
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
+}
+#footer-form-wrapper ul li textarea {
+  height: 132px;
+}
+#footer-form-wrapper input[type=submit] {
+  display: block;
+  color: #fff;
+  background: #00afcc;
+  font-size: 20px;
+  padding: 27px 30px;
+  margin-top: 65px;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+#footer-form-wrapper input[type=submit]:hover {
+  background: #cc0d29;
+}
+#footer-form-wrapper .gfield_description,
+#footer-form-wrapper .validation_message {
+  color: #00afcc;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Roboto", sans-serif;
+  color: #00afcc;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+}
+#footer-form-wrapper span#required {
+  display: block;
+  margin-top: -123px;
+  margin-bottom: 130px;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  line-height: 18px;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-weight: 700;
+  text-transform: lowercase;
+  font-style: normal;
+  text-decoration: none;
+}
+#footer-form-wrapper span#required span {
+  color: #00afcc;
 }
 
 span#footer-form-title {
