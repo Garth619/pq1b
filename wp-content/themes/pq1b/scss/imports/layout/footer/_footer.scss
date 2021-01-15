@@ -1,0 +1,85 @@
+footer {
+  background: $color-four;
+  padding: 45px 23px;
+}
+
+#footer-inner {
+}
+
+#footer-form-wrapper {
+  box-shadow: 0px 1px 20px #000000;
+  padding: 0px 22px;
+  ul {
+    margin-top: 35px;
+    list-style: none;
+    li {
+      display: block;
+      margin-bottom: 20px;
+      label {
+        display: block;
+        margin-bottom: 10px;
+        @include type(
+          (
+            size: 17px,
+            height: 19px,
+            spacing: 0,
+            family: $primaryfont,
+            color: $color-seven,
+            weight: 700,
+          )
+        );
+        span.gfield_required {
+          color: $color-two;
+        }
+      }
+      input {
+        width: 100%;
+        border-radius: 5px;
+        padding: 17px 9px;
+        @include type(
+          (
+            size: 16px,
+            family: $primaryfont,
+            color: $color-four,
+          )
+        );
+      }
+    }
+  }
+}
+
+span#footer-form-title {
+  display: block;
+  padding-top: 30px;
+  @include type(
+    (
+      size: 35px,
+      height: 40px,
+      family: $primaryfont,
+      color: $color-seven,
+      weight: 700,
+      align: center,
+    )
+  );
+  &:after {
+    background: $color-one;
+    margin-top: 20px;
+    @include margin_lr;
+    @include box(171px, 3px);
+    @include contentdisplay();
+  }
+}
+
+span#footer-form-descrip {
+  display: block;
+  margin-top: 20px;
+  @include type(
+    (
+      size: 18px,
+      height: 25px,
+      family: $primaryfont,
+      color: $color-two,
+      align: center,
+    )
+  );
+}
