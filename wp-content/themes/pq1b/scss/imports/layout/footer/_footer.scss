@@ -142,25 +142,83 @@ span#footer-form-descrip {
 }
 
 #footer-logo {
+  margin-top: 50px;
+  margin-bottom: 25px;
   a {
+    max-width: 273px;
+    display: block;
+    @include margin_lr;
     svg {
+      width: 100%;
     }
   }
 }
 
 .footer-location-col {
+  text-align: center;
+  &:last-of-type {
+    margin-top: 47px;
+  }
 }
 
 span {
   &.location-title {
+    display: block;
+    @include type(
+      (
+        size: 15px,
+        height: 25px,
+        spacing: 3px,
+        family: $primaryfont,
+        color: $color-two,
+        weight: 700,
+        transform: uppercase,
+      )
+    );
   }
   &.location-address {
+    display: block;
+    margin-top: 10px;
+    max-width: 205px;
+    @include margin_lr;
+    @include type(
+      (
+        size: 16px,
+        height: 20px,
+        family: $primaryfont,
+        color: $color-seven,
+      )
+    );
   }
   &.location-phone {
+    display: block;
+    margin-top: 15px;
+    @include margin_lr;
+    @include type(
+      (
+        size: 16px,
+        height: 20px,
+        family: $primaryfont,
+        color: $color-seven,
+      )
+    );
+    span {
+      color: $color-two;
+    }
   }
 }
 
 a.location-button {
+  padding: 7px 14px;
+
+  @include type(
+    (
+      size: 12px,
+      height: 14px,
+      family: $primaryfont,
+      transform: lowercase,
+    )
+  );
 }
 
 #copyright-wrapper {
