@@ -99,8 +99,7 @@
 
               <span class='sec-two-slide-title'>$17 Million Settlement</span><!-- sec-two-slide-title -->
 
-              <span class='sec-two-slide-content'>Nationwide Real Estate Kickback Class Action Nationwide Real Estate
-                Kickback Class Action</span>
+              <span class='sec-two-slide-content'>Nationwide Real Estate Kickback Class Action </span>
               <!-- sec-two-slide-content -->
 
             </div>

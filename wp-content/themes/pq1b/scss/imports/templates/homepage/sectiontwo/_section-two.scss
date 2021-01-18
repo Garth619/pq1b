@@ -1,11 +1,14 @@
 #section-two {
   background: $color-six;
+  position: relative;
+  z-index: 1;
 }
 
 #sec-two-inner {
   @include mq(small-tablet) {
     @include flex();
     margin-right: 30px;
+    height: 280px;
   }
 }
 
@@ -78,16 +81,23 @@
   }
 }
 
+.sec-two-button {
+  margin-top: 15px;
+  @include mq(small-tablet) {
+    margin-top: 45px;
+  }
+}
+
 #sec-two-right {
   @include mq(small-tablet) {
     width: 260px;
     flex-shrink: 0;
-    position: relative;
   }
 }
 
 #sec-two-right-inner {
   background: $color-four;
+  position: relative;
   padding: 36px 21px 23px;
   @include mq(small-tablet) {
     margin-top: -65px;
@@ -170,7 +180,6 @@ span#sec-two-title {
   cursor: pointer;
   @include box(calc(50% - 1px), 26px);
   @include flex(center, center);
-
   &:after {
     @include contentdisplay();
   }
@@ -197,5 +206,47 @@ span#sec-two-title {
   &:after {
     transition: all 200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     @include tri(right, 6px, 6px, $color-one);
+  }
+}
+
+.sec-two-tablet-arrow {
+  background: $color-seven;
+  position: absolute;
+  display: none;
+  box-shadow: 0px 1px 10px #021b2880;
+  top: 130px;
+  @include box(35px, 52px);
+
+  @include mq(small-tablet) {
+    @include flex(center, center);
+  }
+  &:after {
+    @include contentdisplay();
+  }
+}
+
+.sec-two-tablet-arrow-left {
+  left: -15px;
+  &:hover {
+    &::after {
+      @include tri(left, 7px, 7px, $color-two);
+    }
+  }
+  &::after {
+    transition: all 200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    @include tri(left, 7px, 7px, $color-one);
+  }
+}
+
+.sec-two-tablet-arrow-right {
+  right: -15px;
+  &:hover {
+    &::after {
+      @include tri(right, 7px, 7px, $color-two);
+    }
+  }
+  &::after {
+    transition: all 200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    @include tri(right, 7px, 7px, $color-one);
   }
 }

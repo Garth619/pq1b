@@ -135,7 +135,7 @@ $('.at-above-post').wrapInner('<span class="myshare">Share</span>');
 
   
 
-    $("#sec-two-slider").slick({
+  $("#sec-two-slider").slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -145,9 +145,22 @@ $('.at-above-post').wrapInner('<span class="myshare">Share</span>');
     adaptiveHeight:true,
     dots: false,
     fade:true,
-    // speed:800,
-    // autoplay: true,
-    // autoplaySpeed: 3000,
+    speed:800,
+    mobileFirst:true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+        responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          prevArrow:".sec-two-tablet-arrow-left",
+          nextArrow:".sec-two-tablet-arrow-right",
+        },
+      },
+    ],
   });
 
   $("#sec-four-slider").slick({
