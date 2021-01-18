@@ -1,6 +1,9 @@
 #section-seven {
   background: $color-six;
   padding: 55px 25px 35px;
+  @include mq(small-tablet) {
+    padding: 70px 25px 42px;
+  }
 }
 
 #sec-seven-inner {
@@ -18,11 +21,19 @@ span#sec-seven-title {
       align: center,
     )
   );
+  @include mq(small-tablet) {
+    max-width: 412px;
+    @include margin_lr;
+    @include quick_type(40px, 45px, null);
+  }
   &::after {
     margin-top: 25px;
     background: $color-one;
     @include box(100%, 3px);
     @include contentdisplay();
+    @include mq(small-tablet) {
+      margin-top: 33px;
+    }
   }
 }
 
@@ -33,6 +44,9 @@ span#sec-seven-title {
 
 #sec-seven-top {
   margin-top: 22px;
+  @include mq(small-tablet) {
+    margin-top: 33px;
+  }
 }
 
 #sec-seven-intro {
@@ -46,10 +60,18 @@ span#sec-seven-title {
       weight: 700,
     )
   );
+  @include mq(small-tablet) {
+    margin-top: 40px;
+    @include quick_type(18px, 25px, null);
+  }
 }
 
 #sec-seven-img-wrapper {
   overflow: hidden;
+  @include mq(small-tablet) {
+    max-width: 398px;
+    @include margin_lr;
+  }
   img {
     @include image();
   }

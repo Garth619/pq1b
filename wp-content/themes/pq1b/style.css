@@ -2051,6 +2051,11 @@ span#sec-four-title:after {
   background: #031a28;
   padding: 45px 40px 53px;
 }
+@media screen and (min-width: 768px) {
+  #section-six {
+    padding: 65px 48px 60px;
+  }
+}
 
 #sec-six-inner {
   text-align: center;
@@ -2077,9 +2082,23 @@ span#sec-six-title::after {
   width: 100%;
   height: 3px;
 }
+@media screen and (min-width: 768px) {
+  span#sec-six-title::after {
+    margin-top: 35px;
+  }
+}
 
 #sec-six-pa-wrapper {
   margin-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  #sec-six-pa-wrapper {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 0px 18px;
+  }
 }
 #sec-six-pa-wrapper a.sec-six-single-pa {
   display: block;
@@ -2089,8 +2108,18 @@ span#sec-six-title::after {
   max-width: 290px;
   margin-bottom: 20px;
   overflow: hidden;
+  text-decoration: none;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  #sec-six-pa-wrapper a.sec-six-single-pa {
+    height: 90px;
+    margin-bottom: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 #sec-six-pa-wrapper a.sec-six-single-pa:hover img {
   opacity: 1;
@@ -2101,7 +2130,7 @@ span#sec-six-title::after {
   z-index: 1;
   font-size: 14px;
   letter-spacing: 1.12px;
-  line-height: 16px;
+  line-height: 18px;
   font-family: "Roboto", sans-serif;
   color: #fff;
   font-weight: 700;
@@ -2133,6 +2162,11 @@ a.sec-six-button {
   background: #efefef;
   padding: 55px 25px 35px;
 }
+@media screen and (min-width: 768px) {
+  #section-seven {
+    padding: 70px 25px 42px;
+  }
+}
 
 span#sec-seven-title {
   display: block;
@@ -2145,6 +2179,15 @@ span#sec-seven-title {
   font-style: normal;
   text-decoration: none;
 }
+@media screen and (min-width: 768px) {
+  span#sec-seven-title {
+    max-width: 412px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 40px;
+    line-height: 45px;
+  }
+}
 span#sec-seven-title::after {
   margin-top: 25px;
   background: #cc0d29;
@@ -2153,9 +2196,19 @@ span#sec-seven-title::after {
   content: "";
   display: block;
 }
+@media screen and (min-width: 768px) {
+  span#sec-seven-title::after {
+    margin-top: 33px;
+  }
+}
 
 #sec-seven-top {
   margin-top: 22px;
+}
+@media screen and (min-width: 768px) {
+  #sec-seven-top {
+    margin-top: 33px;
+  }
 }
 
 #sec-seven-intro {
@@ -2168,9 +2221,23 @@ span#sec-seven-title::after {
   font-style: normal;
   text-decoration: none;
 }
+@media screen and (min-width: 768px) {
+  #sec-seven-intro {
+    margin-top: 40px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
 
 #sec-seven-img-wrapper {
   overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  #sec-seven-img-wrapper {
+    max-width: 398px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 #sec-seven-img-wrapper img {
   max-width: 100%;
