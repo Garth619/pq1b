@@ -1,5 +1,8 @@
 #section-five {
   padding: 50px 40px 35px;
+  @include mq(small-tablet) {
+    padding: 65px 95px 45px;
+  }
 }
 
 #sec-five-intro {
@@ -12,6 +15,9 @@
       weight: 700,
     )
   );
+  @include mq(small-tablet) {
+    @include quick_type(18px, 25px, null);
+  }
 }
 
 #sec-five-quote {
@@ -31,12 +37,19 @@
         align: center,
       )
     );
+    @include mq(small-tablet) {
+      max-width: 500px;
+      @include quick_type(24px, 35px, null);
+    }
     &::after {
       margin-top: 45px;
       margin-bottom: 28px;
       background: $color-one;
       @include box(100%, 3px);
       @include contentdisplay();
+      @include mq(small-tablet) {
+        margin-top: 55px;
+      }
     }
   }
 }

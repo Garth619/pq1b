@@ -1985,6 +1985,11 @@ span#sec-four-title:after {
 #section-five {
   padding: 50px 40px 35px;
 }
+@media screen and (min-width: 768px) {
+  #section-five {
+    padding: 65px 95px 45px;
+  }
+}
 
 #sec-five-intro {
   font-size: 17px;
@@ -1994,6 +1999,12 @@ span#sec-four-title:after {
   font-weight: 700;
   font-style: normal;
   text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  #sec-five-intro {
+    font-size: 18px;
+    line-height: 25px;
+  }
 }
 
 #sec-five-quote svg {
@@ -2014,6 +2025,13 @@ span#sec-four-title:after {
   font-style: normal;
   text-decoration: none;
 }
+@media screen and (min-width: 768px) {
+  #sec-five-quote span#sec-five-quote-content {
+    max-width: 500px;
+    font-size: 24px;
+    line-height: 35px;
+  }
+}
 #sec-five-quote span#sec-five-quote-content::after {
   margin-top: 45px;
   margin-bottom: 28px;
@@ -2022,6 +2040,11 @@ span#sec-four-title:after {
   height: 3px;
   content: "";
   display: block;
+}
+@media screen and (min-width: 768px) {
+  #sec-five-quote span#sec-five-quote-content::after {
+    margin-top: 55px;
+  }
 }
 
 #section-six {
