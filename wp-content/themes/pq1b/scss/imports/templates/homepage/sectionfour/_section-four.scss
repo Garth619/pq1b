@@ -1,6 +1,6 @@
 #section-four {
   background: $color-four;
-  padding: 42px 40px 55px;
+  padding: 58px 40px 55px;
 }
 
 #sec-four-inner {
@@ -26,10 +26,19 @@ span#sec-four-title {
     background: $color-one;
     @include box(100%, 3px);
     @include contentdisplay();
+    @include mq(small-tablet) {
+      margin-top: 35px;
+    }
   }
 }
 
 #sec-four-slider-wrapper {
+  max-width: 385px;
+  position: relative;
+  @include margin_lr;
+  @include mq(small-tablet) {
+    max-width: 585px;
+  }
 }
 
 #sec-four-slider {
@@ -40,15 +49,24 @@ span#sec-four-title {
     //height:inherit; makes slides the same height when side by side
     margin: 0 20px;
     padding: 20px 0;
+    @include mq(small-tablet) {
+      margin: 0 10px;
+    }
   }
   .slick-list {
     margin: 0 -20px;
+    @include mq(small-tablet) {
+      margin: 0 -10px;
+    }
   }
 }
 
 .sec-four-single-slide {
   padding: 30px 30px 40px;
   box-shadow: 0px 1px 20px #000000;
+  @include mq(small-tablet) {
+    box-shadow: 0px 1px 10px #000000;
+  }
   a {
     text-decoration: none;
     .sec-four-img-wrapper {
@@ -94,6 +112,9 @@ span#sec-four-title {
   margin-top: 15px;
   @include margin_lr;
   @include flex(space-between);
+  @include mq(small-tablet) {
+    display: none;
+  }
 }
 
 .sec-four-mobile-arrow {
@@ -129,5 +150,46 @@ span#sec-four-title {
   &:after {
     transition: all 200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     @include tri(right, 6px, 6px, $color-one);
+  }
+}
+.sec-four-tablet-arrow {
+  background: $color-seven;
+  position: absolute;
+  display: none;
+  box-shadow: 0px 1px 10px #021b2880;
+  top: 130px;
+  z-index: 1;
+  @include box(35px, 52px);
+  @include mq(small-tablet) {
+    @include flex(center, center);
+  }
+  &:after {
+    @include contentdisplay();
+  }
+}
+
+.sec-four-tablet-arrow-left {
+  left: -15px;
+  &:hover {
+    &::after {
+      @include tri(left, 7px, 7px, $color-two);
+    }
+  }
+  &::after {
+    transition: all 200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    @include tri(left, 7px, 7px, $color-one);
+  }
+}
+
+.sec-four-tablet-arrow-right {
+  right: -15px;
+  &:hover {
+    &::after {
+      @include tri(right, 7px, 7px, $color-two);
+    }
+  }
+  &::after {
+    transition: all 200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    @include tri(right, 7px, 7px, $color-one);
   }
 }

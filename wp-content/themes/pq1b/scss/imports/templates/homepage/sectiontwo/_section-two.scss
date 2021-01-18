@@ -216,7 +216,6 @@ span#sec-two-title {
   box-shadow: 0px 1px 10px #021b2880;
   top: 130px;
   @include box(35px, 52px);
-
   @include mq(small-tablet) {
     @include flex(center, center);
   }

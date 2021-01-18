@@ -149,7 +149,7 @@ $('.at-above-post').wrapInner('<span class="myshare">Share</span>');
     mobileFirst:true,
     autoplay: true,
     autoplaySpeed: 3000,
-        responsive: [
+    responsive: [
       {
         breakpoint: 767,
         settings: {
@@ -173,6 +173,20 @@ $('.at-above-post').wrapInner('<span class="myshare">Share</span>');
     adaptiveHeight:true,
     dots: false,
     fade:true,
+    mobileFirst:true,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          fade:false,
+          arrows: true,
+          prevArrow:".sec-four-tablet-arrow-left",
+          nextArrow:".sec-four-tablet-arrow-right",
+        },
+      },
+    ],
   });
 
 //    $("#sec-one-slider").slick({
