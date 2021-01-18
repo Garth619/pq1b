@@ -27,7 +27,7 @@
           <a href="" class="single-post-content">
 
             <span class="single-content">Childhood Sexual Abuse Case Filed Against Santa Ana Unified School
-              District</span><!-- /.single-content -->
+              District </span><!-- /.single-content -->
 
             <span class="learn-more">Learn more</span><!-- /.learn-more -->
 
@@ -99,7 +99,8 @@
 
               <span class='sec-two-slide-title'>$17 Million Settlement</span><!-- sec-two-slide-title -->
 
-              <span class='sec-two-slide-content'>Nationwide Real Estate Kickback Class Action</span>
+              <span class='sec-two-slide-content'>Nationwide Real Estate Kickback Class Action Nationwide Real Estate
+                Kickback Class Action</span>
               <!-- sec-two-slide-content -->
 
             </div>

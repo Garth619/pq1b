@@ -145,9 +145,9 @@ $('.at-above-post').wrapInner('<span class="myshare">Share</span>');
     adaptiveHeight:true,
     dots: false,
     fade:true,
-    speed:800,
-    autoplay: true,
-    autoplaySpeed: 3000,
+    // speed:800,
+    // autoplay: true,
+    // autoplaySpeed: 3000,
   });
 
   $("#sec-four-slider").slick({
