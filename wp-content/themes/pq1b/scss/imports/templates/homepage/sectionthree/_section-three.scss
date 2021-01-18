@@ -1,7 +1,7 @@
 #sec-three-inner {
   padding: 55px 40px;
   @include mq(small-tablet) {
-    padding: 63px 40px;
+    padding: 63px 90px 45px;
   }
 }
 
@@ -137,6 +137,11 @@ h1#sec-three-header {
         align: center,
       )
     );
+    @include mq(small-tablet) {
+      max-width: 480px;
+      @include margin_lr;
+      @include quick_type(25px, 35px, null);
+    }
     strong {
       &:nth-of-type(1) {
         color: $color-one;
@@ -146,4 +151,8 @@ h1#sec-three-header {
       }
     }
   }
+}
+
+#sec-three-content {
+  padding-top: 10px;
 }

@@ -1536,7 +1536,7 @@ span#sec-two-title:after {
 }
 @media screen and (min-width: 768px) {
   #sec-three-inner {
-    padding: 63px 40px;
+    padding: 63px 90px 45px;
   }
 }
 
@@ -1709,11 +1709,24 @@ h1#sec-three-header:after {
   font-style: normal;
   text-decoration: none;
 }
+@media screen and (min-width: 768px) {
+  #sec-three-sidebar-quote.content {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
 #sec-three-sidebar-quote.content strong:nth-of-type(1) {
   color: #cc0d29;
 }
 #sec-three-sidebar-quote.content strong:nth-of-type(2) {
   color: #00afcc;
+}
+
+#sec-three-content {
+  padding-top: 10px;
 }
 
 #section-four {
