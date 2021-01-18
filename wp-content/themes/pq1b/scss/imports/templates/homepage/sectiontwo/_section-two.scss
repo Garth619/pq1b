@@ -21,6 +21,8 @@
 }
 
 #sec-two-left-inner {
+  max-width: 490px;
+  @include margin_lr;
   @include flex(space-between);
 }
 

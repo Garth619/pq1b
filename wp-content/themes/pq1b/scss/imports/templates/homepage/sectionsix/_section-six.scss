@@ -36,12 +36,18 @@ span#sec-six-title {
 
 #sec-six-pa-wrapper {
   margin-top: 30px;
-  @include mq(small-tablet) {
-    margin-top: 50px;
+  max-width: 500px;
+  @include margin_lr;
+  @include mq(large-mobile) {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-auto-rows: auto;
     grid-gap: 0px 18px;
+  }
+  @include mq(small-tablet) {
+    margin-top: 50px;
+    max-width: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   a.sec-six-single-pa {
     display: block;

@@ -19,7 +19,7 @@
 
       <div id='footer-logo'>
 
-        <a href='<?php bloginfo('bloginfo');?>/href'>
+        <a href='<?php bloginfo('url');?>'>
 
           <?php echo file_get_contents(get_template_directory() . '/images/logo.svg'); ?>
 
@@ -27,31 +27,35 @@
 
       </div><!-- footer-logo -->
 
-      <div class='footer-location-col'>
+      <div id='footer-location-inner'>
 
-        <span class='location-title'>Los Angeles</span><!-- location-title -->
+        <div class='footer-location-col'>
 
-        <span class='location-address'>601 S. Figueroa Street<br /> 30th Floor<br /> Los Angeles, CA 90017</span>
-        <!-- location-address -->
+          <span class='location-title'>Los Angeles</span><!-- location-title -->
 
-        <span class='location-phone'>Phone <span>(213) 334-7000</span></span><!-- location-phone -->
+          <span class='location-address'>601 S. Figueroa Street<br /> 30th Floor<br /> Los Angeles, CA 90017</span>
+          <!-- location-address -->
 
-        <a class='button-two location-button' href=''>Get Directions</a><!-- button-two -->
+          <span class='location-phone'>Phone <span>(213) 334-7000</span></span><!-- location-phone -->
 
-      </div><!-- footer-location-col -->
+          <a class='button-two location-button' href=''>Get Directions</a><!-- button-two -->
 
-      <div class='footer-location-col'>
+        </div><!-- footer-location-col -->
 
-        <span class='location-title'>Orange County</span><!-- location-title -->
+        <div class='footer-location-col'>
 
-        <span class='location-address'>605 Town Center Drive<br /> Suite 1700<br /> Costa Mesa, CA 92626</span>
-        <!-- location-address -->
+          <span class='location-title'>Orange County</span><!-- location-title -->
 
-        <span class='location-phone'>Phone <span>(949) 383-2800</span></span><!-- location-phone -->
+          <span class='location-address'>605 Town Center Drive<br /> Suite 1700<br /> Costa Mesa, CA 92626</span>
+          <!-- location-address -->
 
-        <a class='button-two location-button' href=''>Get Directions</a><!-- button-two -->
+          <span class='location-phone'>Phone <span>(949) 383-2800</span></span><!-- location-phone -->
 
-      </div><!-- footer-location-col -->
+          <a class='button-two location-button' href=''>Get Directions</a><!-- button-two -->
+
+        </div><!-- footer-location-col -->
+
+      </div><!-- footer-location-inner -->
 
     </div><!-- footer-location-wrapper -->
 
@@ -73,55 +77,55 @@
 
   </div><!-- copyright-wrapper -->
 
-  <footer>
+</footer>
 
-    <?php wp_footer();?>
+<?php wp_footer();?>
 
-    <?php the_field('footer_scripts', 'option');?>
+<?php the_field('footer_scripts', 'option');?>
 
-    <?php if (is_front_page()) {?>
+<?php if (is_front_page()) {?>
 
-    <script type="text/javascript">
-    jQuery(document).ready(function($) {
+<script type="text/javascript">
+jQuery(document).ready(function($) {
 
-      // above the fold home functions
+  // above the fold home functions
 
-      $("body").addClass("ready");
+  $("body").addClass("ready");
 
 
-    });
+});
 
-    // load all other scripts
+// load all other scripts
 
-    function delayScript(src, timeout, attributes) {
-      return new Promise((resolve, reject) => {
-        setTimeout(() => {
-          const scriptElem = document.createElement("script");
-          scriptElem.src = src;
-          for (const key in attributes) {
-            const attribute = key;
-            const value = attributes[key];
-            scriptElem.setAttribute(attribute, value ? value : "");
-          }
-          scriptElem.addEventListener("readystatechange", () => {
-            resolve();
-          });
-          document.head.appendChild(scriptElem);
-        }, timeout);
+function delayScript(src, timeout, attributes) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const scriptElem = document.createElement("script");
+      scriptElem.src = src;
+      for (const key in attributes) {
+        const attribute = key;
+        const value = attributes[key];
+        scriptElem.setAttribute(attribute, value ? value : "");
+      }
+      scriptElem.addEventListener("readystatechange", () => {
+        resolve();
       });
-    }
+      document.head.appendChild(scriptElem);
+    }, timeout);
+  });
+}
 
-    delayScript("<?php bloginfo('template_directory');?>/js/custom-min.js", 2000);
+delayScript("<?php bloginfo('template_directory');?>/js/custom-min.js", 2000);
 
-    <?php if (get_field('live_chat', 'option')) {?>
+<?php if (get_field('live_chat', 'option')) {?>
 
-    delayScript("<?php the_field('live_chat', 'option');?>", 2000);
+delayScript("<?php the_field('live_chat', 'option');?>", 2000);
 
-    <?php }?>
-    </script>
+<?php }?>
+</script>
 
-    <?php }?>
+<?php }?>
 
-    </body>
+</body>
 
-    </html>
+</html>

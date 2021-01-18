@@ -11,6 +11,8 @@
 
 span#sec-seven-title {
   display: block;
+  max-width: 490px;
+  @include margin_lr;
   @include type(
     (
       size: 30px,
@@ -44,6 +46,8 @@ span#sec-seven-title {
 
 #sec-seven-top {
   margin-top: 22px;
+  max-width: 355px;
+  @include margin_lr;
   @include mq(small-tablet) {
     margin-top: 33px;
   }

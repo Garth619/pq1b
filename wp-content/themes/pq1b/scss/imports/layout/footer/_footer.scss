@@ -1,6 +1,9 @@
 footer {
   background: $color-four;
   padding: 45px 23px;
+  @include mq(small-tablet) {
+    padding: 58px 48px 40px;
+  }
 }
 
 #footer-inner {
@@ -10,15 +13,33 @@ footer {
   box-shadow: 0px 1px 20px #000000;
   padding: 0px 22px;
   padding-bottom: 22px;
+  max-width: 550px;
+  @include margin_lr;
+  @include mq(small-tablet) {
+    max-width: 850px;
+    padding: 0px 44px 22px;
+  }
   ul {
     margin-top: 35px;
     list-style: none;
+    @include mq(small-tablet) {
+      @include flex(space-between, null, null, wrap);
+    }
     li {
       display: block;
       margin-bottom: 20px;
+      @include mq(small-tablet) {
+        flex-basis: calc(50% - 9px);
+      }
       &#field_3_7 {
         display: none;
       }
+      &#field_3_6 {
+        @include mq(small-tablet) {
+          flex-basis: 100%;
+        }
+      }
+
       label {
         display: block;
         margin-bottom: 10px;
@@ -41,6 +62,7 @@ footer {
         width: 100%;
         border-radius: 5px;
         padding: 17px 9px;
+        border: none;
         @include type(
           (
             size: 16px,
@@ -48,6 +70,9 @@ footer {
             color: $color-four,
           )
         );
+        @include mq(small-tablet) {
+          padding: 26px 9px;
+        }
       }
       textarea {
         height: 132px;
@@ -63,6 +88,9 @@ footer {
     margin-top: 65px;
     cursor: pointer;
     transition: all 200ms ease-in-out;
+    @include mq(small-tablet) {
+      margin-top: 36px;
+    }
     &:hover {
       background: $color-one;
     }
@@ -96,6 +124,9 @@ footer {
         transform: lowercase,
       )
     );
+    @include mq(small-tablet) {
+      margin-top: -100px;
+    }
     span {
       color: $color-two;
     }
@@ -115,12 +146,20 @@ span#footer-form-title {
       align: center,
     )
   );
+  @include mq(small-tablet) {
+    padding-top: 70px;
+    @include quick_type(45px, 50px, null);
+  }
   &:after {
     background: $color-one;
     margin-top: 20px;
     @include margin_lr;
     @include box(171px, 3px);
     @include contentdisplay();
+    @include mq(small-tablet) {
+      margin-top: 30px;
+      @include box(579px, 3px);
+    }
   }
 }
 
@@ -144,13 +183,28 @@ span#footer-form-descrip {
 #footer-logo {
   margin-top: 50px;
   margin-bottom: 25px;
+  @include mq(small-tablet) {
+    margin-top: 65px;
+    margin-bottom: 50px;
+  }
   a {
     max-width: 273px;
     display: block;
     @include margin_lr;
+    @include mq(small-tablet) {
+      max-width: 315px;
+    }
     svg {
       width: 100%;
     }
+  }
+}
+
+#footer-location-inner {
+  @include mq(small-tablet) {
+    max-width: 515px;
+    @include margin_lr;
+    @include flex(space-between);
   }
 }
 
@@ -158,6 +212,9 @@ span#footer-form-descrip {
   text-align: center;
   &:last-of-type {
     margin-top: 47px;
+    @include mq(small-tablet) {
+      margin-top: 0;
+    }
   }
 }
 
@@ -189,6 +246,9 @@ span {
         color: $color-seven,
       )
     );
+    @include mq(small-tablet) {
+      margin-top: 15px;
+    }
   }
   &.location-phone {
     display: block;
@@ -210,7 +270,7 @@ span {
 
 a.location-button {
   padding: 7px 14px;
-
+  margin-top: 20px;
   @include type(
     (
       size: 12px,
@@ -219,18 +279,71 @@ a.location-button {
       transform: lowercase,
     )
   );
+  @include mq(small-tablet) {
+    margin-top: 32px;
+  }
 }
 
 #copyright-wrapper {
+  margin-top: 40px;
+  padding-top: 17px;
+  text-align: center;
+  border-top: 1px solid #03293d;
+  @include mq(small-tablet) {
+    margin-top: 60px;
+  }
   ul {
+    list-style: none;
+    text-align: center;
+    max-width: 276px;
+    @include margin_lr;
+    @include mq(small-tablet) {
+      max-width: 100%;
+    }
     li {
+      display: inline-block;
+      @include type(
+        (
+          size: 13px,
+          height: 22px,
+          spacing: 0.33px,
+          family: $primaryfont,
+          color: $color-seven,
+        )
+      );
+      &::after {
+        margin: 0 11px 0px 9px;
+        @include contentdisplay(inline-block, "|");
+      }
+      &:first-of-type {
+        &::after {
+          margin: 0 0px 0px 9px;
+          @include mq(small-tablet) {
+            margin: 0 11px 0px 9px;
+          }
+        }
+      }
+      &:last-of-type {
+        &::after {
+          display: none;
+        }
+      }
       a {
+        text-decoration: none;
+        color: $color-seven;
+        transition: all 200ms ease-in-out;
+        &:hover {
+          color: $color-two;
+        }
       }
     }
   }
 }
 
 a#ilawyer {
+  margin-top: 20px;
+  display: inline-block;
   svg {
+    @include image();
   }
 }
