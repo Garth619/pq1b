@@ -7,7 +7,7 @@
 
 h1#sec-three-header {
   max-width: 260px;
-  @include margin_lr;
+  @include margin_lr();
   @include type(
     (
       size: 30px,
@@ -19,13 +19,13 @@ h1#sec-three-header {
     )
   );
   @include mq(small-tablet) {
-    max-width: 360px;
+    max-width: 100%;
     @include quick_type(40px, 50px, null);
   }
   &:after {
     background: $color-one;
     margin-top: 20px;
-    @include margin_lr;
+    @include margin_lr();
     @include box(233px, 3px);
     @include contentdisplay();
     @include mq(small-tablet) {
@@ -53,6 +53,7 @@ h1#sec-three-header {
     );
     @include mq(small-tablet) {
       max-width: 545px;
+      @include margin_lr();
       @include quick_type(18px, 30px, null);
     }
   }
@@ -63,7 +64,7 @@ h1#sec-three-header {
 
 #sec-three-video {
   max-width: 355px;
-  @include margin_lr;
+  @include margin_lr();
 }
 
 .pq-video {
@@ -139,7 +140,7 @@ h1#sec-three-header {
     );
     @include mq(small-tablet) {
       max-width: 480px;
-      @include margin_lr;
+      @include margin_lr();
       @include quick_type(25px, 35px, null);
     }
     strong {

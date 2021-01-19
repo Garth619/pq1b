@@ -25,7 +25,7 @@ span#sec-six-title {
     margin-top: 30px;
     max-width: 285px;
     background: $color-one;
-    @include margin_lr;
+    @include margin_lr();
     @include contentdisplay();
     @include box(100%, 3px);
     @include mq(small-tablet) {
@@ -37,7 +37,7 @@ span#sec-six-title {
 #sec-six-pa-wrapper {
   margin-top: 30px;
   max-width: 500px;
-  @include margin_lr;
+  @include margin_lr();
   @include mq(large-mobile) {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -46,7 +46,7 @@ span#sec-six-title {
   }
   @include mq(small-tablet) {
     margin-top: 50px;
-    max-width: 100%;
+    max-width: 760px;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   a.sec-six-single-pa {
@@ -58,10 +58,11 @@ span#sec-six-title {
     margin-bottom: 20px;
     overflow: hidden;
     text-decoration: none;
-    @include margin_lr;
+    @include margin_lr();
     @include mq(small-tablet) {
       height: 90px;
       margin-bottom: 22px;
+      padding: 19px 40px;
       @include flex(center, center);
     }
     &:hover {

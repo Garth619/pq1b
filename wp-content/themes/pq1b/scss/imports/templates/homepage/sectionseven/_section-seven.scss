@@ -2,7 +2,7 @@
   background: $color-six;
   padding: 55px 25px 35px;
   @include mq(small-tablet) {
-    padding: 70px 25px 42px;
+    padding: 70px 95px 42px;
   }
 }
 
@@ -12,7 +12,7 @@
 span#sec-seven-title {
   display: block;
   max-width: 490px;
-  @include margin_lr;
+  @include margin_lr();
   @include type(
     (
       size: 30px,
@@ -25,7 +25,7 @@ span#sec-seven-title {
   );
   @include mq(small-tablet) {
     max-width: 412px;
-    @include margin_lr;
+    @include margin_lr();
     @include quick_type(40px, 45px, null);
   }
   &::after {
@@ -47,7 +47,7 @@ span#sec-seven-title {
 #sec-seven-top {
   margin-top: 22px;
   max-width: 355px;
-  @include margin_lr;
+  @include margin_lr();
   @include mq(small-tablet) {
     margin-top: 33px;
   }
@@ -74,7 +74,7 @@ span#sec-seven-title {
   overflow: hidden;
   @include mq(small-tablet) {
     max-width: 398px;
-    @include margin_lr;
+    @include margin_lr();
   }
   img {
     @include image();

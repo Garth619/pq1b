@@ -10,6 +10,7 @@
   </div><!-- /.sec-one-inner -->
 
   <picture>
+    <source media='(min-width: 1180px)' srcset='<?php bloginfo('template_directory');?>/images/main-hero-1200.jpg'>
     <source media='(min-width: 768px)' srcset='<?php bloginfo('template_directory');?>/images/hero-tablet.jpg'>
     <img id='hero' src='<?php bloginfo('template_directory');?>/images/main-hero-mobile.jpg' alt='' />
   </picture>

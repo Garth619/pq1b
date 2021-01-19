@@ -18,7 +18,7 @@
   }
   @include mq(small-monitor) {
     max-width: 1650px;
-    @include margin_lr;
+    @include margin_lr();
   }
 }
 
@@ -43,7 +43,7 @@ span#sec-ten-title {
   display: block;
   max-width: 225px;
   margin-bottom: 13px;
-  @include margin_lr;
+  @include margin_lr();
   @include type(
     (
       size: 35px,
@@ -66,7 +66,7 @@ span#sec-ten-title {
 
 #sec-ten-content {
   max-width: 350px;
-  @include margin_lr;
+  @include margin_lr();
   @include mq(small-tablet) {
     max-width: 480px;
   }
@@ -109,7 +109,7 @@ span#sec-ten-title {
     padding-top: 10px;
     max-width: 685px;
     min-height: 103px;
-    @include margin_lr;
+    @include margin_lr();
     @include flex(space-between, center);
   }
   @include mq(small-laptop) {
@@ -124,7 +124,7 @@ span#sec-ten-title {
 #sec-ten-slider {
   @include mq(small-tablet) {
     width: calc(100% - 145px);
-    @include margin_lr;
+    @include margin_lr();
   }
   .slick-slide {
     margin: 0 10px;

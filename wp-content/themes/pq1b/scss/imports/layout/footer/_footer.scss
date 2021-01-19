@@ -7,16 +7,19 @@ footer {
 }
 
 #footer-inner {
+  max-width: 550px;
+  @include margin_lr();
+  @include mq(small-tablet) {
+    max-width: 650px;
+  }
 }
 
 #footer-form-wrapper {
   box-shadow: 0px 1px 20px #000000;
   padding: 0px 22px;
   padding-bottom: 22px;
-  max-width: 550px;
-  @include margin_lr;
+
   @include mq(small-tablet) {
-    max-width: 850px;
     padding: 0px 44px 22px;
   }
   ul {
@@ -153,7 +156,7 @@ span#footer-form-title {
   &:after {
     background: $color-one;
     margin-top: 20px;
-    @include margin_lr;
+    @include margin_lr();
     @include box(171px, 3px);
     @include contentdisplay();
     @include mq(small-tablet) {
@@ -190,7 +193,7 @@ span#footer-form-descrip {
   a {
     max-width: 273px;
     display: block;
-    @include margin_lr;
+    @include margin_lr();
     @include mq(small-tablet) {
       max-width: 315px;
     }
@@ -203,7 +206,7 @@ span#footer-form-descrip {
 #footer-location-inner {
   @include mq(small-tablet) {
     max-width: 515px;
-    @include margin_lr;
+    @include margin_lr();
     @include flex(space-between);
   }
 }
@@ -237,7 +240,7 @@ span {
     display: block;
     margin-top: 10px;
     max-width: 205px;
-    @include margin_lr;
+    @include margin_lr();
     @include type(
       (
         size: 16px,
@@ -253,7 +256,7 @@ span {
   &.location-phone {
     display: block;
     margin-top: 15px;
-    @include margin_lr;
+    @include margin_lr();
     @include type(
       (
         size: 16px,
@@ -296,7 +299,7 @@ a.location-button {
     list-style: none;
     text-align: center;
     max-width: 276px;
-    @include margin_lr;
+    @include margin_lr();
     @include mq(small-tablet) {
       max-width: 100%;
     }

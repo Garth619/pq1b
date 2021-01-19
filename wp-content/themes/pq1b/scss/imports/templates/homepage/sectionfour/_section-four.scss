@@ -13,7 +13,7 @@ span#sec-four-title {
   display: block;
   max-width: 260px;
   margin-bottom: 18px;
-  @include margin_lr;
+  @include margin_lr();
   @include type(
     (
       size: 30px,
@@ -39,14 +39,15 @@ span#sec-four-title {
 #sec-four-slider-wrapper {
   max-width: 385px;
   position: relative;
-  @include margin_lr;
+  @include margin_lr();
   @include mq(small-tablet) {
-    max-width: 100%;
+    max-width: 805px;
     @include flex(space-between, center);
   }
 }
 
 #sec-four-slider {
+  //height: 353px;
   @include mq(small-tablet) {
     width: calc(100% - 140px);
   }
@@ -71,7 +72,7 @@ span#sec-four-title {
 
 .sec-four-single-slide {
   padding: 30px 30px 40px;
-  height: 353px;
+  //height: 353px;
   box-shadow: 0px 1px 20px #000000;
   @include mq(small-tablet) {
     padding: 40px 27px 40px;
@@ -120,7 +121,7 @@ span#sec-four-title {
 #sec-four-mobile-arrows {
   max-width: 318px;
   margin-top: 15px;
-  @include margin_lr;
+  @include margin_lr();
   @include flex(space-between);
   @include mq(small-tablet) {
     display: none;

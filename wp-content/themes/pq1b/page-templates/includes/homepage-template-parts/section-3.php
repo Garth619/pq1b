@@ -2,7 +2,7 @@
 
   <div id='sec-three-inner'>
 
-    <h1 id='sec-three-header'>Trial Lawyers for High-Stakes Cases</h1><!-- sec-three-header -->
+    <h1 id='sec-three-header'>Trial Lawyers for<br /> High-Stakes Cases</h1><!-- sec-three-header -->
 
     <div id='sec-three-intro' class="content">
 

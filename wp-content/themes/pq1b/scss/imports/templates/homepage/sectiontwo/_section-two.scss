@@ -9,20 +9,22 @@
     @include flex();
     margin-right: 30px;
     height: 280px;
+    max-width: 850px;
+    @include margin_lr();
   }
 }
 
 #sec-two-left {
   padding: 24px 32px;
   @include mq(small-tablet) {
-    padding: 53px 32px;
+    padding: 53px 50px 53px 36px;
     flex-grow: 1;
   }
 }
 
 #sec-two-left-inner {
   max-width: 490px;
-  @include margin_lr;
+  @include margin_lr();
   @include flex(space-between);
 }
 
@@ -94,6 +96,7 @@
   @include mq(small-tablet) {
     width: 260px;
     flex-shrink: 0;
+    margin-right: 35px;
   }
 }
 
@@ -126,7 +129,7 @@ span#sec-two-title {
   &:after {
     margin-top: 15px;
     background: rgba(255, 255, 255, 0.5);
-    @include margin_lr;
+    @include margin_lr();
     @include box(162px, 1px);
     @include contentdisplay();
   }
@@ -158,7 +161,7 @@ span#sec-two-title {
     &.sec-two-slide-content {
       margin-top: 13px;
       max-width: 207px;
-      @include margin_lr;
+      @include margin_lr();
       @include quick_type(13px, 17px, 0.26px);
       @include mq(small-tablet) {
         @include quick_type(14px, 20px, 0.26px);
@@ -169,7 +172,7 @@ span#sec-two-title {
 
 #sec-two-mobile-arrows {
   max-width: 318px;
-  @include margin_lr;
+  @include margin_lr();
   @include flex(space-between);
   @include mq(small-tablet) {
     display: none;

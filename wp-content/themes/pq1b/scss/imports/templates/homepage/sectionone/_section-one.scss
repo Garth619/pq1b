@@ -9,10 +9,15 @@
   text-align: center;
   padding: 47px 50px 65px;
   max-width: 470px;
-  @include margin_lr;
+  @include margin_lr();
   @include mq(small-tablet) {
     max-width: 650px;
     padding: 61px 50px 109px;
+    text-align: left;
+  }
+  @include mq(small-laptop) {
+    max-width: 100%;
+    padding: 130px 160px 204px;
   }
   span {
     display: block;
@@ -28,6 +33,10 @@
       );
       @include mq(small-tablet) {
         @include quick_type(40px, 50px, null);
+      }
+      @include mq(small-laptop) {
+        max-width: 666px;
+        @include quick_type(50px, 60px, null);
       }
     }
     &.sec-one-name {
@@ -49,12 +58,17 @@
         margin-top: 18px;
         margin-bottom: 25px;
         max-width: 68px;
-        @include margin_lr;
+        @include margin_lr();
         @include contentdisplay();
         @include box(100%, 4px);
         @include mq(small-tablet) {
           max-width: 476px;
           margin-top: 23px;
+        }
+        @include mq(small-laptop) {
+          margin-top: 45px;
+          @include margin_lr(0);
+          @include box(624px, 4px);
         }
       }
     }

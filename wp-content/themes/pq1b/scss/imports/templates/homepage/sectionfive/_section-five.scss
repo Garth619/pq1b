@@ -22,7 +22,7 @@
 
 #sec-five-quote {
   svg {
-    @include margin_lr;
+    @include margin_lr();
     @include image();
   }
   span#sec-five-quote-content {
@@ -39,6 +39,7 @@
     );
     @include mq(small-tablet) {
       max-width: 500px;
+      @include margin_lr();
       @include quick_type(24px, 35px, null);
     }
     &::after {

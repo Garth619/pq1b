@@ -182,6 +182,7 @@ $('.at-above-post').wrapInner('<span class="myshare">Share</span>');
           slidesToScroll: 2,
           fade:false,
           arrows: true,
+          adaptiveHeight:false,
           prevArrow:".sec-four-tablet-arrow-left",
           nextArrow:".sec-four-tablet-arrow-right",
         },
