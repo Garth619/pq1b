@@ -11,61 +11,71 @@
 
     </div><!-- sec-three-intro -->
 
-    <div id='sec-three-sidebar'>
+    <div id='sec-three-content-wrapper'>
 
-      <div id='sec-three-video' class="pq-video">
+      <div id='sec-three-sidebar'>
 
-        <div class='mywistia'></div><!-- mywistia -->
+        <div id='sec-three-video' class="pq-video">
 
-        <div class='pq-video-img'>
+          <div class='mywistia'></div><!-- mywistia -->
 
-          <img src='<?php bloginfo('template_directory');?>/images/video-image.jpg' alt='' />
+          <div class='pq-video-img'>
 
-          <div class='pq-video-overlay'>
+            <img src='<?php bloginfo('template_directory');?>/images/video-image.jpg' alt='' />
 
-            <span class='pq-play-button'></span><!-- pq-play-button -->
+            <div class='pq-video-overlay'>
 
-          </div><!-- pq-video-overlay -->
+              <span class='pq-play-button'></span><!-- pq-play-button -->
 
-        </div><!-- pq-video-img -->
+            </div><!-- pq-video-overlay -->
 
-      </div><!-- sec-three-video -->
+          </div><!-- pq-video-img -->
 
-      <div id='sec-three-sidebar-quote' class="content">
+        </div><!-- sec-three-video -->
 
-        <p><strong>We listen to people.</strong> We have taken and prevailed on cases that other lawyers have dismissed
-          because we put in
-          the work and <strong>are not afraid to fight for our clients.</strong></p>
+        <div id='sec-three-sidebar-quote' class="content">
 
-      </div><!-- sec-three-sidebar-quote -->
+          <p><strong>We listen to people.</strong> We have taken and prevailed on cases that other lawyers have
+            dismissed
+            because we put in
+            the work and <strong>are not afraid to fight for our clients.</strong></p>
 
-    </div><!-- sec-three-sidebar -->
+        </div><!-- sec-three-sidebar-quote -->
 
-    <div id='sec-three-content' class="content">
+      </div><!-- sec-three-sidebar -->
 
-      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-        aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+      <div id='sec-three-content' class="content">
 
-      <h2>Why choose us?</h2>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+        </p>
 
-      <ul>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua.</li>
-        <li>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</li>
-        <li>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</li>
-      </ul>
+        <h2>Why choose us?</h2>
 
-      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-        aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-      <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-        eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-        consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam
-        quaerat voluptatem.</p>
+        <ul>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</li>
+          <li>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</li>
+          <li>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</li>
+        </ul>
 
-    </div><!-- sec-three-content  class="content"-->
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+        </p>
+        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+          dolores
+          eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+          consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
+          aliquam
+          quaerat voluptatem.</p>
+
+      </div><!-- sec-three-content -->
+
+    </div><!-- sec-three-content-wrapper -->
 
   </div><!-- sec-three-inner -->
 

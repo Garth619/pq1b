@@ -3,6 +3,9 @@
   @include mq(small-tablet) {
     padding: 63px 90px 45px;
   }
+  @include mq(small-laptop) {
+    padding: 75px 137px 90px;
+  }
 }
 
 h1#sec-three-header {
@@ -22,6 +25,9 @@ h1#sec-three-header {
     max-width: 100%;
     @include quick_type(40px, 50px, null);
   }
+  @include mq(small-laptop) {
+    @include quick_type(55px, 65px, null);
+  }
   &:after {
     background: $color-one;
     margin-top: 20px;
@@ -40,6 +46,9 @@ h1#sec-three-header {
   @include mq(small-tablet) {
     padding-bottom: 10px;
   }
+  @include mq(small-laptop) {
+    padding-top: 45px;
+  }
   &.content {
     @include type(
       (
@@ -56,10 +65,26 @@ h1#sec-three-header {
       @include margin_lr();
       @include quick_type(18px, 30px, null);
     }
+    @include mq(small-laptop) {
+      max-width: 835px;
+      @include margin_lr();
+      @include quick_type(20px, 34px, null);
+    }
+  }
+}
+
+#sec-three-content-wrapper {
+  @include mq(small-laptop) {
+    @include flex(space-between);
   }
 }
 
 #sec-three-sidebar {
+  @include mq(small-laptop) {
+    flex-basis: 370px;
+    flex-shrink: 0;
+    margin-top: 20px;
+  }
 }
 
 #sec-three-video {
@@ -128,6 +153,9 @@ h1#sec-three-header {
 
 #sec-three-sidebar-quote {
   margin-top: 21px;
+  @include mq(small-laptop) {
+    margin-top: 33px;
+  }
   &.content {
     @include type(
       (
@@ -143,6 +171,11 @@ h1#sec-three-header {
       @include margin_lr();
       @include quick_type(25px, 35px, null);
     }
+    @include mq(small-laptop) {
+      text-align: left;
+      padding-right: 6px;
+      @include quick_type(35px, 50px, null);
+    }
     strong {
       &:nth-of-type(1) {
         color: $color-one;
@@ -156,4 +189,5 @@ h1#sec-three-header {
 
 #sec-three-content {
   padding-top: 10px;
+  margin-left: 57px;
 }

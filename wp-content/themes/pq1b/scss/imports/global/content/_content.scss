@@ -7,6 +7,9 @@
       color: $color-four,
     )
   );
+  @include mq(small-laptop) {
+    @include quick_type(16px, 30px, null);
+  }
   h2 {
     padding-bottom: 13px;
     @include type(
@@ -18,6 +21,9 @@
         weight: 700,
       )
     );
+    @include mq(small-laptop) {
+      @include quick_type(20px, 30px, null);
+    }
   }
   h3 {
     padding-bottom: 27px;
@@ -43,6 +49,9 @@
       padding-left: 25px;
       position: relative;
       margin-bottom: 25px;
+      @include mq(small-laptop) {
+        line-height: 25px;
+      }
       &:before {
         background: $color-two;
         border-radius: 50%;
