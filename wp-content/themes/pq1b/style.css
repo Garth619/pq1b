@@ -2238,6 +2238,11 @@ h1#sec-three-header:after {
     padding: 58px 35px 80px;
   }
 }
+@media screen and (min-width: 1170px) {
+  #section-four {
+    padding: 74px 26px 80px;
+  }
+}
 
 span#sec-four-title {
   display: block;
@@ -2283,6 +2288,11 @@ span#sec-four-title:after {
     align-items: center;
   }
 }
+@media screen and (min-width: 1170px) {
+  #sec-four-slider-wrapper {
+    max-width: 100%;
+  }
+}
 
 @media screen and (min-width: 768px) {
   #sec-four-slider {
@@ -2313,7 +2323,7 @@ span#sec-four-title:after {
 }
 @media screen and (min-width: 768px) {
   .sec-four-single-slide {
-    padding: 40px 27px 40px;
+    padding: 30px 30px 40px;
     box-shadow: 0px 1px 10px #000000;
   }
 }

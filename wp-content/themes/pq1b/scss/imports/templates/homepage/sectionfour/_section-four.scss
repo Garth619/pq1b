@@ -4,6 +4,9 @@
   @include mq(small-tablet) {
     padding: 58px 35px 80px;
   }
+  @include mq(small-laptop) {
+    padding: 74px 26px 80px;
+  }
 }
 
 #sec-four-inner {
@@ -44,6 +47,9 @@ span#sec-four-title {
     max-width: 805px;
     @include flex(space-between, center);
   }
+  @include mq(small-laptop) {
+    max-width: 100%;
+  }
 }
 
 #sec-four-slider {
@@ -75,7 +81,7 @@ span#sec-four-title {
   //height: 353px;
   box-shadow: 0px 1px 20px #000000;
   @include mq(small-tablet) {
-    padding: 40px 27px 40px;
+    padding: 30px 30px 40px;
     box-shadow: 0px 1px 10px #000000;
   }
   a {

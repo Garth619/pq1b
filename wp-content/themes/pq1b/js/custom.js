@@ -186,6 +186,16 @@ $('.at-above-post').wrapInner('<span class="myshare">Share</span>');
           prevArrow:".sec-four-tablet-arrow-left",
           nextArrow:".sec-four-tablet-arrow-right",
         },
+        breakpoint: 1180,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          fade:false,
+          arrows: true,
+          adaptiveHeight:false,
+          prevArrow:".sec-four-tablet-arrow-left",
+          nextArrow:".sec-four-tablet-arrow-right",
+        },
       },
     ],
   });
