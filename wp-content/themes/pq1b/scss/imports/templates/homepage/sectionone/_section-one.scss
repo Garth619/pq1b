@@ -67,8 +67,8 @@
         }
         @include mq(small-laptop) {
           margin-top: 45px;
+          max-width: 624px;
           @include margin_lr(0);
-          @include box(624px, 4px);
         }
       }
     }

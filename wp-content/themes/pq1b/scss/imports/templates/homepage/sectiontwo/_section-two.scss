@@ -12,6 +12,10 @@
     max-width: 850px;
     @include margin_lr();
   }
+  @include mq(small-laptop) {
+    height: 380px;
+    max-width: 100%;
+  }
 }
 
 #sec-two-left {
@@ -20,25 +24,39 @@
     padding: 53px 50px 53px 36px;
     flex-grow: 1;
   }
+  @include mq(small-laptop) {
+    padding: 70px 70px 65px 39px;
+  }
 }
 
 #sec-two-left-inner {
   max-width: 490px;
   @include margin_lr();
   @include flex(space-between);
+  @include mq(small-laptop) {
+    max-width: 100%;
+  }
 }
 
 .sec-two-single-post {
   flex-basis: 45%;
+  @include mq(small-laptop) {
+    flex-basis: 28%;
+  }
   &:nth-of-type(3),
   &:nth-of-type(4) {
     display: none;
   }
+  &:nth-of-type(3) {
+    @include mq(small-laptop) {
+      display: block;
+    }
+  }
   a.single-cat-title {
     background: $color-two;
-    display: block;
-    padding: 7px 5px 5px;
-    @include box(110px, 24px);
+    display: inline-block;
+    padding: 7px 54px 5px 10px;
+    height: 24px;
     @include type(
       (
         size: 10px,
@@ -50,6 +68,11 @@
         transform: uppercase,
       )
     );
+    @include mq(small-laptop) {
+      font-size: 13px;
+      width: 100%;
+      letter-spacing: 2.6px;
+    }
   }
   a.single-post-content {
     @include type(
@@ -60,11 +83,17 @@
         color: $color-eight,
       )
     );
+    @include mq(small-laptop) {
+      @include quick_type(15px, 22px, null);
+    }
   }
   span {
     &.single-content {
       margin-top: 8px;
       display: block;
+      @include mq(small-laptop) {
+        margin-top: 12px;
+      }
     }
     &.learn-more {
       display: block;
@@ -81,6 +110,11 @@
           transform: uppercase,
         )
       );
+      @include mq(small-laptop) {
+        margin-top: 40px;
+        font-size: 14px;
+        padding-top: 18px;
+      }
     }
   }
 }
@@ -90,13 +124,19 @@
   @include mq(small-tablet) {
     margin-top: 45px;
   }
+  @include mq(small-laptop) {
+    display: none;
+  }
 }
-
 #sec-two-right {
   @include mq(small-tablet) {
     width: 260px;
     flex-shrink: 0;
     margin-right: 35px;
+  }
+  @include mq(small-laptop) {
+    width: 387px;
+    margin-right: 65px;
   }
 }
 
@@ -107,6 +147,11 @@
   @include mq(small-tablet) {
     margin-top: -65px;
     min-height: 307px;
+  }
+  @include mq(small-laptop) {
+    margin-top: -140px;
+    padding: 75px 21px 48px;
+    min-height: 447px;
   }
 }
 
@@ -124,7 +169,8 @@ span#sec-two-title {
       transform: uppercase,
     )
   );
-  @include mq(small-tablet) {
+  @include mq(small-laptop) {
+    @include quick_type(17px, 19px, null);
   }
   &:after {
     margin-top: 15px;
@@ -132,6 +178,10 @@ span#sec-two-title {
     @include margin_lr();
     @include box(162px, 1px);
     @include contentdisplay();
+    @include mq(small-laptop) {
+      margin-top: 28px;
+      @include box(245px, 1px);
+    }
   }
 }
 
@@ -153,9 +203,17 @@ span#sec-two-title {
     font-family: $primaryfont;
     &.sec-two-slide-title {
       font-weight: 700;
+      max-width: 280px;
+      @include margin_lr();
       @include quick_type(22px, 30px, 0);
       @include mq(small-tablet) {
+        max-width: 100%;
+        padding: 0px 30px;
         @include quick_type(25px, 30px, 0);
+      }
+      @include mq(small-laptop) {
+        padding: 0px 50px;
+        @include quick_type(40px, 50px, 0);
       }
     }
     &.sec-two-slide-content {
@@ -165,6 +223,11 @@ span#sec-two-title {
       @include quick_type(13px, 17px, 0.26px);
       @include mq(small-tablet) {
         @include quick_type(14px, 20px, 0.26px);
+      }
+      @include mq(small-laptop) {
+        margin-top: 25px;
+        max-width: 267px;
+        @include quick_type(18px, 24px, null);
       }
     }
   }
@@ -224,6 +287,10 @@ span#sec-two-title {
   @include mq(small-tablet) {
     @include flex(center, center);
   }
+  @include mq(small-laptop) {
+    top: 183px;
+    @include box(44px, 65px);
+  }
   &:after {
     @include contentdisplay();
   }
@@ -234,11 +301,17 @@ span#sec-two-title {
   &:hover {
     &::after {
       @include tri(left, 7px, 7px, $color-two);
+      @include mq(small-laptop) {
+        @include tri(left, 9px, 9px, $color-two);
+      }
     }
   }
   &::after {
     transition: all 200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     @include tri(left, 7px, 7px, $color-one);
+    @include mq(small-laptop) {
+      @include tri(left, 9px, 9px, $color-one);
+    }
   }
 }
 
@@ -247,10 +320,16 @@ span#sec-two-title {
   &:hover {
     &::after {
       @include tri(right, 7px, 7px, $color-two);
+      @include mq(small-laptop) {
+        @include tri(right, 9px, 9px, $color-two);
+      }
     }
   }
   &::after {
     transition: all 200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     @include tri(right, 7px, 7px, $color-one);
+    @include mq(small-laptop) {
+      @include tri(right, 9px, 9px, $color-one);
+    }
   }
 }
