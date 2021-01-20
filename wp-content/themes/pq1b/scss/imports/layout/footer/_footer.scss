@@ -309,9 +309,13 @@ span {
     );
     @include mq(small-laptop) {
       margin-top: 22px;
+      font-size: 18px;
     }
     span {
       color: $color-two;
+      @include mq(small-laptop) {
+        margin-left: 5px;
+      }
     }
   }
 }
@@ -401,7 +405,7 @@ a#ilawyer {
   margin-top: 20px;
   display: inline-block;
   @include mq(small-laptop) {
-    margin-top: 5px;
+    margin-top: 3px;
   }
   svg {
     @include image();

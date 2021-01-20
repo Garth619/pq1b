@@ -1389,10 +1389,16 @@ span.location-phone {
 @media screen and (min-width: 1170px) {
   span.location-phone {
     margin-top: 22px;
+    font-size: 18px;
   }
 }
 span.location-phone span {
   color: #00afcc;
+}
+@media screen and (min-width: 1170px) {
+  span.location-phone span {
+    margin-left: 5px;
+  }
 }
 
 a.location-button {
@@ -1492,7 +1498,7 @@ a#ilawyer {
 }
 @media screen and (min-width: 1170px) {
   a#ilawyer {
-    margin-top: 5px;
+    margin-top: 3px;
   }
 }
 a#ilawyer svg {
