@@ -36,6 +36,9 @@
         transform: uppercase,
       )
     );
+    @include mq(small-laptop) {
+      line-height: 30px;
+    }
   }
   p,
   ul,

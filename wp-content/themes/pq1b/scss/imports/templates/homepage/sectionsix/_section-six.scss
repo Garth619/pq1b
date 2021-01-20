@@ -4,6 +4,9 @@
   @include mq(small-tablet) {
     padding: 65px 48px 60px;
   }
+  @include mq(small-laptop) {
+    padding: 65px 85px 65px;
+  }
 }
 
 #sec-six-inner {
@@ -49,6 +52,10 @@ span#sec-six-title {
     max-width: 760px;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+  @include mq(small-laptop) {
+    max-width: 1130px;
+    grid-gap: 0px 28px;
+  }
   a.sec-six-single-pa {
     display: block;
     position: relative;
@@ -57,13 +64,18 @@ span#sec-six-title {
     max-width: 290px;
     margin-bottom: 20px;
     overflow: hidden;
+    width: 100%;
     text-decoration: none;
     @include margin_lr();
     @include mq(small-tablet) {
       height: 90px;
       margin-bottom: 22px;
       padding: 19px 40px;
+      max-width: 100%;
       @include flex(center, center);
+    }
+    @include mq(small-laptop) {
+      margin-bottom: 30px;
     }
     &:hover {
       img {
@@ -86,6 +98,9 @@ span#sec-six-title {
           transform: uppercase,
         )
       );
+      @include mq(small-laptop) {
+        @include quick_type(15px, 25px, null);
+      }
     }
     img {
       opacity: 0;
@@ -93,6 +108,7 @@ span#sec-six-title {
       transition: all 400ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
       @include box(100%);
       @include image();
+      height: 100%;
       @include abs(0, null, null, 0);
     }
   }
@@ -100,4 +116,7 @@ span#sec-six-title {
 
 a.sec-six-button {
   margin-top: 32px;
+  @include mq(small-laptop) {
+    margin-top: 40px;
+  }
 }

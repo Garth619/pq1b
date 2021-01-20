@@ -59,23 +59,23 @@
 
     </div><!-- footer-location-wrapper -->
 
+    <div id='copyright-wrapper'>
+
+      <ul>
+        <li>Copyright &copy; <?php echo date('Y'); ?> Greenberg Gross</li>
+        <li><a href="">Policies & Disclaimer</a></li>
+        <li><a href="">Privacy Policy</a></li>
+      </ul>
+
+      <a id='ilawyer' href='//ilawyermarketing.com' target="_blank" rel="noopener">
+
+        <?php echo file_get_contents(get_template_directory() . '/images/ilawyer.svg'); ?>
+
+      </a><!-- ilawyer -->
+
+    </div><!-- copyright-wrapper -->
+
   </div><!-- footer-inner -->
-
-  <div id='copyright-wrapper'>
-
-    <ul>
-      <li>Copyright &copy; <?php echo date('Y'); ?> Greenberg Gross</li>
-      <li><a href="">Policies & Disclaimer</a></li>
-      <li><a href="">Privacy Policy</a></li>
-    </ul>
-
-    <a id='ilawyer' href='//ilawyermarketing.com' target="_blank" rel="noopener">
-
-      <?php echo file_get_contents(get_template_directory() . '/images/ilawyer.svg'); ?>
-
-    </a><!-- ilawyer -->
-
-  </div><!-- copyright-wrapper -->
 
 </footer>
 

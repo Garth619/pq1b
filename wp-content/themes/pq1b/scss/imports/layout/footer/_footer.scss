@@ -4,6 +4,9 @@ footer {
   @include mq(small-tablet) {
     padding: 58px 48px 40px;
   }
+  @include mq(small-laptop) {
+    padding: 100px 48px 32px;
+  }
 }
 
 #footer-inner {
@@ -12,15 +15,20 @@ footer {
   @include mq(small-tablet) {
     max-width: 650px;
   }
+  @include mq(small-laptop) {
+    max-width: 887px;
+  }
 }
 
 #footer-form-wrapper {
   box-shadow: 0px 1px 20px #000000;
   padding: 0px 22px;
   padding-bottom: 22px;
-
   @include mq(small-tablet) {
     padding: 0px 44px 22px;
+  }
+  @include mq(small-laptop) {
+    padding: 0px 84px 42px;
   }
   ul {
     margin-top: 35px;
@@ -28,11 +36,17 @@ footer {
     @include mq(small-tablet) {
       @include flex(space-between, null, null, wrap);
     }
+    @include mq(small-laptop) {
+      margin-top: 45px;
+    }
     li {
       display: block;
       margin-bottom: 20px;
       @include mq(small-tablet) {
         flex-basis: calc(50% - 9px);
+      }
+      @include mq(small-laptop) {
+        margin-bottom: 20px;
       }
       &#field_3_7 {
         display: none;
@@ -42,10 +56,12 @@ footer {
           flex-basis: 100%;
         }
       }
-
       label {
         display: block;
         margin-bottom: 10px;
+        @include mq(small-laptop) {
+          margin-bottom: 20px;
+        }
         @include type(
           (
             size: 17px,
@@ -94,6 +110,9 @@ footer {
     @include mq(small-tablet) {
       margin-top: 36px;
     }
+    @include mq(small-laptop) {
+      padding: 30px 30px;
+    }
     &:hover {
       background: $color-one;
     }
@@ -130,12 +149,15 @@ footer {
     @include mq(small-tablet) {
       margin-top: -100px;
     }
+    @include mq(small-laptop) {
+      margin-top: -103px;
+      font-size: 18px;
+    }
     span {
       color: $color-two;
     }
   }
 }
-
 span#footer-form-title {
   display: block;
   padding-top: 30px;
@@ -152,6 +174,10 @@ span#footer-form-title {
   @include mq(small-tablet) {
     padding-top: 70px;
     @include quick_type(45px, 50px, null);
+  }
+  @include mq(small-laptop) {
+    padding-top: 83px;
+    @include quick_type(55px, 60px, null);
   }
   &:after {
     background: $color-one;
@@ -181,6 +207,10 @@ span#footer-form-descrip {
 }
 
 #footer-location-wrapper {
+  @include mq(small-laptop) {
+    margin-top: 93px;
+    @include flex(space-between);
+  }
 }
 
 #footer-logo {
@@ -189,6 +219,9 @@ span#footer-form-descrip {
   @include mq(small-tablet) {
     margin-top: 65px;
     margin-bottom: 50px;
+  }
+  @include mq(small-laptop) {
+    margin-top: 54px;
   }
   a {
     max-width: 273px;
@@ -208,6 +241,12 @@ span#footer-form-descrip {
     max-width: 515px;
     @include margin_lr();
     @include flex(space-between);
+  }
+  @include mq(small-laptop) {
+    max-width: 100%;
+    flex-grow: 1;
+    padding: 0 67px;
+    @include margin_lr(0);
   }
 }
 
@@ -252,6 +291,9 @@ span {
     @include mq(small-tablet) {
       margin-top: 15px;
     }
+    @include mq(sall-laptop) {
+      line-height: 22px;
+    }
   }
   &.location-phone {
     display: block;
@@ -265,6 +307,9 @@ span {
         color: $color-seven,
       )
     );
+    @include mq(small-laptop) {
+      margin-top: 22px;
+    }
     span {
       color: $color-two;
     }
@@ -295,6 +340,11 @@ a.location-button {
   @include mq(small-tablet) {
     margin-top: 60px;
   }
+  @include mq(small-laptop) {
+    margin-top: 71px;
+    padding-top: 30px;
+    @include flex(space-between);
+  }
   ul {
     list-style: none;
     text-align: center;
@@ -302,6 +352,10 @@ a.location-button {
     @include margin_lr();
     @include mq(small-tablet) {
       max-width: 100%;
+    }
+    @include mq(small-laptop) {
+      max-width: 100%;
+      @include margin_lr(0);
     }
     li {
       display: inline-block;
@@ -346,6 +400,9 @@ a.location-button {
 a#ilawyer {
   margin-top: 20px;
   display: inline-block;
+  @include mq(small-laptop) {
+    margin-top: 5px;
+  }
   svg {
     @include image();
   }
