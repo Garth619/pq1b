@@ -6,6 +6,9 @@
   @include mq(small-laptop) {
     padding: 75px 137px 90px;
   }
+  @include mq(large-laptop) {
+    padding: 106px 137px 125px;
+  }
 }
 
 h1#sec-three-header {
@@ -28,6 +31,9 @@ h1#sec-three-header {
   @include mq(small-laptop) {
     @include quick_type(55px, 65px, null);
   }
+  @include mq(large-laptop) {
+    @include quick_type(65px, 75px, null);
+  }
   &:after {
     background: $color-one;
     margin-top: 20px;
@@ -37,6 +43,9 @@ h1#sec-three-header {
     @include mq(small-tablet) {
       margin-top: 30px;
       @include box(470px, 3px);
+    }
+    @include mq(large-laptop) {
+      @include box(593px, 3px);
     }
   }
 }
@@ -48,6 +57,10 @@ h1#sec-three-header {
   }
   @include mq(small-laptop) {
     padding-top: 45px;
+  }
+  @include mq(large-laptop) {
+    padding-top: 55px;
+    padding-bottom: 50px;
   }
   &.content {
     @include type(
@@ -70,6 +83,9 @@ h1#sec-three-header {
       @include margin_lr();
       @include quick_type(20px, 34px, null);
     }
+    @include mq(large-laptop) {
+      @include quick_type(22px, 34px, null);
+    }
   }
 }
 
@@ -85,11 +101,17 @@ h1#sec-three-header {
     flex-shrink: 0;
     margin-top: 20px;
   }
+  @include mq(large-laptop) {
+    flex-basis: 433px;
+  }
 }
 
 #sec-three-video {
   max-width: 355px;
   @include margin_lr();
+  @include mq(large-laptop) {
+    max-width: 100%;
+  }
 }
 
 .pq-video {
@@ -100,6 +122,9 @@ h1#sec-three-header {
         span.pq-play-button {
           &::after {
             @include tri(right, 8px, 9px, $color-two);
+            @include mq(large-laptop) {
+              @include tri(right, 10px, 11px, $color-two);
+            }
           }
         }
       }
@@ -112,6 +137,7 @@ h1#sec-three-header {
   .pq-video-img {
     img {
       @include image();
+      width: 100%;
     }
     .pq-video-overlay {
       @include box(100%);
@@ -127,6 +153,9 @@ h1#sec-three-header {
         @include mq(small-tablet) {
           @include box(88px);
         }
+        @include mq(large-laptop) {
+          @include box(100px);
+        }
         &::before {
           background: $color-four;
           border-radius: 50%;
@@ -134,6 +163,9 @@ h1#sec-three-header {
           @include contentdisplay();
           @include mq(small-tablet) {
             @include box(69px);
+          }
+          @include mq(large-laptop) {
+            @include box(79px);
           }
         }
         &::after {
@@ -145,6 +177,11 @@ h1#sec-three-header {
             top: 36px;
             left: 41px;
           }
+          @include mq(large-laptop) {
+            top: 38px;
+            left: 46px;
+            @include tri(right, 10px, 11px, $color-one);
+          }
         }
       }
     }
@@ -155,6 +192,9 @@ h1#sec-three-header {
   margin-top: 21px;
   @include mq(small-laptop) {
     margin-top: 33px;
+  }
+  @include mq(large-laptop) {
+    margin-top: 46px;
   }
   &.content {
     @include type(
@@ -175,6 +215,9 @@ h1#sec-three-header {
       text-align: left;
       padding-right: 6px;
       @include quick_type(35px, 50px, null);
+    }
+    @include mq(large-laptop) {
+      @include quick_type(38px, 50px, null);
     }
     strong {
       &:nth-of-type(1) {

@@ -17,7 +17,7 @@
   }
   @include mq(small-laptop) {
     max-width: 100%;
-    padding: 130px 160px 204px;
+    padding: 130px 160px 171px;
   }
   span {
     display: block;
@@ -38,6 +38,9 @@
         max-width: 666px;
         @include quick_type(50px, 60px, null);
       }
+      @include mq(large-laptop) {
+        @include quick_type(60px, 74px, null);
+      }
     }
     &.sec-one-name {
       @include type(
@@ -52,6 +55,9 @@
       );
       @include mq(small-tablet) {
         @include quick_type(25px, 27px, null);
+      }
+      @include mq(large-laptop) {
+        font-size: 30px;
       }
       &:before {
         background: $color-two;
@@ -69,6 +75,10 @@
           margin-top: 45px;
           max-width: 624px;
           @include margin_lr(0);
+        }
+        @include mq(large-laptop) {
+          margin-top: 39px;
+          margin-bottom: 35px;
         }
       }
     }

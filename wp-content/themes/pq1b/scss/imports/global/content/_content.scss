@@ -10,6 +10,9 @@
   @include mq(small-laptop) {
     @include quick_type(16px, 30px, null);
   }
+  @include mq(large-laptop) {
+    @include quick_type(17px, 30px, null);
+  }
   h2 {
     padding-bottom: 13px;
     @include type(
@@ -23,6 +26,10 @@
     );
     @include mq(small-laptop) {
       @include quick_type(20px, 30px, null);
+    }
+    @include mq(large-laptop) {
+      padding-bottom: 20px;
+      @include quick_type(22px, 30px, null);
     }
   }
   h3 {
