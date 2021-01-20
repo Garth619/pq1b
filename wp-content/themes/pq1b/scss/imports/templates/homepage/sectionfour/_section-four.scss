@@ -7,6 +7,9 @@
   @include mq(small-laptop) {
     padding: 74px 26px 80px;
   }
+  @include mq(large-laptop) {
+    padding: 74px 46px 95px;
+  }
 }
 
 #sec-four-inner {
@@ -36,6 +39,9 @@ span#sec-four-title {
       margin-top: 35px;
       margin-bottom: 30px;
     }
+    @include mq(large-laptop) {
+      margin-bottom: 55px;
+    }
   }
 }
 
@@ -50,12 +56,18 @@ span#sec-four-title {
   @include mq(small-laptop) {
     max-width: 100%;
   }
+  @include mq(large-laptop) {
+    max-width: 1250px;
+  }
 }
 
 #sec-four-slider {
   //height: 353px;
   @include mq(small-tablet) {
     width: calc(100% - 140px);
+  }
+  @include mq(large-laptop) {
+    width: calc(100% - 170px);
   }
   .slick-track {
     //@include flex(); makes slides the same height when side by side
@@ -108,6 +120,9 @@ span#sec-four-title {
             transform: uppercase,
           )
         );
+        @include mq(large-laptop) {
+          @include quick_type(18px, 21px, 3.6px);
+        }
       }
       &.sec-four-single-position-title {
         margin-top: 5px;
@@ -119,6 +134,10 @@ span#sec-four-title {
             color: $color-two,
           )
         );
+        @include mq(large-laptop) {
+          margin-top: 8px;
+          @include quick_type(15px, 17px, null);
+        }
       }
     }
   }
@@ -188,11 +207,17 @@ span#sec-four-title {
   &:hover {
     &::after {
       @include tri(left, 7px, 7px, $color-two);
+      @include mq(large-laptop) {
+        @include tri(left, 9px, 9px, $color-two);
+      }
     }
   }
   &::after {
     transition: all 200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     @include tri(left, 7px, 7px, $color-one);
+    @include mq(large-laptop) {
+      @include tri(left, 9px, 9px, $color-one);
+    }
   }
 }
 
@@ -201,10 +226,16 @@ span#sec-four-title {
   &:hover {
     &::after {
       @include tri(right, 7px, 7px, $color-two);
+      @include mq(large-laptop) {
+        @include tri(right, 9px, 9px, $color-two);
+      }
     }
   }
   &::after {
     transition: all 200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     @include tri(right, 7px, 7px, $color-one);
+    @include mq(large-laptop) {
+      @include tri(right, 9px, 9px, $color-one);
+    }
   }
 }

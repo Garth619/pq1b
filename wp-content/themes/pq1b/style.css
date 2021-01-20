@@ -2505,6 +2505,11 @@ h1#sec-three-header:after {
     padding: 74px 26px 80px;
   }
 }
+@media screen and (min-width: 1380px) {
+  #section-four {
+    padding: 74px 46px 95px;
+  }
+}
 
 span#sec-four-title {
   display: block;
@@ -2535,6 +2540,11 @@ span#sec-four-title:after {
     margin-bottom: 30px;
   }
 }
+@media screen and (min-width: 1380px) {
+  span#sec-four-title:after {
+    margin-bottom: 55px;
+  }
+}
 
 #sec-four-slider-wrapper {
   max-width: 385px;
@@ -2555,10 +2565,20 @@ span#sec-four-title:after {
     max-width: 100%;
   }
 }
+@media screen and (min-width: 1380px) {
+  #sec-four-slider-wrapper {
+    max-width: 1250px;
+  }
+}
 
 @media screen and (min-width: 768px) {
   #sec-four-slider {
     width: calc(100% - 140px);
+  }
+}
+@media screen and (min-width: 1380px) {
+  #sec-four-slider {
+    width: calc(100% - 170px);
   }
 }
 #sec-four-slider .slick-slide {
@@ -2616,6 +2636,13 @@ span#sec-four-title:after {
   font-style: normal;
   text-decoration: none;
 }
+@media screen and (min-width: 1380px) {
+  .sec-four-single-slide a span.sec-four-single-att-title {
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 3.6px;
+  }
+}
 .sec-four-single-slide a span.sec-four-single-position-title {
   margin-top: 5px;
   font-size: 13px;
@@ -2625,6 +2652,13 @@ span#sec-four-title:after {
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
+}
+@media screen and (min-width: 1380px) {
+  .sec-four-single-slide a span.sec-four-single-position-title {
+    margin-top: 8px;
+    font-size: 15px;
+    line-height: 17px;
+  }
 }
 
 #sec-four-mobile-arrows {
@@ -2722,6 +2756,16 @@ span#sec-four-title:after {
   border-right: 7px solid #00afcc;
   border-left: none;
 }
+@media screen and (min-width: 1380px) {
+  .sec-four-tablet-arrow-left:hover::after {
+    width: 0;
+    height: 0;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-right: 9px solid #00afcc;
+    border-left: none;
+  }
+}
 .sec-four-tablet-arrow-left::after {
   transition: all 200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
   width: 0;
@@ -2730,6 +2774,16 @@ span#sec-four-title:after {
   border-bottom: 7px solid transparent;
   border-right: 7px solid #cc0d29;
   border-left: none;
+}
+@media screen and (min-width: 1380px) {
+  .sec-four-tablet-arrow-left::after {
+    width: 0;
+    height: 0;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-right: 9px solid #cc0d29;
+    border-left: none;
+  }
 }
 
 .sec-four-tablet-arrow-right {
@@ -2743,6 +2797,16 @@ span#sec-four-title:after {
   border-left: 7px solid #00afcc;
   border-right: none;
 }
+@media screen and (min-width: 1380px) {
+  .sec-four-tablet-arrow-right:hover::after {
+    width: 0;
+    height: 0;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-left: 9px solid #00afcc;
+    border-right: none;
+  }
+}
 .sec-four-tablet-arrow-right::after {
   transition: all 200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
   width: 0;
@@ -2751,6 +2815,16 @@ span#sec-four-title:after {
   border-bottom: 7px solid transparent;
   border-left: 7px solid #cc0d29;
   border-right: none;
+}
+@media screen and (min-width: 1380px) {
+  .sec-four-tablet-arrow-right::after {
+    width: 0;
+    height: 0;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-left: 9px solid #cc0d29;
+    border-right: none;
+  }
 }
 
 #section-five {
@@ -2764,6 +2838,11 @@ span#sec-four-title:after {
 @media screen and (min-width: 1170px) {
   #section-five {
     padding: 113px 129px 55px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  #section-five {
+    padding: 161px 129px 113px;
   }
 }
 
@@ -2797,6 +2876,11 @@ span#sec-four-title:after {
   #sec-five-intro {
     font-size: 20px;
     line-height: 30px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  #sec-five-intro {
+    font-size: 22px;
   }
 }
 
@@ -2838,6 +2922,12 @@ span#sec-four-title:after {
     padding: 0px 20px;
   }
 }
+@media screen and (min-width: 1380px) {
+  #sec-five-quote span#sec-five-quote-content {
+    font-size: 27px;
+    line-height: 40px;
+  }
+}
 #sec-five-quote span#sec-five-quote-content::after {
   margin-top: 45px;
   margin-bottom: 28px;
@@ -2856,6 +2946,11 @@ span#sec-four-title:after {
 @media screen and (min-width: 1170px) {
   #sec-five-quote span#sec-five-quote-content::after {
     margin-top: 35px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  #sec-five-quote span#sec-five-quote-content::after {
+    margin-bottom: 40px;
   }
 }
 

@@ -6,6 +6,9 @@
   @include mq(small-laptop) {
     padding: 113px 129px 55px;
   }
+  @include mq(large-laptop) {
+    padding: 161px 129px 113px;
+  }
 }
 
 #sec-five-inner {
@@ -33,6 +36,9 @@
   }
   @include mq(small-laptop) {
     @include quick_type(20px, 30px, null);
+  }
+  @include mq(large-laptop) {
+    @include quick_type(22px, null, null);
   }
 }
 
@@ -65,6 +71,9 @@
       margin-top: -35px;
       padding: 0px 20px;
     }
+    @include mq(large-laptop) {
+      @include quick_type(27px, 40px, null);
+    }
     &::after {
       margin-top: 45px;
       margin-bottom: 28px;
@@ -77,6 +86,9 @@
       }
       @include mq(small-laptop) {
         margin-top: 35px;
+      }
+      @include mq(large-laptop) {
+        margin-bottom: 40px;
       }
     }
   }
