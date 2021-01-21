@@ -6,31 +6,7 @@ get_header();?>
 
 <div id="internal-main">
 
-  <div class='page-title-wrapper'>
-
-    <h1 class="page-title page-large-content-title"><?php the_title();?></h1>
-
-  </div><!-- page-title-wrapper -->
-
-  <?php if (get_field('practice_area_description')) {?>
-
-  <div id='page-descrip-wrapper'>
-
-    <div id='page-descrip'>
-
-      <?php the_field('practice_area_description');?>
-
-    </div><!-- page-descrip -->
-
-    <?php if (get_field('practice_area_description')) {?>
-
-    <span id='page-subtitle'><?php the_field('practice_area_subtitle');?></span><!-- page-subtitle -->
-
-    <?php }?>
-
-  </div><!-- page-descrip-wrapper -->
-
-  <?php }?>
+  <h1 class="page-title page-large-content-title"><?php the_title();?></h1>
 
   <div id="page-container">
 
