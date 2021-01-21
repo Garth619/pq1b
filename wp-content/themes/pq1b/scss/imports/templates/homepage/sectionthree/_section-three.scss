@@ -7,7 +7,7 @@
     padding: 75px 137px 90px;
   }
   @include mq(large-laptop) {
-    padding: 106px 137px 125px;
+    padding: 106px 137px 205px;
   }
 }
 
@@ -93,6 +93,10 @@ h1#sec-three-header {
   @include mq(small-laptop) {
     @include flex(space-between);
   }
+  @include mq(small-monitor) {
+    max-width: 1449px;
+    @include margin_lr();
+  }
 }
 
 #sec-three-sidebar {
@@ -104,6 +108,9 @@ h1#sec-three-header {
   @include mq(large-laptop) {
     flex-basis: 433px;
   }
+  @include mq(small-monitor) {
+    flex-basis: 543px;
+  }
 }
 
 #sec-three-video {
@@ -111,6 +118,10 @@ h1#sec-three-header {
   @include margin_lr();
   @include mq(large-laptop) {
     max-width: 100%;
+  }
+  @include mq(small-monitor) {
+    max-width: 490px;
+    @include margin_lr(0);
   }
 }
 
@@ -124,6 +135,9 @@ h1#sec-three-header {
             @include tri(right, 8px, 9px, $color-two);
             @include mq(large-laptop) {
               @include tri(right, 10px, 11px, $color-two);
+            }
+            @include mq(small-monitor) {
+              @include tri(right, 12px, 13px, $color-two);
             }
           }
         }
@@ -156,6 +170,9 @@ h1#sec-three-header {
         @include mq(large-laptop) {
           @include box(100px);
         }
+        @include mq(small-monitor) {
+          @include box(122px);
+        }
         &::before {
           background: $color-four;
           border-radius: 50%;
@@ -166,6 +183,9 @@ h1#sec-three-header {
           }
           @include mq(large-laptop) {
             @include box(79px);
+          }
+          @include mq(small-monitor) {
+            @include box(97px);
           }
         }
         &::after {
@@ -181,6 +201,11 @@ h1#sec-three-header {
             top: 38px;
             left: 46px;
             @include tri(right, 10px, 11px, $color-one);
+          }
+          @include mq(small-monitor) {
+            top: 47px;
+            left: 56px;
+            @include tri(right, 12px, 13px, $color-one);
           }
         }
       }
@@ -214,10 +239,15 @@ h1#sec-three-header {
     @include mq(small-laptop) {
       text-align: left;
       padding-right: 6px;
+      @include margin_lr(0);
       @include quick_type(35px, 50px, null);
     }
     @include mq(large-laptop) {
       @include quick_type(38px, 50px, null);
+    }
+    @include mq(small-monitor) {
+      max-width: 100%;
+      @include quick_type(48px, 60px, null);
     }
     strong {
       &:nth-of-type(1) {
@@ -233,4 +263,7 @@ h1#sec-three-header {
 #sec-three-content {
   padding-top: 10px;
   margin-left: 57px;
+  @include mq(small-monitor) {
+    margin-left: 140px;
+  }
 }

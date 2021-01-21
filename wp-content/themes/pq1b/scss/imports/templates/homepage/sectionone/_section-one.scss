@@ -19,6 +19,10 @@
     max-width: 100%;
     padding: 130px 160px 171px;
   }
+  @include mq(large-laptop) {
+    max-width: 1920px;
+    @include margin_lr();
+  }
   span {
     display: block;
     color: $color-seven;

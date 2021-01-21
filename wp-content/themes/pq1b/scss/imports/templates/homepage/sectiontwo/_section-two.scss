@@ -19,6 +19,9 @@
   @include mq(large-laptop) {
     height: 420px;
   }
+  @include mq(small-monitor) {
+    max-width: 1920px;
+  }
 }
 
 #sec-two-left {
@@ -32,6 +35,12 @@
   }
   @include mq(large-laptop) {
     padding: 70px 87px 65px 79px;
+  }
+  @include mq(large-laptop) {
+    padding: 70px 87px 65px 160px;
+  }
+  @include mq(small-monitor) {
+    padding: 70px 187px 65px 160px;
   }
 }
 
@@ -51,6 +60,9 @@
   }
   @include mq(large-laptop) {
     flex-basis: 26%;
+  }
+  @include mq(small-monitor) {
+    flex-basis: 24%;
   }
   &:nth-of-type(3),
   &:nth-of-type(4) {
@@ -98,6 +110,9 @@
     @include mq(large-laptop) {
       @include quick_type(17px, 25px, null);
     }
+    @include mq(small-monitor) {
+      @include quick_type(20px, 30px, null);
+    }
   }
   span {
     &.single-content {
@@ -133,6 +148,10 @@
       @include mq(large-laptop) {
         margin-top: 20px;
       }
+      @include mq(small-monitor) {
+        margin-top: 25px;
+        padding-top: 22px;
+      }
     }
   }
 }
@@ -158,6 +177,10 @@
   }
   @include mq(large-laptop) {
     margin-right: 104px;
+  }
+  @include mq(small-monitor) {
+    margin-right: 92px;
+    width: 434px;
   }
 }
 
