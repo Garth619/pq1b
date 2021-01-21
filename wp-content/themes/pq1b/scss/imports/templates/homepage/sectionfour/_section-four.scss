@@ -10,6 +10,9 @@
   @include mq(large-laptop) {
     padding: 74px 46px 95px;
   }
+  @include mq(small-monitor) {
+    padding: 83px 46px 80px;
+  }
 }
 
 #sec-four-inner {
@@ -59,6 +62,9 @@ span#sec-four-title {
   @include mq(large-laptop) {
     max-width: 1250px;
   }
+  @include mq(small-monitor) {
+    max-width: 1780px;
+  }
 }
 
 #sec-four-slider {
@@ -68,6 +74,9 @@ span#sec-four-title {
   }
   @include mq(large-laptop) {
     width: calc(100% - 170px);
+  }
+  @include mq(small-monitor) {
+    width: calc(100% - 234px);
   }
   .slick-track {
     //@include flex(); makes slides the same height when side by side
@@ -79,11 +88,17 @@ span#sec-four-title {
     @include mq(small-tablet) {
       margin: 0 10px;
     }
+    @include mq(small-monitor) {
+      margin: 0 60px;
+    }
   }
   .slick-list {
     margin: 0 -20px;
     @include mq(small-tablet) {
       margin: 0 -10px;
+    }
+    @include mq(small-monitor) {
+      margin: 0 -60px;
     }
   }
 }
@@ -102,6 +117,7 @@ span#sec-four-title {
       overflow: hidden;
       img {
         @include image();
+        width: 100%;
       }
     }
     span {
@@ -122,6 +138,9 @@ span#sec-four-title {
         );
         @include mq(large-laptop) {
           @include quick_type(18px, 21px, 3.6px);
+        }
+        @include mq(small-monitor) {
+          margin-top: 40px;
         }
       }
       &.sec-four-single-position-title {

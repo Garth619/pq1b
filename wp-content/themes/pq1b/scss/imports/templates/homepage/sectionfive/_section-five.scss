@@ -9,16 +9,26 @@
   @include mq(large-laptop) {
     padding: 161px 129px 113px;
   }
+  @include mq(small-monitor) {
+    padding: 201px 129px 113px;
+  }
 }
 
 #sec-five-inner {
   @include mq(small-laptop) {
     @include flex(space-between);
   }
+  @include mq(small-monitor) {
+    max-width: 1400px;
+    @include margin_lr();
+  }
 }
 
 .sec-five-col {
   flex-basis: calc(50% - 40px);
+  @include mq(small-monitor) {
+    flex-basis: calc(50% - 80px);
+  }
 }
 
 #sec-five-intro {
@@ -73,6 +83,9 @@
     }
     @include mq(large-laptop) {
       @include quick_type(27px, 40px, null);
+    }
+    @include mq(small-monitor) {
+      max-width: 100%;
     }
     &::after {
       margin-top: 45px;
