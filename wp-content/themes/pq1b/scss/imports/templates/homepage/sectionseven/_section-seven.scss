@@ -7,6 +7,9 @@
   @include mq(small-laptop) {
     padding: 90px 120px 85px;
   }
+  @include mq(large-laptop) {
+    padding: 90px 120px 135px;
+  }
 }
 
 #sec-seven-inner {
@@ -75,6 +78,10 @@ span#sec-seven-title {
     margin-top: 0;
     max-width: 425px;
   }
+  @include mq(large-laptop) {
+    max-width: 100%;
+    width: 520px;
+  }
 }
 
 #sec-seven-intro {
@@ -95,6 +102,9 @@ span#sec-seven-title {
   @include mq(small-laptop) {
     margin-top: 0px;
   }
+  @include mq(large-laptop) {
+    @include quick_type(22px, 30px, null);
+  }
 }
 
 #sec-seven-img-wrapper {
@@ -103,8 +113,12 @@ span#sec-seven-title {
     max-width: 398px;
     @include margin_lr();
   }
+  @include mq(large-laptop) {
+    max-width: 100%;
+  }
   img {
     @include image();
+    width: 100%;
   }
 }
 
