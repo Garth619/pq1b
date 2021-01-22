@@ -6,52 +6,34 @@ get_header();?>
 
 <div id="internal-main">
 
-  <div class='page-title-wrapper'>
-
-    <h1 class="page-title page-large-content-title"><?php the_title();?></h1>
-
-  </div><!-- page-title-wrapper -->
+  <h1 class="page-title page-large-content-title"><?php the_title();?></h1>
 
   <div id="page-container">
+    <!-- do yt wsta with thumbnail options -->
+    <div id='video-wrapper'>
 
-    <div id='video-center-wrapper'>
+      <div id='single-video' class="pq-video">
 
-      <?php if (have_rows('video_center')): ?>
+        <div class='mywistia'></div><!-- mywistia -->
 
-      <?php while (have_rows('video_center')): the_row();?>
+        <div class='pq-video-img'>
 
-      <div class='single-video'>
+          <img src='<?php bloginfo('template_directory');?>/images/video-image.jpg' alt='' />
 
-        <div class='video-thumb'>
+          <div class='pq-video-overlay'>
 
-          <div
-            class='mywisita wistia_embed wistia_async_<?php the_sub_field('wistia_id');?> popover=true popoverContent=thumbnail'>
-          </div><!-- wistia -->
+            <span class='pq-play-button'></span><!-- pq-play-button -->
 
-          <div class='video-overlay'>
+          </div><!-- pq-video-overlay -->
 
-            <div class='play-button'></div><!-- play-button -->
+        </div><!-- pq-video-img -->
 
-          </div><!-- video-overlay -->
-
-        </div><!-- video-thumb -->
-
-        <div class='video-title-wrapper'>
-
-          <span class='video-title'><?php the_sub_field('video_title');?></span><!-- video-title -->
-
-        </div><!-- video-title-wrapper -->
+        <span class='single-video-title-wrapper'>Learn about our law firm really long title that is two lines long here
+          is the style</span><!-- single-video-title-wrapper -->
 
       </div><!-- single-video -->
 
-      <?php endwhile;?>
-
-      <?php endif;?>
-
-
-    </div><!-- video-center-wrapper -->
-
-    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+    </div><!-- video-wrapper -->
 
   </div><!-- page-container -->
 

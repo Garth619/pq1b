@@ -6,105 +6,75 @@ get_header();?>
 
 <div id="internal-main">
 
-  <?php get_template_part('page-templates/includes/template', 'default-page-banner');?>
+  <h1 class="page-title page-large-content-title"><?php the_title();?></h1>
 
-  <div class="page_container">
+  <div id="page-container">
 
-    <div id='case_results_wrapper' class="internal_wrapper">
+    <div id='case-results-wrapper' class="content">
 
-      <div id='select_wrapper'>
+      <div class='single-case-result'>
 
-        <span id='select_category_title'>Select Category</span><!-- select_category_title -->
+        <span class='single-case-result-title'>Ninth Circuit Reversal in $10 Million Tax Case</span>
+        <!-- single-case-result-title -->
 
-        <div id='select_dropdown_wrapper'>
+        <p>Evan Borges won a Ninth Circuit appeal for former ad agency executive Thomas Rubin against the Internal
+          Revenue Service. Borges successfully argued that Rubin is entitled to pursue a $10 million tax refund because
+          he had complied with a legal requirement to report inconsistencies between his personal tax return and his
+          company’s tax return. The Ninth Circuit reversed the district court’s dismissal of Rubin’s lawsuit against the
+          IRS for denying him the tax refund. Rubin’s tax refund litigation, which the court allowed to proceed, arose
+          out of changes in law related to a bankruptcy trustee’s treatment on the corporate return of a claimed $67
+          million of cancellation of indebtedness income.</p>
 
-          <div id='select_input'>
+      </div><!-- single-case-result -->
 
-            <span id='select_input_title'>Select</span><!-- class -->
+      <div class='single-case-result'>
 
-          </div><!-- select_input -->
+        <span class='single-case-result-title'>Ninth Circuit Reversal in $10 Million Tax Case</span>
+        <!-- single-case-result-title -->
 
-          <div id='select_dropdown'>
+        <p>Evan Borges won a Ninth Circuit appeal for former ad agency executive Thomas Rubin against the Internal
+          Revenue Service. Borges successfully argued that Rubin is entitled to pursue a $10 million tax refund because
+          he had complied with a legal requirement to report inconsistencies between his personal tax return and his
+          company’s tax return. The Ninth Circuit reversed the district court’s dismissal of Rubin’s lawsuit against the
+          IRS for denying him the tax refund. Rubin’s tax refund litigation, which the court allowed to proceed, arose
+          out of changes in law related to a bankruptcy trustee’s treatment on the corporate return of a claimed $67
+          million of cancellation of indebtedness income.</p>
 
-            <div id='select_dropdown_inner'>
+      </div><!-- single-case-result -->
 
+      <div class='single-case-result'>
 
-              <?php $terms = get_terms('case_results_category');
+        <span class='single-case-result-title'>Ninth Circuit Reversal in $10 Million Tax Case</span>
+        <!-- single-case-result-title -->
 
-if (!empty($terms) && !is_wp_error($terms)) {
+        <p>Evan Borges won a Ninth Circuit appeal for former ad agency executive Thomas Rubin against the Internal
+          Revenue Service. Borges successfully argued that Rubin is entitled to pursue a $10 million tax refund because
+          he had complied with a legal requirement to report inconsistencies between his personal tax return and his
+          company’s tax return. The Ninth Circuit reversed the district court’s dismissal of Rubin’s lawsuit against the
+          IRS for denying him the tax refund. Rubin’s tax refund litigation, which the court allowed to proceed, arose
+          out of changes in law related to a bankruptcy trustee’s treatment on the corporate return of a claimed $67
+          million of cancellation of indebtedness income.</p>
 
-    echo '<ul>';
+      </div><!-- single-case-result -->
 
-    foreach ($terms as $term) {
+      <div class='single-case-result'>
 
-        $term_link = get_term_link($term);
+        <span class='single-case-result-title'>Ninth Circuit Reversal in $10 Million Tax Case</span>
+        <!-- single-case-result-title -->
 
-        echo '<li><a href="' . esc_url($term_link) . '">' . $term->name . '</a></li>';
-    }
+        <p>Evan Borges won a Ninth Circuit appeal for former ad agency executive Thomas Rubin against the Internal
+          Revenue Service. Borges successfully argued that Rubin is entitled to pursue a $10 million tax refund because
+          he had complied with a legal requirement to report inconsistencies between his personal tax return and his
+          company’s tax return. The Ninth Circuit reversed the district court’s dismissal of Rubin’s lawsuit against the
+          IRS for denying him the tax refund. Rubin’s tax refund litigation, which the court allowed to proceed, arose
+          out of changes in law related to a bankruptcy trustee’s treatment on the corporate return of a claimed $67
+          million of cancellation of indebtedness income.</p>
 
-    echo '<li><a href="' . get_the_permalink(54) . '">View All +</a></li></ul>';
+      </div><!-- single-case-result -->
 
-}?>
+    </div><!-- case-results-wrapper -->
 
-            </div><!-- select_dropdown_inner -->
-
-          </div><!-- select_dropdown -->
-
-        </div><!-- select_dropdown_wrapper -->
-
-      </div><!-- select_wrapper -->
-
-      <div id='case_result_boxes'>
-
-        <?php $mymain_query = new WP_Query(array('post_type' => 'case_results', 'posts_per_page' => '-1', 'order' => 'DSC'));while ($mymain_query->have_posts()): $mymain_query->the_post();?>
-
-        <div class='single_cr'>
-
-          <div class='single_cr_inner'>
-
-            <span class='single_cr_title'><?php the_title();?></span><!-- single_cr_title -->
-
-            <span class='double_line'></span><!-- double_line -->
-
-            <?php
-    $myterms = get_the_terms($post->ID, 'case_results_category');
-    // $terms_string = join(', ', wp_list_pluck($term_obj_list, 'name'));
-
-    echo "<ul class='single_cr_type'>";
-
-    foreach ($myterms as $myterm) {
-
-        $myterm_link = get_term_link($myterm);
-
-        echo '<li><a href="' . esc_url($myterm_link) . '">' . $myterm->name . '</a></li>';
-
-    }
-
-    echo "</ul>";
-
-    ?>
-
-            <span class='single_cr_type'><?php echo $terms_string; ?></span><!-- single_cr_type -->
-
-            <div class='single_cr_content content'>
-
-              <?php the_content();?>
-
-            </div><!-- single_cr_type -->
-
-          </div><!-- single_cr_inner -->
-
-        </div><!-- single_cr -->
-
-        <?php endwhile;?>
-
-        <?php wp_reset_postdata(); // reset the query ?>
-
-      </div><!-- case_result_boxes -->
-
-    </div><!-- case_results_wrapper -->
-
-  </div><!-- page_container -->
+  </div><!-- page-container -->
 
 </div><!-- internal-main -->
 

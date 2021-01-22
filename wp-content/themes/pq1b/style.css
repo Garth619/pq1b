@@ -1398,14 +1398,14 @@ span#footer-form-descrip {
   }
 }
 
-.footer-location-col {
+.location-col {
   text-align: center;
 }
-.footer-location-col:last-of-type {
+.location-col:last-of-type {
   margin-top: 47px;
 }
 @media screen and (min-width: 768px) {
-  .footer-location-col:last-of-type {
+  .location-col:last-of-type {
     margin-top: 0;
   }
 }

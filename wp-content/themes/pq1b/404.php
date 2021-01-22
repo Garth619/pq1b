@@ -2,19 +2,19 @@
 
 <div id="internal-main">
 
-  <div id='page-descrip-wrapper'>
+  <h1 class="page-title page-large-content-title"><?php the_field('not_found_title', 'option');?></h1>
 
-    <h1 class="page-title page-large-content-title"><?php the_field('not_found_title', 'option');?></h1>
 
-  </div>
-
-  <div id="page-container" class="two-col no-banner-layout">
+  <div id="page-container">
 
     <div class="page-content">
 
       <div class='page-content-inner content'>
 
-        <?php the_field('not_found_content', 'option');?>
+        <?php //the_field('not_found_content', 'option');?>
+
+        <p>The page you were looking for appears to have been moved, deleted or does not exist. You could go back to
+          where you were or head straight to our home page.</p>
 
       </div><!-- page-content-inner -->
 
