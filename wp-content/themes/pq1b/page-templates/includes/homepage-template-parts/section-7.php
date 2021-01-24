@@ -4,7 +4,9 @@
 
     <div id='sec-seven-tile-wrapper'>
 
-      <span id='sec-seven-title'>We’ll see you in court. <i>Our</i> court</span><!-- sec-seven-title -->
+      <span id='sec-seven-title'>We’ll see you in court.
+
+        <br /><i>Our</i> court</span><!-- sec-seven-title -->
 
     </div><!-- sec-seven-tile-wrapper -->
 
