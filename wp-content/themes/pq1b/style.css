@@ -567,8 +567,8 @@ input {
   }
 }
 .content h2 {
-  padding-bottom: 13px;
-  font-size: 17px;
+  padding-bottom: 28px;
+  font-size: 18px;
   line-height: 20px;
   font-family: "Roboto", sans-serif;
   color: #00afcc;
@@ -590,8 +590,8 @@ input {
   }
 }
 .content h3 {
-  padding-bottom: 27px;
-  font-size: 18px;
+  padding-bottom: 15px;
+  font-size: 17px;
   line-height: 25px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -604,6 +604,16 @@ input {
     line-height: 30px;
   }
 }
+.content h4 {
+  margin-bottom: 23px;
+  font-size: 15px;
+  line-height: 22px;
+  font-family: "Roboto", sans-serif;
+  color: #cc0d29;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+}
 .content p,
 .content ul,
 .content ol {
@@ -614,7 +624,7 @@ input {
 }
 .content ul li {
   font-weight: 700;
-  padding-left: 25px;
+  padding-left: 20px;
   position: relative;
   margin-bottom: 25px;
 }
@@ -624,7 +634,7 @@ input {
   }
 }
 .content ul li:before {
-  background: #00afcc;
+  background: #cc0d29;
   border-radius: 50%;
   position: absolute;
   top: 8px;

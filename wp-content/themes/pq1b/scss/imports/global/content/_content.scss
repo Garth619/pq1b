@@ -14,10 +14,10 @@
     @include quick_type(17px, 30px, null);
   }
   h2 {
-    padding-bottom: 13px;
+    padding-bottom: 28px;
     @include type(
       (
-        size: 17px,
+        size: 18px,
         height: 20px,
         family: $primaryfont,
         color: $color-two,
@@ -33,10 +33,10 @@
     }
   }
   h3 {
-    padding-bottom: 27px;
+    padding-bottom: 15px;
     @include type(
       (
-        size: 18px,
+        size: 17px,
         height: 25px,
         family: $primaryfont,
         weight: 700,
@@ -47,6 +47,18 @@
       line-height: 30px;
     }
   }
+  h4 {
+    margin-bottom: 23px;
+    @include type(
+      (
+        size: 15px,
+        height: 22px,
+        weight: 700,
+        family: $primaryfont,
+        color: $color-one,
+      )
+    );
+  }
   p,
   ul,
   ol {
@@ -56,14 +68,14 @@
     list-style: none;
     li {
       font-weight: 700;
-      padding-left: 25px;
+      padding-left: 20px;
       position: relative;
       margin-bottom: 25px;
       @include mq(small-laptop) {
         line-height: 25px;
       }
       &:before {
-        background: $color-two;
+        background: $color-one;
         border-radius: 50%;
         @include abs(8px, null, null, 0);
         @include box(7px);
