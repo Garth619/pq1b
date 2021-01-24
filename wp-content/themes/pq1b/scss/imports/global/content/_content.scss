@@ -59,6 +59,13 @@
       )
     );
   }
+  a {
+    color: $color-one;
+    transition: all 200ms ease-in-out;
+    &:hover {
+      color: $color-two;
+    }
+  }
   p,
   ul,
   ol {

@@ -614,6 +614,13 @@ input {
   font-style: normal;
   text-decoration: none;
 }
+.content a {
+  color: #cc0d29;
+  transition: all 200ms ease-in-out;
+}
+.content a:hover {
+  color: #00afcc;
+}
 .content p,
 .content ul,
 .content ol {
@@ -669,8 +676,13 @@ input {
 #page-container {
   padding: 27px 40px;
 }
+#page-container.two-col {
+  display: flex;
+  flex-direction: column;
+}
 
 .page-content-inner {
+  order: 1;
   margin-top: 20px;
 }
 
@@ -1084,7 +1096,8 @@ nav ul.sub-menu li a:hover {
 }
 
 #sidebar-wrapper {
-  display: none;
+  background: #aaaaaa;
+  order: 2;
 }
 
 footer {

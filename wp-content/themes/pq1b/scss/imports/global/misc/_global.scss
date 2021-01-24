@@ -20,9 +20,13 @@
 
 #page-container {
   padding: 27px 40px;
+  &.two-col {
+    @include flex(null, null, column);
+  }
 }
 
 .page-content-inner {
+  order: 1;
   margin-top: 20px;
 }
 
