@@ -10,6 +10,9 @@
   @include mq(large-laptop) {
     padding: 81px 80px 95px;
   }
+  @include mq(small-monitor) {
+    padding: 81px 80px 85px;
+  }
 }
 
 #sec-six-inner {
@@ -63,6 +66,9 @@ span#sec-six-title {
     margin-top: 90px;
     max-width: 100%;
   }
+  @include mq(small-monitor) {
+    max-width: 1390px;
+  }
   a.sec-six-single-pa {
     display: block;
     position: relative;
@@ -73,6 +79,8 @@ span#sec-six-title {
     overflow: hidden;
     width: 100%;
     text-decoration: none;
+    background: $color-four;
+    transition: background 200ms ease-in-out;
     @include margin_lr();
     @include mq(small-tablet) {
       //height: 90px;
@@ -88,9 +96,13 @@ span#sec-six-title {
     @include mq(large-laptop) {
       padding: 40px 20px;
     }
+    @include mq(small-monitor) {
+      padding: 42px 20px;
+    }
     &:hover {
+      background: $color-two;
       img {
-        opacity: 1;
+        opacity: 0; // future sites want to have this
       }
     }
     span.sec-six-pa-title {

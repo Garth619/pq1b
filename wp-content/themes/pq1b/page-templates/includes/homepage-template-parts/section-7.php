@@ -2,7 +2,11 @@
 
   <div id='sec-seven-inner'>
 
-    <span id='sec-seven-title'>We’ll see you in court. <i>Our</i> court</span><!-- sec-seven-title -->
+    <div id='sec-seven-tile-wrapper'>
+
+      <span id='sec-seven-title'>We’ll see you in court. <i>Our</i> court</span><!-- sec-seven-title -->
+
+    </div><!-- sec-seven-tile-wrapper -->
 
     <div id='sec-seven-content-wrapper'>
 

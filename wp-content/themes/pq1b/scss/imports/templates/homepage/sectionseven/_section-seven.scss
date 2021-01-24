@@ -10,9 +10,23 @@
   @include mq(large-laptop) {
     padding: 90px 120px 135px;
   }
+  @include mq(small-monitor) {
+    padding: 120px 120px 135px;
+  }
 }
 
 #sec-seven-inner {
+  @include mq(small-monitor) {
+    max-width: 1500px;
+    @include margin_lr();
+  }
+}
+
+#sec-seven-tile-wrapper {
+  @include mq(small-monitor) {
+    margin-left: 98px;
+    @include flex(flex-end);
+  }
 }
 
 span#sec-seven-title {
@@ -38,18 +52,26 @@ span#sec-seven-title {
     max-width: 100%;
     @include quick_type(48px, 60px, null);
   }
+  @include mq(small-monitor) {
+    width: calc(100% - 683px);
+    @include margin_lr(0);
+  }
   &::after {
     margin-top: 25px;
     background: $color-one;
     @include box(100%, 3px);
     @include contentdisplay();
     @include mq(small-tablet) {
-      margin-top: 33px;
+      margin-top: 27px;
     }
     @include mq(small-laptop) {
       max-width: 518px;
       margin-top: 25px;
       @include margin_lr();
+    }
+    @include mq(small-monitor) {
+      margin-top: 75px;
+      max-width: 100%;
     }
   }
 }
@@ -81,6 +103,9 @@ span#sec-seven-title {
   @include mq(large-laptop) {
     max-width: 100%;
     width: 520px;
+  }
+  @include mq(small-monitor) {
+    width: 683px;
   }
 }
 
@@ -116,6 +141,7 @@ span#sec-seven-title {
   @include mq(large-laptop) {
     max-width: 100%;
   }
+
   img {
     @include image();
     width: 100%;
@@ -124,4 +150,7 @@ span#sec-seven-title {
 
 #sec-seven-bottom {
   margin-left: 55px;
+  @include mq(small-monitor) {
+    margin-left: 98px;
+  }
 }
