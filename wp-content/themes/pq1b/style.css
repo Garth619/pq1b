@@ -652,6 +652,36 @@ input {
   display: block;
 }
 
+#internal-main {
+  margin-top: 93px;
+}
+
+#page-container {
+  padding: 27px 40px;
+}
+
+.page-content-inner {
+  margin-top: 20px;
+}
+
+.page-title {
+  font-size: 30px;
+  line-height: 35px;
+  font-family: "Roboto", sans-serif;
+  color: #031a28;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+}
+.page-title::after {
+  background: #00afcc;
+  margin-top: 23px;
+  width: 100%;
+  height: 5px;
+  content: "";
+  display: block;
+}
+
 .gform_wrapper ul li ::-webkit-input-placeholder {
   color: #031a28;
 }
@@ -1037,6 +1067,14 @@ nav ul.sub-menu li a:hover {
   opacity: 1;
   visibility: visible;
   transform: translate(0px, 0px);
+}
+
+#internal-banner {
+  display: none;
+}
+
+#sidebar-wrapper {
+  display: none;
 }
 
 footer {

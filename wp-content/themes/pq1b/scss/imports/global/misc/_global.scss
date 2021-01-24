@@ -14,6 +14,35 @@
 .slick-slider {
   display: block;
 }
+#internal-main {
+  margin-top: 93px;
+}
+
+#page-container {
+  padding: 27px 40px;
+}
+
+.page-content-inner {
+  margin-top: 20px;
+}
+
+.page-title {
+  @include type(
+    (
+      size: 30px,
+      height: 35px,
+      family: $primaryfont,
+      color: $color-four,
+      weight: 700,
+    )
+  );
+  &::after {
+    background: $color-two;
+    margin-top: 23px;
+    @include box(100%, 5px);
+    @include contentdisplay();
+  }
+}
 
 .gform_wrapper ul li ::-webkit-input-placeholder {
   color: $color-four;
