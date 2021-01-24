@@ -10,6 +10,9 @@ footer {
   @include mq(large-laptop) {
     padding: 130px 48px 62px;
   }
+  @include mq(small-monitor) {
+    padding: 138px 48px 62px;
+  }
 }
 
 #footer-inner {
@@ -23,6 +26,9 @@ footer {
   }
   @include mq(large-laptop) {
     max-width: 1087px;
+  }
+  @include mq(small-monitor) {
+    max-width: 1385px;
   }
 }
 
@@ -235,6 +241,10 @@ span#footer-form-descrip {
   @include mq(large-laptop) {
     margin-top: 80px;
   }
+  @include mq(small-monitor) {
+    margin-left: 40px;
+    margin-top: 109px;
+  }
 }
 
 #footer-logo {
@@ -280,6 +290,9 @@ span#footer-form-descrip {
   }
   @include mq(large-laptop) {
     margin-left: 55px;
+  }
+  @include mq(small-monitor) {
+    padding: 0 157px;
   }
 }
 
