@@ -8,6 +8,9 @@
     height: 307px;
     @include flex(center, center);
   }
+  @include mq(large-laptop) {
+    height: 381px;
+  }
 }
 
 body.page-template-default {

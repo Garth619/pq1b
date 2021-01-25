@@ -45,6 +45,9 @@
     order: 1;
     padding-top: 66px;
   }
+  @include mq(large-laptop) {
+    padding-top: 70px;
+  }
 }
 
 .page-content-inner {
@@ -64,6 +67,9 @@
     padding-left: 76px;
     padding-right: 76px;
     padding-bottom: 69px;
+  }
+  @include mq(large-laptop) {
+    margin-top: 31px;
   }
 }
 
@@ -88,11 +94,17 @@
     padding-left: 76px;
     padding-right: 76px;
   }
+  @include mq(large-laptop) {
+    @include quick_type(40px, 50px, null);
+  }
   &::after {
     background: $color-two;
     margin-top: 23px;
     @include box(100%, 5px);
     @include contentdisplay();
+    @include mq(large-laptop) {
+      margin-top: 31px;
+    }
   }
 }
 
