@@ -1,6 +1,7 @@
 #internal-banner {
   padding: 27px 40px;
   position: relative;
+  overflow: hidden;
   @include mq(small-tablet) {
     padding: 48px 40px;
   }

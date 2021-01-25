@@ -36,7 +36,7 @@
     }
     @include mq(small-laptop) {
       padding: 0;
-      @include flex(space-between, null, row);
+      @include flex(flex-start, null, row);
     }
   }
 }
@@ -78,6 +78,7 @@
     padding-left: 146px;
     padding-right: 235px;
     padding-bottom: 100px;
+    max-width: 1725px;
   }
 }
 
