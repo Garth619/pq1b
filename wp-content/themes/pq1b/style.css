@@ -599,6 +599,12 @@ input {
   font-style: normal;
   text-decoration: none;
 }
+@media screen and (min-width: 768px) {
+  .content h3 {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
 @media screen and (min-width: 1170px) {
   .content h3 {
     line-height: 30px;
@@ -613,6 +619,12 @@ input {
   font-weight: 700;
   font-style: normal;
   text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .content h4 {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 .content a {
   color: #cc0d29;
@@ -672,9 +684,19 @@ input {
 #internal-main {
   margin-top: 93px;
 }
+@media screen and (min-width: 768px) {
+  #internal-main {
+    margin-top: 121px;
+  }
+}
 
 #page-container {
   padding: 27px 40px;
+}
+@media screen and (min-width: 768px) {
+  #page-container {
+    padding: 48px 70px;
+  }
 }
 #page-container.two-col {
   padding: 27px 0px 0px 0px;
@@ -683,6 +705,11 @@ input {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 768px) {
+  #page-container.two-col {
+    padding: 48px 0px 0px 0px;
+  }
+}
 
 .page-content-inner {
   order: 1;
@@ -690,6 +717,14 @@ input {
   padding-bottom: 25px;
   padding-left: 40px;
   padding-right: 40px;
+}
+@media screen and (min-width: 768px) {
+  .page-content-inner {
+    margin-top: 32px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 49px;
+  }
 }
 
 .page-title {
@@ -702,6 +737,14 @@ input {
   font-weight: 700;
   font-style: normal;
   text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .page-title {
+    padding-left: 70px;
+    padding-right: 70px;
+    font-size: 35px;
+    line-height: 45px;
+  }
 }
 .page-title::after {
   background: #00afcc;
@@ -800,6 +843,13 @@ input {
   text-transform: uppercase;
   font-style: normal;
   text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .button-three {
+    padding: 13px 10px;
+    font-size: 13px;
+    line-height: 15px;
+  }
 }
 .button-three:hover {
   background: #cc0d29;
@@ -1120,10 +1170,13 @@ nav ul.sub-menu li a:hover {
   transform: translate(0px, 0px);
 }
 
-#internal-banner {
-  display: none;
+#internal-banner-content {
+  text-align: center;
 }
 
+.page-title {
+  display: inline-block;
+}
 #sidebar-wrapper {
   order: 2;
 }
@@ -1142,6 +1195,13 @@ nav ul.sub-menu li a:hover {
   font-style: normal;
   text-decoration: none;
 }
+@media screen and (min-width: 768px) {
+  #sidebar-wrapper h3,
+#sidebar-wrapper #featured-att-title {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
 #sidebar-wrapper #featured-att-title {
   padding-left: 0px;
   padding-right: 0px;
@@ -1149,7 +1209,7 @@ nav ul.sub-menu li a:hover {
 
 #sidebar-inner {
   background: #efefef;
-  padding: 45px 0px;
+  padding: 43px 0px 20px;
 }
 
 .sidebar-box ul {
@@ -1180,10 +1240,16 @@ nav ul.sub-menu li a:hover {
   display: block;
   color: #031a28;
   padding-left: 40px;
-  padding-right: 93px;
+  padding-right: 40px;
   margin-bottom: 24px;
   text-decoration: none;
   transition: all 200ms ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  .sidebar-box ul li a {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
 }
 .sidebar-box ul.menu > li.menu-item-has-children.active > a {
   color: #00afcc;
@@ -1196,13 +1262,16 @@ nav ul.sub-menu li a:hover {
   border-top: 7px solid #00afcc;
   border-bottom: none;
 }
+.sidebar-box ul.menu > li.menu-item-has-children > a {
+  display: flex;
+  align-items: center;
+}
 .sidebar-box ul.menu > li.menu-item-has-children > a::after {
+  display: inline-block;
   transition: all 200ms ease-in-out;
+  margin-left: 37px;
   content: "";
-  display: block;
-  position: absolute;
-  top: 10px;
-  right: 70px;
+  display: inline-block;
   width: 0;
   height: 0;
   border-right: 4px solid transparent;
@@ -1234,9 +1303,19 @@ nav ul.sub-menu li a:hover {
 #featured-att-wrapper {
   padding: 48px 36px;
 }
+@media screen and (min-width: 768px) {
+  #featured-att-wrapper {
+    padding: 48px 70px 66px;
+  }
+}
 
 #featured-att-list {
   margin-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  #featured-att-list {
+    margin-top: 40px;
+  }
 }
 
 a.single-featured-att {
@@ -1267,6 +1346,7 @@ a.single-featured-att .single-featured-att-inner .single-featured-att-content {
 }
 a.single-featured-att .single-featured-att-inner .single-featured-att-content::after {
   margin-top: 23px;
+  margin-right: 20px;
   content: "";
   display: block;
   width: 0;
@@ -1289,6 +1369,11 @@ a.single-featured-att .single-featured-att-inner .single-featured-att-content sp
   font-style: normal;
   text-decoration: none;
 }
+@media screen and (min-width: 768px) {
+  a.single-featured-att .single-featured-att-inner .single-featured-att-content span.single-featured-att-title {
+    margin-top: 16px;
+  }
+}
 a.single-featured-att .single-featured-att-inner .single-featured-att-content span.single-featured-att-position {
   margin-top: 2px;
   font-size: 15px;
@@ -1306,9 +1391,28 @@ a.single-featured-att .single-featured-att-inner .single-featured-att-content sp
   margin-left: auto;
   margin-right: auto;
 }
+@media screen and (min-width: 675px) {
+  #featured-att-button-wrapper {
+    max-width: 100%;
+    text-align: center;
+  }
+}
 #featured-att-button-wrapper .featured-att-button {
   margin-bottom: 20px;
   width: 100%;
+}
+@media screen and (min-width: 675px) {
+  #featured-att-button-wrapper .featured-att-button {
+    display: inline-block;
+    max-width: 244px;
+    margin: 0px 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #featured-att-button-wrapper .featured-att-button {
+    max-width: 157px;
+    margin: 0px 7px;
+  }
 }
 #featured-att-button-wrapper .featured-att-button:last-of-type {
   margin-bottom: 0;
@@ -2980,7 +3084,11 @@ h1#sec-three-header:after {
 
 #sec-three-content {
   padding-top: 10px;
-  margin-left: 57px;
+}
+@media screen and (min-width: 1170px) {
+  #sec-three-content {
+    margin-left: 57px;
+  }
 }
 @media screen and (min-width: 1695px) {
   #sec-three-content {
@@ -3916,8 +4024,10 @@ span#sec-seven-title::after {
   width: 100%;
 }
 
-#sec-seven-bottom {
-  margin-left: 55px;
+@media screen and (min-width: 1170px) {
+  #sec-seven-bottom {
+    margin-left: 57px;
+  }
 }
 @media screen and (min-width: 1695px) {
   #sec-seven-bottom {

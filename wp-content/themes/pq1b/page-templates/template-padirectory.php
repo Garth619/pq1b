@@ -6,7 +6,9 @@ get_header();?>
 
 <div id="internal-main">
 
-  <h1 class="page-title page-large-content-title"><?php the_title();?></h1>
+  <?php get_template_part('page-templates/includes/template', 'default-page-banner');?>
+
+
 
   <div id="page-container">
 

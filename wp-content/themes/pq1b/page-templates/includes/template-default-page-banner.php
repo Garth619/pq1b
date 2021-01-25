@@ -66,6 +66,16 @@
 
     <?php }?>
 
+    <?php // practice areas
+
+    if (is_page_template('page-templates/template-padirectory.php')) {?>
+
+    <h1 class="banner-title page-title"><?php the_title();?></h1>
+
+    <?php }?>
+
+
+
   </div><!-- internal-banner-content -->
 
   <img id='hero' src='<?php bloginfo('template_directory');?>/images/.jpg' alt='' />

@@ -262,7 +262,9 @@ h1#sec-three-header {
 
 #sec-three-content {
   padding-top: 10px;
-  margin-left: 57px;
+  @include mq(small-laptop) {
+    margin-left: 57px;
+  }
   @include mq(small-monitor) {
     margin-left: 140px;
   }

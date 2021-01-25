@@ -16,15 +16,24 @@
 }
 #internal-main {
   margin-top: 93px;
+  @include mq(small-tablet) {
+    margin-top: 121px;
+  }
 }
 
 #page-container {
   padding: 27px 40px;
+  @include mq(small-tablet) {
+    padding: 48px 70px;
+  }
   &.two-col {
     padding: 27px 0px 0px 0px;
     padding-left: 0;
     padding-right: 0;
     @include flex(null, null, column);
+    @include mq(small-tablet) {
+      padding: 48px 0px 0px 0px;
+    }
   }
 }
 
@@ -34,6 +43,12 @@
   padding-bottom: 25px;
   padding-left: 40px;
   padding-right: 40px;
+  @include mq(small-tablet) {
+    margin-top: 32px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 49px;
+  }
 }
 
 .page-title {
@@ -48,6 +63,11 @@
       weight: 700,
     )
   );
+  @include mq(small-tablet) {
+    padding-left: 70px;
+    padding-right: 70px;
+    @include quick_type(35px, 45px, null);
+  }
   &::after {
     background: $color-two;
     margin-top: 23px;

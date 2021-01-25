@@ -66,6 +66,10 @@
       transform: uppercase,
     )
   );
+  @include mq(small-tablet) {
+    padding: 13px 10px;
+    @include quick_type(13px, 15px, null);
+  }
   &:hover {
     background: $color-one;
   }

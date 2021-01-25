@@ -16,6 +16,10 @@
         transform: uppercase,
       )
     );
+    @include mq(small-tablet) {
+      padding-left: 70px;
+      padding-right: 70px;
+    }
   }
   #featured-att-title {
     padding-left: 0px;
@@ -25,7 +29,7 @@
 
 #sidebar-inner {
   background: $color-six;
-  padding: 45px 0px;
+  padding: 43px 0px 20px;
 }
 
 .sidebar-box {
@@ -58,10 +62,14 @@
         display: block;
         color: $color-four;
         padding-left: 40px;
-        padding-right: 93px;
+        padding-right: 40px;
         margin-bottom: 24px;
         text-decoration: none;
         transition: all 200ms ease-in-out;
+        @include mq(small-tablet) {
+          padding-left: 70px;
+          padding-right: 70px;
+        }
       }
     }
     &.menu {
@@ -75,10 +83,13 @@
           }
         }
         > a {
+          @include flex(null, center);
           &::after {
+            display: inline-block;
             transition: all 200ms ease-in-out;
-            @include contentdisplay();
-            @include abs(10px, 70px, null, null);
+            margin-left: 37px;
+            @include contentdisplay(inline-block);
+            //@include abs(10px, 70px, null, null);
             @include tri(down, 4px, 7px, $color-four);
           }
         }
@@ -120,10 +131,16 @@
 
 #featured-att-wrapper {
   padding: 48px 36px;
+  @include mq(small-tablet) {
+    padding: 48px 70px 66px;
+  }
 }
 
 #featured-att-list {
   margin-top: 30px;
+  @include mq(small-tablet) {
+    margin-top: 40px;
+  }
 }
 
 a.single-featured-att {
@@ -146,6 +163,7 @@ a.single-featured-att {
       @include flex(space-between);
       &::after {
         margin-top: 23px;
+        margin-right: 20px;
         @include contentdisplay();
         @include tri(right, 8px, 8px, $color-one);
       }
@@ -162,6 +180,9 @@ a.single-featured-att {
               weight: 700,
             )
           );
+          @include mq(small-tablet) {
+            margin-top: 16px;
+          }
         }
         &.single-featured-att-position {
           margin-top: 2px;
@@ -183,9 +204,22 @@ a.single-featured-att {
   margin-top: 30px;
   max-width: 244px;
   @include margin_lr();
+  @include mq(large-mobile) {
+    max-width: 100%;
+    text-align: center;
+  }
   .featured-att-button {
     margin-bottom: 20px;
     width: 100%;
+    @include mq(large-mobile) {
+      display: inline-block;
+      max-width: 244px;
+      margin: 0px 10px;
+    }
+    @include mq(small-tablet) {
+      max-width: 157px;
+      margin: 0px 7px;
+    }
     &:last-of-type {
       margin-bottom: 0;
     }
