@@ -34,6 +34,15 @@
     @include mq(small-tablet) {
       padding: 48px 0px 0px 0px;
     }
+    @include mq(small-laptop) {
+      padding: 0;
+      @include flex(space-between, null, row);
+    }
+  }
+}
+.page-content {
+  @include mq(small-laptop) {
+    order: 1;
   }
 }
 

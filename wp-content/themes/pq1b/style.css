@@ -710,6 +710,20 @@ input {
     padding: 48px 0px 0px 0px;
   }
 }
+@media screen and (min-width: 1170px) {
+  #page-container.two-col {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .page-content {
+    order: 1;
+  }
+}
 
 .page-content-inner {
   order: 1;
@@ -1241,6 +1255,11 @@ img#banner-img {
 
 #sidebar-wrapper {
   order: 2;
+}
+@media screen and (min-width: 1170px) {
+  #sidebar-wrapper {
+    order: 1;
+  }
 }
 #sidebar-wrapper h3,
 #sidebar-wrapper #featured-att-title {

@@ -1,5 +1,8 @@
 #sidebar-wrapper {
   order: 2;
+  @include mq(small-laptop) {
+    order: 1;
+  }
   h3,
   #featured-att-title {
     padding-left: 40px;
