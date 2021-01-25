@@ -43,6 +43,7 @@
 .page-content {
   @include mq(small-laptop) {
     order: 1;
+    padding-top: 66px;
   }
 }
 
@@ -57,6 +58,12 @@
     padding-left: 70px;
     padding-right: 70px;
     padding-bottom: 49px;
+  }
+  @include mq(small-laptop) {
+    margin-top: 26px;
+    padding-left: 76px;
+    padding-right: 76px;
+    padding-bottom: 69px;
   }
 }
 
@@ -76,6 +83,10 @@
     padding-left: 70px;
     padding-right: 70px;
     @include quick_type(35px, 45px, null);
+  }
+  @include mq(small-laptop) {
+    padding-left: 76px;
+    padding-right: 76px;
   }
   &::after {
     background: $color-two;

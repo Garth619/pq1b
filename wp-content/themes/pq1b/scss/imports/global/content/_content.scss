@@ -25,11 +25,12 @@
       )
     );
     @include mq(small-laptop) {
-      @include quick_type(20px, 30px, null);
+      padding-bottom: 20px;
+      @include quick_type(22px, 30px, null);
     }
     @include mq(large-laptop) {
       padding-bottom: 20px;
-      @include quick_type(22px, 30px, null);
+      //@include quick_type(22px, 30px, null);
     }
   }
   h3 {

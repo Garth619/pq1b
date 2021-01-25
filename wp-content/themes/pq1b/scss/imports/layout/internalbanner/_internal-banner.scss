@@ -1,7 +1,6 @@
 #internal-banner {
   padding: 27px 40px;
   position: relative;
-  background: pink;
   @include mq(small-tablet) {
     padding: 48px 40px;
   }
@@ -11,12 +10,23 @@
   }
 }
 
+body.page-template-default {
+  #internal-banner {
+    display: none;
+    @include mq(small-laptop) {
+      display: block;
+    }
+  }
+}
+
 #internal-banner-content {
   text-align: center;
   position: relative;
   z-index: 1;
   @include mq(small-laptop) {
     max-width: 1020px;
+    height: 100%;
+    @include flex(center, center);
     @include margin_lr();
   }
 }
