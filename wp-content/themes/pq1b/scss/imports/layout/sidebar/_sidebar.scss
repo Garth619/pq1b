@@ -1,14 +1,7 @@
 #sidebar-wrapper {
   order: 2;
-}
-
-#sidebar-inner {
-  background: $color-six;
-  padding: 45px 0px;
-}
-
-.sidebar-box {
-  h3 {
+  h3,
+  #featured-att-title {
     padding-left: 40px;
     padding-right: 40px;
     margin-bottom: 24px;
@@ -24,6 +17,18 @@
       )
     );
   }
+  #featured-att-title {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+#sidebar-inner {
+  background: $color-six;
+  padding: 45px 0px;
+}
+
+.sidebar-box {
   ul {
     list-style-type: none;
     li {
@@ -109,6 +114,80 @@
           color: $color-two;
         }
       }
+    }
+  }
+}
+
+#featured-att-wrapper {
+  padding: 48px 36px;
+}
+
+#featured-att-list {
+  margin-top: 30px;
+}
+
+a.single-featured-att {
+  display: block;
+  text-decoration: none;
+  border-bottom: 1px $color-five solid;
+  margin-top: 27px;
+  padding-bottom: 27px;
+  .single-featured-att-inner {
+    @include flex(space-between);
+    .single-featured-att-img {
+      @include box(77px);
+      img {
+        @include image();
+      }
+    }
+    .single-featured-att-content {
+      margin-left: 15px;
+      flex-grow: 1;
+      @include flex(space-between);
+      &::after {
+        margin-top: 23px;
+        @include contentdisplay();
+        @include tri(right, 8px, 8px, $color-one);
+      }
+      span {
+        display: block;
+        &.single-featured-att-title {
+          margin-top: 10px;
+          @include type(
+            (
+              size: 18px,
+              height: 20px,
+              family: $primaryfont,
+              color: $color-four,
+              weight: 700,
+            )
+          );
+        }
+        &.single-featured-att-position {
+          margin-top: 2px;
+          @include type(
+            (
+              size: 15px,
+              height: 20px,
+              family: $primaryfont,
+              color: $color-four,
+            )
+          );
+        }
+      }
+    }
+  }
+}
+
+#featured-att-button-wrapper {
+  margin-top: 30px;
+  max-width: 244px;
+  @include margin_lr();
+  .featured-att-button {
+    margin-bottom: 20px;
+    width: 100%;
+    &:last-of-type {
+      margin-bottom: 0;
     }
   }
 }
