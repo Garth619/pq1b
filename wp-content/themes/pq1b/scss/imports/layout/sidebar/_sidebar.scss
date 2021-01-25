@@ -1,6 +1,9 @@
 #sidebar-wrapper {
-  background: $color-six;
   order: 2;
+}
+
+#sidebar-inner {
+  background: $color-six;
   padding: 45px 0px;
 }
 

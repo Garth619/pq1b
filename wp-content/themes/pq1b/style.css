@@ -1104,8 +1104,11 @@ nav ul.sub-menu li a:hover {
 }
 
 #sidebar-wrapper {
-  background: #efefef;
   order: 2;
+}
+
+#sidebar-inner {
+  background: #efefef;
   padding: 45px 0px;
 }
 
