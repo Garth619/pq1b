@@ -38,6 +38,7 @@ body.page-template-default {
   display: inline-block;
   &.banner-title {
     @include mq(small-laptop) {
+      padding: 0px 70px;
       @include type(
         (
           size: 45px,

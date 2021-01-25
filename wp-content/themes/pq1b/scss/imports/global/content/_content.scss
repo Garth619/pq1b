@@ -32,6 +32,9 @@
       padding-bottom: 24px;
       @include quick_type(25px, 33px, null);
     }
+    @include mq(small-monitor) {
+      padding-bottom: 35px;
+    }
   }
   h3 {
     padding-bottom: 15px;

@@ -8,6 +8,9 @@
   @include mq(large-laptop) {
     flex-basis: 437px;
   }
+  @include mq(small-monitor) {
+    flex-basis: 593px;
+  }
   h3,
   #featured-att-title {
     padding-left: 40px;
@@ -36,6 +39,10 @@
       margin-bottom: 33px;
       padding-left: 58px;
       padding-right: 58px;
+    }
+    @include mq(small-monitor) {
+      padding-left: 117px;
+      padding-right: 117px;
     }
   }
   #featured-att-title {
@@ -101,6 +108,10 @@
           padding-left: 58px;
           padding-right: 58px;
         }
+        @include mq(small-monitor) {
+          padding-left: 117px;
+          padding-right: 117px;
+        }
       }
     }
     &.menu {
@@ -120,8 +131,10 @@
             transition: all 200ms ease-in-out;
             margin-left: 37px;
             @include contentdisplay(inline-block);
-            //@include abs(10px, 70px, null, null);
             @include tri(down, 4px, 7px, $color-four);
+            @include mq(small-monitor) {
+              margin-left: 15px;
+            }
           }
         }
       }
@@ -170,6 +183,12 @@
   }
   @include mq(large-laptop) {
     padding: 41px 0px 95px 58px;
+  }
+  @include mq(small-monitor) {
+    padding: 64px 0px 95px 58px;
+  }
+  @include mq(small-monitor) {
+    padding: 64px 89px 125px 117px;
   }
 }
 

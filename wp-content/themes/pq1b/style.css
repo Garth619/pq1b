@@ -590,6 +590,11 @@ input {
     line-height: 33px;
   }
 }
+@media screen and (min-width: 1695px) {
+  .content h2 {
+    padding-bottom: 35px;
+  }
+}
 .content h3 {
   padding-bottom: 15px;
   font-size: 17px;
@@ -763,6 +768,16 @@ input {
 @media screen and (min-width: 1380px) {
   .page-content-inner {
     margin-top: 31px;
+    padding-left: 110px;
+    padding-right: 175px;
+  }
+}
+@media screen and (min-width: 1695px) {
+  .page-content-inner {
+    margin-top: 39px;
+    padding-left: 146px;
+    padding-right: 235px;
+    padding-bottom: 100px;
   }
 }
 
@@ -793,7 +808,19 @@ input {
 }
 @media screen and (min-width: 1380px) {
   .page-title {
+    padding-left: 110px;
+    padding-right: 175px;
     font-size: 40px;
+    line-height: 50px;
+  }
+}
+@media screen and (min-width: 1695px) {
+  .page-title {
+    padding-left: 146px;
+    padding-right: 235px;
+    display: block;
+    width: 100%;
+    font-size: 45px;
     line-height: 50px;
   }
 }
@@ -1286,6 +1313,7 @@ body.page-template-default #internal-banner {
 }
 @media screen and (min-width: 1170px) {
   .page-title.banner-title {
+    padding: 0px 70px;
     font-size: 45px;
     line-height: 56px;
     font-family: "Roboto", sans-serif;
@@ -1333,6 +1361,11 @@ img#banner-img {
     flex-basis: 437px;
   }
 }
+@media screen and (min-width: 1695px) {
+  #sidebar-wrapper {
+    flex-basis: 593px;
+  }
+}
 #sidebar-wrapper h3,
 #sidebar-wrapper #featured-att-title {
   padding-left: 40px;
@@ -1368,6 +1401,13 @@ img#banner-img {
     margin-bottom: 33px;
     padding-left: 58px;
     padding-right: 58px;
+  }
+}
+@media screen and (min-width: 1695px) {
+  #sidebar-wrapper h3,
+#sidebar-wrapper #featured-att-title {
+    padding-left: 117px;
+    padding-right: 117px;
   }
 }
 #sidebar-wrapper #featured-att-title {
@@ -1441,6 +1481,12 @@ img#banner-img {
     padding-right: 58px;
   }
 }
+@media screen and (min-width: 1695px) {
+  .sidebar-box ul li a {
+    padding-left: 117px;
+    padding-right: 117px;
+  }
+}
 .sidebar-box ul.menu > li.menu-item-has-children.active > a {
   color: #00afcc;
 }
@@ -1468,6 +1514,11 @@ img#banner-img {
   border-left: 4px solid transparent;
   border-top: 7px solid #031a28;
   border-bottom: none;
+}
+@media screen and (min-width: 1695px) {
+  .sidebar-box ul.menu > li.menu-item-has-children > a::after {
+    margin-left: 15px;
+  }
 }
 .sidebar-box ul.menu > li.current-menu-item > a {
   color: #00afcc;
@@ -1506,6 +1557,16 @@ img#banner-img {
 @media screen and (min-width: 1380px) {
   #featured-att-wrapper {
     padding: 41px 0px 95px 58px;
+  }
+}
+@media screen and (min-width: 1695px) {
+  #featured-att-wrapper {
+    padding: 64px 0px 95px 58px;
+  }
+}
+@media screen and (min-width: 1695px) {
+  #featured-att-wrapper {
+    padding: 64px 89px 125px 117px;
   }
 }
 
