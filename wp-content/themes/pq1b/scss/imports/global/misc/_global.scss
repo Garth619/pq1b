@@ -21,6 +21,9 @@
 #page-container {
   padding: 27px 40px;
   &.two-col {
+    padding: 27px 0px 0px 0px;
+    padding-left: 0;
+    padding-right: 0;
     @include flex(null, null, column);
   }
 }
@@ -28,9 +31,14 @@
 .page-content-inner {
   order: 1;
   margin-top: 20px;
+  padding-bottom: 25px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .page-title {
+  padding-left: 40px;
+  padding-right: 40px;
   @include type(
     (
       size: 30px,

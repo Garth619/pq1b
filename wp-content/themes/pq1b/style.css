@@ -677,6 +677,9 @@ input {
   padding: 27px 40px;
 }
 #page-container.two-col {
+  padding: 27px 0px 0px 0px;
+  padding-left: 0;
+  padding-right: 0;
   display: flex;
   flex-direction: column;
 }
@@ -684,9 +687,14 @@ input {
 .page-content-inner {
   order: 1;
   margin-top: 20px;
+  padding-bottom: 25px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .page-title {
+  padding-left: 40px;
+  padding-right: 40px;
   font-size: 30px;
   line-height: 35px;
   font-family: "Roboto", sans-serif;
@@ -1096,8 +1104,102 @@ nav ul.sub-menu li a:hover {
 }
 
 #sidebar-wrapper {
-  background: #aaaaaa;
+  background: #efefef;
   order: 2;
+  padding: 45px 0px;
+}
+
+.sidebar-box h3 {
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 24px;
+  font-size: 22px;
+  letter-spacing: 2.2px;
+  line-height: 30px;
+  font-family: "Roboto", sans-serif;
+  color: #031a28;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
+}
+.sidebar-box ul {
+  list-style-type: none;
+}
+.sidebar-box ul li {
+  position: relative;
+  font-size: 17px;
+  line-height: 26px;
+  font-family: "Roboto", sans-serif;
+  color: #031a28;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+}
+.sidebar-box ul li.active > a {
+  margin-bottom: 19px;
+}
+.sidebar-box ul li.active ul.sub-menu {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-bottom: 30px;
+  opacity: 1;
+  visibility: visible;
+  max-height: 3000px;
+}
+.sidebar-box ul li a {
+  display: block;
+  color: #031a28;
+  padding-left: 40px;
+  padding-right: 93px;
+  margin-bottom: 24px;
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+}
+.sidebar-box ul.menu > li.menu-item-has-children.active > a {
+  color: #00afcc;
+}
+.sidebar-box ul.menu > li.menu-item-has-children.active > a::after {
+  width: 0;
+  height: 0;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  border-top: 7px solid #00afcc;
+  border-bottom: none;
+}
+.sidebar-box ul.menu > li.menu-item-has-children > a::after {
+  transition: all 200ms ease-in-out;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 70px;
+  width: 0;
+  height: 0;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  border-top: 7px solid #031a28;
+  border-bottom: none;
+}
+.sidebar-box ul.menu > li.current-menu-item > a {
+  color: #00afcc;
+}
+.sidebar-box ul.sub-menu {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  border-top: 2px solid #00afcc;
+  background: #fff;
+  transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out, max-height 500ms cubic-bezier(0.17, 0.66, 0.34, 0.98), margin 500ms cubic-bezier(0.17, 0.66, 0.34, 0.98), padding 500ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+}
+.sidebar-box ul.sub-menu li:last-of-type a {
+  margin-bottom: 0;
+}
+.sidebar-box ul.sub-menu > li.current-menu-item > a {
+  color: #00afcc;
 }
 
 footer {

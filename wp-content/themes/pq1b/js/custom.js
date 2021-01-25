@@ -715,18 +715,15 @@ $('.about-middle-att ul li').wrapInner("<span></span>");
   $(".sidebar-box ul.menu > li.menu-item-has-children > a").on(
     "click",
     function (e) {
-      $(this).next("ul.sub-menu").slideToggle(300);
+      $(this).next("ul.sub-menu").toggleClass('active');
 
       $(this).parent().toggleClass("active");
     }
   );
 
-  $('.widget h3').on('click', function(e) {
-    $(this).next('ul').slideToggle(300);
-    $(this).next('#bio-list').slideToggle(300);
-    $(this).next('#bio-slider-wrapper').toggleClass('open');
-    $(this).toggleClass('active');
-  });
+  $(".sidebar-box ul.menu > li.current-menu-ancestor").addClass('active');
+
+  
 
   
   /* Resize Nav Functions
