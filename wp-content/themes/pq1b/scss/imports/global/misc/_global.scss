@@ -16,7 +16,7 @@
 }
 #internal-main {
   margin-top: 93px;
-  @include mq(small-tablet) {
+  @include mq(small-laptop) {
     margin-top: 121px;
   }
 }

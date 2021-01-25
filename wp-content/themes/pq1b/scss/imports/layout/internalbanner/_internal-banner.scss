@@ -1,12 +1,55 @@
 #internal-banner {
+  padding: 27px 40px;
+  position: relative;
+  background: pink;
+  @include mq(small-tablet) {
+    padding: 48px 40px;
+  }
+  @include mq(small-laptop) {
+    height: 307px;
+    @include flex(center, center);
+  }
 }
 
 #internal-banner-content {
   text-align: center;
+  position: relative;
+  z-index: 1;
+  @include mq(small-laptop) {
+    max-width: 1020px;
+    @include margin_lr();
+  }
 }
 
 .page-title {
   display: inline-block;
   &.banner-title {
+    @include mq(small-laptop) {
+      @include type(
+        (
+          size: 45px,
+          height: 56px,
+          family: $primaryfont,
+          color: $color-seven,
+          align: center,
+          weight: 700,
+        )
+      );
+      &::after {
+        @include mq(small-laptop) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+img#banner-img {
+  display: none;
+  object-fit: cover;
+  @include box(100%);
+  @include abs(0, null, null, 0);
+  @include mq(small-laptop) {
+    display: block;
   }
 }

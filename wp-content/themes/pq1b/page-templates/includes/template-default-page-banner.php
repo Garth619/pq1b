@@ -78,8 +78,12 @@
 
   </div><!-- internal-banner-content -->
 
-  <img id='hero' src='<?php bloginfo('template_directory');?>/images/.jpg' alt='' />
+  <picture>
 
+    <img id='banner-img' src='<?php bloginfo('template_directory');?>/images/int-hero-1200.jpg' alt='' />
+
+  </picture>
+  <!-- remove 'data-' and 'lazyload' if needs to load on page load -->
 </div><!-- internal-banner -->
 
 <?php }?>
