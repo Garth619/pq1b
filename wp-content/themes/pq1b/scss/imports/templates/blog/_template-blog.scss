@@ -1,0 +1,42 @@
+.blog-header {
+  padding-bottom: 15px;
+  @include type(
+    (
+      size: 19px,
+      height: 23px,
+      family: $primaryfont,
+      color: $color-two,
+      weight: 900,
+    )
+  );
+  @include mq(small-laptop) {
+    @include quick_type(22px, 30px, null);
+  }
+  @include mq(large-laptop) {
+    @include quick_type(25px, 33px, null);
+  }
+  @include mq(small-monitor) {
+  }
+  a {
+    color: $color-four;
+    text-decoration: none;
+    transition: all 200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    &:hover {
+      color: $color-two;
+    }
+  }
+}
+
+.blog-meta {
+  @include type(
+    (
+      size: 14px,
+      height: 30px,
+      spacing: 1.6px,
+      family: $primaryfont,
+      color: $color-four,
+      weight: 700,
+      transform: uppercase,
+    )
+  );
+}

@@ -20,38 +20,26 @@
 
   <div class="blog-post">
 
-    <?php if (has_post_thumbnail()) {?>
+    <h2 class="blog-header"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
 
-    <div class='blog-post-featured-image'>
+    <div class="blog-meta">
 
-      <?php the_post_thumbnail('medium');?>
-
-    </div><!-- blog-post-featured-image -->
-
-    <?php }?>
-
-    <div class='blog-post-content-wrapper'>
-
-      <div class="blog-meta">
-
-        <span class="date">Posted on <?php $pfx_date = get_the_date();
+      <span class="date">Posted on <?php $pfx_date = get_the_date();
         echo $pfx_date?></span>
 
-      </div><!-- blog-meta -->
+      <?php echo get_the_category_list(); ?>
 
-      <h2 class="blog-header"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
+    </div><!-- blog-meta -->
 
-      <div class="blog-content content">
+    <div class="blog-content content">
 
-        <?php echo wp_trim_words(get_the_content(), 54, '...'); ?>
+      <?php echo wp_trim_words(get_the_content(), 54, '...'); ?>
 
-      </div><!-- blog-content -->
+    </div><!-- blog-content -->
 
-      <a class="button-two read-more" href="<?php the_permalink();?>">Read Article</a>
+    <a class="read-more" href="<?php the_permalink();?>">Read More</a>
 
-      <?php edit_post_link(__('Edit'), '', '');?>
-
-    </div><!-- blog-post-content-wrapper -->
+    <?php edit_post_link(__('Edit'), '', '');?>
 
   </div><!-- blog_post -->
 

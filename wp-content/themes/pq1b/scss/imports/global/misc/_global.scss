@@ -140,6 +140,11 @@
   &.default-title {
     width: 100%;
   }
+  &.large-title {
+    @include mq(large-laptop) {
+      @include quick_type(65px, 70px, null);
+    }
+  }
   &::after {
     background: $color-two;
     margin-top: 23px;

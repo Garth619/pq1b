@@ -850,6 +850,12 @@ input {
 .page-title.default-title {
   width: 100%;
 }
+@media screen and (min-width: 1380px) {
+  .page-title.large-title {
+    font-size: 65px;
+    line-height: 70px;
+  }
+}
 .page-title::after {
   background: #00afcc;
   margin-top: 23px;
@@ -4372,6 +4378,49 @@ span#sec-seven-title::after {
     margin-left: 98px;
     margin-right: 63px;
   }
+}
+
+.blog-header {
+  padding-bottom: 15px;
+  font-size: 19px;
+  line-height: 23px;
+  font-family: "Roboto", sans-serif;
+  color: #00afcc;
+  font-weight: 900;
+  font-style: normal;
+  text-decoration: none;
+}
+@media screen and (min-width: 1170px) {
+  .blog-header {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  .blog-header {
+    font-size: 25px;
+    line-height: 33px;
+  }
+}
+.blog-header a {
+  color: #031a28;
+  text-decoration: none;
+  transition: all 200ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+}
+.blog-header a:hover {
+  color: #00afcc;
+}
+
+.blog-meta {
+  font-size: 14px;
+  letter-spacing: 1.6px;
+  line-height: 30px;
+  font-family: "Roboto", sans-serif;
+  color: #031a28;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-style: normal;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
