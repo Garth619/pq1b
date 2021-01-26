@@ -17,7 +17,7 @@
 
     if (is_category()) {?>
 
-    <h1 class="banner-title page-title"><?php single_cat_title()?></h1><!-- banner_title -->
+    <h1 class="banner-title page-title large-title"><?php single_cat_title()?></h1><!-- banner_title -->
 
     <?php }?>
 
@@ -25,7 +25,7 @@
 
     if (is_archive() && !is_category()) {?>
 
-    <h1 class="banner-title page-title">
+    <h1 class="banner-title page-title large-title">
       <?php printf(__('<span>%s</span>'), get_the_date(_x('Y', 'yearly archives date format', 'twentyten')));?>
     </h1>
 
@@ -66,11 +66,11 @@
 
     <?php }?>
 
-    <?php // practice areas
+    <?php // practice areas directory
 
     if (is_page_template('page-templates/template-padirectory.php')) {?>
 
-    <h1 class="banner-title page-title"><?php the_title();?></h1>
+    <h1 class="banner-title page-title large-title"><?php the_title();?></h1>
 
     <?php }?>
 

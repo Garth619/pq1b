@@ -8,8 +8,6 @@ get_header();?>
 
   <?php get_template_part('page-templates/includes/template', 'default-page-banner');?>
 
-
-
   <div id="page-container">
 
     <div id='pa-directory'>

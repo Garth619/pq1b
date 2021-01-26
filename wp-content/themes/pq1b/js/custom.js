@@ -707,7 +707,7 @@ $('.about-middle-att ul li').wrapInner("<span></span>");
 
   var pgurl = window.location.href;
 
-  $(".sidebar-box.sidebar-blog ul li").each(function () {
+  $(".sidebar-blog .sidebar-box ul li").each(function () {
     if ($(this).find("a").attr("href") == pgurl)
       $(this).addClass("blog-active");
   });

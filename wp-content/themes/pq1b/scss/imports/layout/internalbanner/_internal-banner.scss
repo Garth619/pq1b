@@ -3,7 +3,7 @@
   position: relative;
   overflow: hidden;
   @include mq(small-tablet) {
-    padding: 48px 40px;
+    padding: 48px 40px 30px;
   }
   @include mq(small-laptop) {
     height: 307px;
@@ -55,6 +55,17 @@ body.page-template-default {
           display: none;
         }
       }
+    }
+  }
+  &.large-title {
+    @include mq(small-laptop) {
+      font-size: 50px;
+    }
+    @include mq(large-laptop) {
+      font-size: 60px;
+    }
+    @include mq(small-monitor) {
+      font-size: 65px;
     }
   }
 }
