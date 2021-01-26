@@ -1,9 +1,13 @@
 <div id="sidebar-wrapper">
 
-  <div class="sidebar-box sidebar-blog">
+  <div id='sidebar-inner'>
 
-    <?php bulk_sidebar();?>
+    <div class="sidebar-box sidebar-blog">
 
-  </div><!-- sidebar-box -->
+      <?php bulk_sidebar();?>
+
+    </div><!-- sidebar-box -->
+
+  </div><!-- sidebar-inner -->
 
 </div><!-- sidebar_wrapper -->

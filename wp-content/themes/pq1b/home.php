@@ -8,7 +8,7 @@
 
     <?php if (!get_field('disable_sidebar')) {
 
-    get_sidebar();
+    get_sidebar('blog');
 
 }?>
 
