@@ -39,6 +39,27 @@
       @include flex(flex-start, null, row);
     }
   }
+  &.no-banner-layout {
+    .page-content {
+      max-width: 1425px;
+      padding-left: 40px;
+      padding-right: 40px;
+      @include margin_lr();
+      @include mq(small-tablet) {
+        padding-left: 70px;
+        padding-right: 70px;
+      }
+    }
+    .page-title {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .page-content-inner {
+      padding-left: 0px;
+      padding-right: 0px;
+      max-width: 100%;
+    }
+  }
 }
 .page-content {
   @include mq(small-laptop) {
@@ -85,6 +106,7 @@
 .page-title {
   padding-left: 40px;
   padding-right: 40px;
+  width: 100%;
   @include type(
     (
       size: 30px,

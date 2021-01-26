@@ -729,6 +729,28 @@ input {
     flex-direction: row;
   }
 }
+#page-container.no-banner-layout .page-content {
+  max-width: 1425px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  #page-container.no-banner-layout .page-content {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+#page-container.no-banner-layout .page-title {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#page-container.no-banner-layout .page-content-inner {
+  padding-left: 0px;
+  padding-right: 0px;
+  max-width: 100%;
+}
 
 @media screen and (min-width: 1170px) {
   .page-content {
@@ -785,6 +807,7 @@ input {
 .page-title {
   padding-left: 40px;
   padding-right: 40px;
+  width: 100%;
   font-size: 30px;
   line-height: 35px;
   font-family: "Roboto", sans-serif;

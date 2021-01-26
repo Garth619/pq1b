@@ -4,15 +4,6 @@
 
   <?php get_template_part('page-templates/includes/template', 'default-page-banner');?>
 
-  <?php if (get_field('disable_banner_new')) {?>
-
-  <div id='page-descrip-wrapper'>
-
-    <h1 class="page-title page-large-content-title"><?php the_title();?></h1>
-
-  </div>
-
-  <?php }?>
 
   <?php // banner/no banner on internal pages
 if (basename(get_page_template()) === 'page.php') {
@@ -21,9 +12,19 @@ if (basename(get_page_template()) === 'page.php') {
     } else {
         $banner = ' default-banner-layout';
     }
-}?>
 
-  <div id="page-container" class="two-col <?php echo $banner; ?>">
+}
+
+if (get_field('disable_sidebar')) {
+    $sidebar = ' disabled-sidebar';
+} else {
+    $sidebar = ' enabled-sidebar';
+}
+
+?>
+
+  <div id="page-container" class="two-col <?php echo $banner;
+echo $sidebar; ?>">
 
     <?php if (!get_field('disable_sidebar')) {
 
@@ -32,6 +33,13 @@ if (basename(get_page_template()) === 'page.php') {
 }?>
 
     <div class="page-content">
+
+      <?php if (get_field('disable_banner_new')) {?>
+
+      <h1 class="page-title"><?php the_title();?></h1>
+
+      <?php }?>
+
 
       <?php if (!get_field('disable_banner_new')): ?>
 
