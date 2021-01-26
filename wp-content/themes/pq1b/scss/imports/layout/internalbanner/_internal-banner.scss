@@ -2,6 +2,7 @@
   padding: 27px 40px;
   position: relative;
   overflow: hidden;
+  background: pink;
   @include mq(small-tablet) {
     padding: 48px 40px;
   }

@@ -8,7 +8,7 @@
 
     if (is_home()) {?>
 
-    <h1 class="banner-title page-title"><?php the_field('internal_banner_blog_title', 'option');?></h1>
+    <h1 class="banner-title page-title large-title"><?php the_field('internal_banner_blog_title', 'option');?></h1>
     <!-- banner_title -->
 
     <?php }?>
