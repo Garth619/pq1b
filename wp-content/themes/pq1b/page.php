@@ -36,7 +36,7 @@ echo $sidebar; ?>">
 
       <?php if (get_field('disable_banner_new')) {?>
 
-      <h1 class="page-title"><?php the_title();?></h1>
+      <h1 class="page-title default-title"><?php the_title();?></h1>
 
       <?php }?>
 
@@ -45,11 +45,11 @@ echo $sidebar; ?>">
 
       <?php if (get_field('banner_h1') == "Yes"): ?>
 
-      <h2 class="page-title"><?php // the_title();?>H1 California’s Top Sex Abuse Lawyers</h2>
+      <h2 class="page-title default-title"><?php // the_title();?>H1 California’s Top Sex Abuse Lawyers</h2>
 
       <?php else: ?>
 
-      <h1 class="page-title"><?php // the_title();?>H1 California’s Top Sex Abuse Lawyers</h1>
+      <h1 class="page-title default-title"><?php // the_title();?>H1 California’s Top Sex Abuse Lawyers</h1>
 
       <?php endif;?>
 

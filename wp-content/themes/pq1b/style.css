@@ -807,7 +807,6 @@ input {
 .page-title {
   padding-left: 40px;
   padding-right: 40px;
-  width: 100%;
   font-size: 30px;
   line-height: 35px;
   font-family: "Roboto", sans-serif;
@@ -847,6 +846,9 @@ input {
     font-size: 45px;
     line-height: 50px;
   }
+}
+.page-title.default-title {
+  width: 100%;
 }
 .page-title::after {
   background: #00afcc;

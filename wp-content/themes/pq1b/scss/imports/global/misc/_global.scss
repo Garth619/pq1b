@@ -106,7 +106,7 @@
 .page-title {
   padding-left: 40px;
   padding-right: 40px;
-  width: 100%;
+
   @include type(
     (
       size: 30px,
@@ -136,6 +136,9 @@
     display: block;
     width: 100%;
     @include quick_type(45px, 50px, null);
+  }
+  &.default-title {
+    width: 100%;
   }
   &::after {
     background: $color-two;
