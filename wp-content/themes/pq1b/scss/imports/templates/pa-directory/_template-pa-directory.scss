@@ -16,13 +16,33 @@ body.page-template-template-padirectory {
   ul.pa_directory_top_menu {
     > li {
       margin-bottom: 25px;
+      @include mq(large-laptop) {
+        margin-bottom: 55px;
+      }
       &:nth-child(even) {
         background: $color-six;
         padding: 30px 0 10px;
         margin-bottom: 35px;
+        @include mq(small-tablet) {
+          padding: 50px 0 20px;
+          margin-bottom: 50px;
+        }
+        @include mq(large-laptop) {
+          padding: 103px 0 65px;
+        }
+      }
+      &:nth-child(odd) {
+        &:not(:first-of-type) {
+          @include mq(large-laptop) {
+            padding: 59px 0 35px;
+          }
+        }
       }
       &:last-of-type {
         margin-bottom: 0;
+        div {
+          padding-bottom: 0;
+        }
       }
       > a {
         display: block;

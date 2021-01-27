@@ -709,6 +709,11 @@ input {
     padding: 48px 70px;
   }
 }
+@media screen and (min-width: 1380px) {
+  #page-container {
+    padding: 48px 70px 77px;
+  }
+}
 #page-container.two-col {
   padding: 27px 0px 0px 0px;
   padding-left: 0;
@@ -850,10 +855,25 @@ input {
 .page-title.default-title {
   width: 100%;
 }
+.page-title.large-title {
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+}
 @media screen and (min-width: 1380px) {
   .page-title.large-title {
     font-size: 65px;
     line-height: 70px;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .page-title.no-banner-title {
+    padding: 30px 30px 0;
+  }
+}
+@media screen and (min-width: 1380px) {
+  .page-title.no-banner-title {
+    padding: 60px 30px 0;
   }
 }
 .page-title::after {
@@ -868,6 +888,10 @@ input {
   .page-title::after {
     margin-top: 31px;
   }
+}
+
+#large-title-wrapper {
+  text-align: center;
 }
 
 .gform_wrapper ul li ::-webkit-input-placeholder {
@@ -2237,11 +2261,12 @@ span.location-phone {
     margin-top: 33px;
   }
 }
-span.location-phone span {
+span.location-phone a {
   color: #00afcc;
+  text-decoration: none;
 }
 @media screen and (min-width: 1170px) {
-  span.location-phone span {
+  span.location-phone a {
     margin-left: 5px;
   }
 }
@@ -4413,13 +4438,37 @@ body.page-template-template-padirectory #page-container {
 #pa-directory ul.pa_directory_top_menu > li {
   margin-bottom: 25px;
 }
+@media screen and (min-width: 1380px) {
+  #pa-directory ul.pa_directory_top_menu > li {
+    margin-bottom: 55px;
+  }
+}
 #pa-directory ul.pa_directory_top_menu > li:nth-child(even) {
   background: #efefef;
   padding: 30px 0 10px;
   margin-bottom: 35px;
 }
+@media screen and (min-width: 768px) {
+  #pa-directory ul.pa_directory_top_menu > li:nth-child(even) {
+    padding: 50px 0 20px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  #pa-directory ul.pa_directory_top_menu > li:nth-child(even) {
+    padding: 103px 0 65px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  #pa-directory ul.pa_directory_top_menu > li:nth-child(odd):not(:first-of-type) {
+    padding: 59px 0 35px;
+  }
+}
 #pa-directory ul.pa_directory_top_menu > li:last-of-type {
   margin-bottom: 0;
+}
+#pa-directory ul.pa_directory_top_menu > li:last-of-type div {
+  padding-bottom: 0;
 }
 #pa-directory ul.pa_directory_top_menu > li > a {
   display: block;
@@ -4545,6 +4594,91 @@ body.page-template-template-padirectory #page-container {
 }
 #pa-directory ul.pa_directory_top_menu > li > div ul li a:hover {
   color: #00afcc;
+}
+
+.contact-title-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.contact-title-wrapper .large-title {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+span#contact-description {
+  display: block;
+  margin-top: 25px;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: "Roboto", sans-serif;
+  color: #031a28;
+  font-weight: 400;
+  text-align: center;
+  font-style: normal;
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  span#contact-description {
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 1380px) {
+  span#contact-description {
+    font-size: 18px;
+  }
+}
+
+#contact-wrapper {
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  #contact-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1170px) {
+  #contact-wrapper {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  #contact-wrapper {
+    margin-top: 39px;
+  }
+}
+#contact-wrapper .location-col {
+  margin: 30px 30px 0;
+}
+@media screen and (min-width: 1380px) {
+  #contact-wrapper .location-col {
+    margin: 30px 88px 0;
+  }
+}
+#contact-wrapper span.location-title {
+  color: #cc0d29;
+}
+#contact-wrapper span.location-address {
+  color: #031a28;
+}
+#contact-wrapper span.location-phone {
+  color: #031a28;
+}
+#contact-wrapper span.location-phone a {
+  color: #cc0d29;
+}
+#contact-wrapper .button-two {
+  border: 2px solid #031a28;
+  color: #031a28;
+  transition: all 200ms ease-in-out;
+}
+#contact-wrapper .button-two:hover {
+  color: #cc0d29;
+  border: 2px solid #cc0d29;
 }
 
 #blog-feed {

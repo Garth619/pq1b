@@ -26,6 +26,9 @@
   @include mq(small-tablet) {
     padding: 48px 70px;
   }
+  @include mq(large-laptop) {
+    padding: 48px 70px 77px;
+  }
   &.two-col {
     padding: 27px 0px 0px 0px;
     padding-left: 0;
@@ -106,7 +109,6 @@
 .page-title {
   padding-left: 40px;
   padding-right: 40px;
-
   @include type(
     (
       size: 30px,
@@ -141,8 +143,19 @@
     width: 100%;
   }
   &.large-title {
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
     @include mq(large-laptop) {
       @include quick_type(65px, 70px, null);
+    }
+  }
+  &.no-banner-title {
+    @include mq(small-laptop) {
+      padding: 30px 30px 0;
+    }
+    @include mq(large-laptop) {
+      padding: 60px 30px 0;
     }
   }
   &::after {
@@ -154,6 +167,10 @@
       margin-top: 31px;
     }
   }
+}
+
+#large-title-wrapper {
+  text-align: center;
 }
 
 .gform_wrapper ul li ::-webkit-input-placeholder {

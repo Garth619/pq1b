@@ -368,8 +368,9 @@ span {
       font-size: 20px;
       margin-top: 33px;
     }
-    span {
+    a {
       color: $color-two;
+      text-decoration: none;
       @include mq(small-laptop) {
         margin-left: 5px;
       }

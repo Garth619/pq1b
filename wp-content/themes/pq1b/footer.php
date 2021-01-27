@@ -15,6 +15,8 @@
 
     </div><!-- footer-form-wrapper -->
 
+    <?php if (!is_page_template('page-templates/template-contact.php')) {?>
+
     <div id='footer-location-wrapper'>
 
       <div id='footer-logo'>
@@ -34,6 +36,8 @@
       </div><!-- footer-location-inner -->
 
     </div><!-- footer-location-wrapper -->
+
+    <?php }?>
 
     <div id='copyright-wrapper'>
 

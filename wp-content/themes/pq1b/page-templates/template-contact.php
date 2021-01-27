@@ -6,11 +6,15 @@ get_header();?>
 
 <div id="internal-main">
 
-  <h1 class="page-title page-large-content-title"><?php the_title();?></h1>
-
-  <span id='contact-descrption'>Call today or fill out consultation form below</span><!-- contact-descrption -->
-
   <div id="page-container">
+
+    <div id='large-title-wrapper' class='contact-title-wrapper'>
+
+      <h1 class="page-title large-title no-banner-title"><?php the_title();?></h1>
+
+      <span id='contact-description'>Call today or fill out consultation form below</span><!-- contact-description -->
+
+    </div><!-- large-title-wrapper -->
 
     <div id='contact-wrapper'>
 
@@ -21,5 +25,4 @@ get_header();?>
   </div><!-- page-container -->
 
 </div><!-- internal-main -->
-
 <?php get_footer();?>
