@@ -1,46 +1,18 @@
 <?php get_header();?>
 
+
 <div id="internal-main">
 
-  <div class='page-title-wrapper'>
+  <?php if (get_field('disable_sidebar')) {
+    $sidebar = ' disabled-sidebar';
+} else {
+    $sidebar = ' enabled-sidebar';
+}
 
-    <h1 class="page-title page-large-content-title"><?php the_title();?></h1>
+?>
 
-  </div><!-- page-title-wrapper -->
-
-  <div id="page-container" class="two-col no-banner-layout">
-
-    <div class="page-content">
-
-      <div class='page-content-inner content'>
-
-        <?php get_template_part('loop', 'single');?>
-
-        <?php $related_news_list = get_field('related_news_list');?>
-
-        <?php if ($related_news_list): ?>
-
-        <div id='related-news'>
-
-          <h3 id='related-news-title'><?php the_field('related_news_title');?></h3><!-- related-news-title -->
-
-          <ul>
-            <?php foreach ($related_news_list as $post): ?>
-            <?php setup_postdata($post);?>
-
-            <li><a href="<?php the_permalink();?>"><?php the_title();?></a></li>
-
-            <?php endforeach;?>
-            <?php wp_reset_postdata();?>
-          </ul>
-
-        </div><!-- related-news -->
-
-        <?php endif;?>
-
-      </div><!-- page-content-inner -->
-
-    </div><!-- page-content -->
+  <div id="page-container" class="two-col <?php echo $banner;
+echo $sidebar; ?>">
 
     <?php if (!get_field('disable_sidebar')) {
 
@@ -48,9 +20,38 @@
 
 }?>
 
-  </div><!-- page-container -->
+    <div class="page-content">
 
-  <?php get_template_part('page-templates/includes/template', 'morenews-slider');?>
+      <?php if (get_field('disable_banner_new')) {?>
+
+      <h1 class="page-title default-title"><?php the_title();?></h1>
+
+      <?php }?>
+
+
+      <?php if (!get_field('disable_banner_new')): ?>
+
+      <?php if (get_field('banner_h1') == "Yes"): ?>
+
+      <h2 class="page-title default-title"><?php the_title();?></h2>
+
+      <?php else: ?>
+
+      <h1 class="page-title default-title"><?php the_title();?></h1>
+
+      <?php endif;?>
+
+      <?php endif;?>
+
+      <div class='page-content-inner content'>
+
+        <?php get_template_part('loop', 'single');?>
+
+      </div><!-- page-content-inner -->
+
+    </div><!-- page-content -->
+
+  </div><!-- page-container -->
 
 </div><!-- internal-main -->
 
