@@ -2,29 +2,19 @@
 
 <div id="internal-main">
 
-  <h1 class="page-title page-large-content-title"><?php the_field('not_found_title', 'option');?></h1>
-
-
   <div id="page-container">
 
-    <div class="page-content">
+    <div id='large-title-wrapper' class='contact-title-wrapper'>
 
-      <div class='page-content-inner content'>
+      <h1 class="page-title large-title no-banner-title"><?php the_field('not_found_title', 'option');?></h1>
 
-        <?php //the_field('not_found_content', 'option');?>
+    </div><!-- large-title-wrapper -->
 
-        <p>The page you were looking for appears to have been moved, deleted or does not exist. You could go back to
-          where you were or head straight to our home page.</p>
+    <div id='not-found-wrapper' class='content'>
 
-      </div><!-- page-content-inner -->
+      <?php the_field('not_found_content', 'option');?>
 
-    </div><!-- page-content -->
-
-    <?php if (!get_field('disable_sidebar')) {
-
-    get_sidebar();
-
-}?>
+    </div><!-- not-found-wrapper -->
 
   </div><!-- page-container -->
 

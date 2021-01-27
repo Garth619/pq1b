@@ -69,9 +69,11 @@
       @include quick_type(16px, 22px, null);
     }
   }
-  a {
+  a,
+  span.go-back {
     color: $color-one;
     transition: all 200ms ease-in-out;
+    text-decoration: underline;
     &:hover {
       color: $color-two;
     }
