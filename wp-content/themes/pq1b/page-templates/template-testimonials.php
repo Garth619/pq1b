@@ -22,21 +22,17 @@ get_header();?>
 
         <div class='testi-quote'>
 
-          <p>“I always felt he genuinely cared
-            and is a credit to his profession.</p>
-
+          <?php the_field('featured_testimonial_quote');?>
 
         </div><!-- testi-quote -->
 
         <div class='testi-descrip content'>
 
-          <p>David right away set me at ease with the case he was handling for me, he explained in detail what was to be
-            expected from the court the DA’s office, explained all my options. I felt that he was very competent and
-            with his confidence he set my mind at ease.”</p>
+          <?php the_field('featured_testimonial_content');?>
 
         </div><!-- testi-descrip content -->
 
-        <span class='testi-name'>David Murphey</span><!-- testi-name -->
+        <span class='testi-name'><?php the_field('featured_testimonial_name');?></span><!-- testi-name -->
 
       </div><!-- testi-single -->
 
@@ -46,118 +42,65 @@ get_header();?>
 
       <div class='testi-col'>
 
-        <div class='testi-single
-'>
+        <?php if (have_rows('testimonials')): ?>
+
+        <?php while (have_rows('testimonials')): the_row();?>
+
+        <div class='testi-single'>
 
           <img class='stars' src='<?php bloginfo('template_directory');?>/images/stars.svg' alt='' />
 
           <div class='testi-quote'>
 
-            <p>“I always felt he genuinely cared
-              and is a credit to his profession.</p>
+            <?php the_sub_field('quote');?>
 
           </div><!-- testi-quote -->
 
           <div class='testi-descrip content'>
 
-            <p>David right away set me at ease with the case he was handling for me, he explained in detail what was to
-              be
-              expected from the court the DA’s office, explained all my options. I felt that he was very competent and
-              with his confidence he set my mind at ease.”</p>
+            <?php the_sub_field('content');?>
 
 
           </div><!-- testi-descrip content -->
 
-          <span class='testi-name'>David Murphey</span><!-- testi-name -->
+          <span class='testi-name'> <?php the_sub_field('name');?></span><!-- testi-name -->
 
         </div>
-        <!-- testi-single
- -->
 
-        <div class='testi-single
-'>
-
-          <img class='stars' src='<?php bloginfo('template_directory');?>/images/stars.svg' alt='' />
-
-          <div class='testi-quote'>
-
-            <p>“I always felt he genuinely cared
-              and is a credit to his profession.</p>
-
-          </div><!-- testi-quote -->
-
-          <div class='testi-descrip content'>
-
-            <p>David right away set me at ease with the case he was handling for me, he explained in detail what was to
-              be
-              expected from the court the DA’s office, explained all my options. I felt that he was very competent and
-              with his confidence he set my mind at ease.”</p>
-
-          </div><!-- testi-descrip content -->
-
-          <span class='testi-name'>David Murphey</span><!-- testi-name -->
-
-        </div>
-        <!-- testi-single
- -->
+        <?php endwhile;?>
+        <?php endif;?>
 
       </div><!-- testi-col -->
 
       <div class='testi-col'>
 
-        <div class='testi-single
-'>
+        <?php if (have_rows('testimonials_column_two_')): ?>
+
+        <?php while (have_rows('testimonials_column_two_')): the_row();?>
+
+        <div class='testi-single'>
 
           <img class='stars' src='<?php bloginfo('template_directory');?>/images/stars.svg' alt='' />
 
           <div class='testi-quote'>
 
-            <p>“I always felt he genuinely cared
-              and is a credit to his profession.</p>
+            <?php the_sub_field('quote');?>
 
           </div><!-- testi-quote -->
 
           <div class='testi-descrip content'>
 
-            <p>David right away set me at ease with the case he was handling for me, he explained in detail what was to
-              be
-              expected from the court the DA’s office, explained all my options. I felt that he was very competent and
-              with his confidence he set my mind at ease.”</p>
+            <?php the_sub_field('content');?>
+
 
           </div><!-- testi-descrip content -->
 
-          <span class='testi-name'>David Murphey</span><!-- testi-name -->
+          <span class='testi-name'> <?php the_sub_field('name');?></span><!-- testi-name -->
 
         </div>
-        <!-- testi-single
- -->
 
-        <div class='testi-single
-'>
-
-          <img class='stars' src='<?php bloginfo('template_directory');?>/images/stars.svg' alt='' />
-
-          <div class='testi-quote'>
-
-            <p>“I always felt he genuinely cared
-              and is a credit to his profession.</p>
-
-          </div><!-- testi-quote -->
-
-          <div class='testi-descrip content'>
-
-            <p>David right away set me at ease with the case he was handling for me, he explained in detail what was to
-              be
-              expected from the court the DA’s office, explained all my options. I felt that he was very competent and
-              with his confidence he set my mind at ease.”</p>
-
-          </div><!-- testi-descrip content -->
-
-          <span class='testi-name'>David Murphey</span><!-- testi-name -->
-
-        </div>
-        <!-- testi-single
- -->
+        <?php endwhile;?>
+        <?php endif;?>
 
       </div><!-- testi-col -->
 
