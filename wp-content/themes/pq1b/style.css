@@ -4631,6 +4631,69 @@ body.page-template-template-testimonials #page-container {
   padding-right: 0;
 }
 
+#testi-top {
+  background: #031a28;
+  margin-top: 40px;
+  padding: 40px 40px;
+  color: #fff;
+  text-align: center;
+}
+
+img.stars {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  width: 158px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testi-quote {
+  margin-top: 30px;
+  font-size: 22px;
+  letter-spacing: 0.94px;
+  line-height: 32px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  text-decoration: none;
+}
+.testi-quote p {
+  margin-bottom: 20px;
+}
+
+.testi-descrip.content {
+  color: #fff;
+}
+
+.testi-name {
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  line-height: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  text-decoration: none;
+}
+.testi-name::before {
+  background: #00afcc;
+  margin: 30px 0;
+  width: 50px;
+  height: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  content: "";
+  display: block;
+}
+
+#testi-bottom {
+  text-align: center;
+  padding: 40px 40px;
+}
+#testi-bottom .testi-descrip.content {
+  color: #031a28;
+}
+
 body.page-template-template-caseresults #page-container {
   padding-left: 0;
   padding-right: 0;
