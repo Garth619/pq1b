@@ -4634,12 +4634,29 @@ body.page-template-template-testimonials #page-container {
 #testi-top {
   background: #031a28;
   margin-top: 40px;
-  padding: 40px 40px;
+  padding: 40px 40px 1px;
   color: #fff;
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  #testi-top {
+    margin-top: 80px;
+    padding: 50px 40px 10px;
+  }
+}
+@media screen and (min-width: 1170px) {
+  #testi-top {
+    padding: 60px 40px 20px;
+  }
+}
 
-img.stars {
+.testi-single {
+  margin-bottom: 40px;
+  max-width: 505px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.testi-single img.stars {
   max-width: 100%;
   height: auto;
   display: block;
@@ -4647,8 +4664,7 @@ img.stars {
   margin-left: auto;
   margin-right: auto;
 }
-
-.testi-quote {
+.testi-single .testi-quote {
   margin-top: 30px;
   font-size: 22px;
   letter-spacing: 0.94px;
@@ -4658,24 +4674,29 @@ img.stars {
   font-style: normal;
   text-decoration: none;
 }
-.testi-quote p {
+@media screen and (min-width: 1170px) {
+  .testi-single .testi-quote {
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
+.testi-single .testi-quote p {
   margin-bottom: 20px;
 }
-
-.testi-descrip.content {
+.testi-single .testi-descrip.content {
   color: #fff;
 }
-
-.testi-name {
+.testi-single .testi-name {
   font-size: 15px;
   letter-spacing: 1.5px;
   line-height: 20px;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
+  text-transform: uppercase;
   font-style: normal;
   text-decoration: none;
 }
-.testi-name::before {
+.testi-single .testi-name::before {
   background: #00afcc;
   margin: 30px 0;
   width: 50px;
@@ -4690,8 +4711,32 @@ img.stars {
   text-align: center;
   padding: 40px 40px;
 }
-#testi-bottom .testi-descrip.content {
+@media screen and (min-width: 1170px) {
+  #testi-bottom {
+    padding: 60px 40px;
+    max-width: 1120px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+#testi-bottom .testi-single img.stars {
+  margin-left: 0;
+  margin-right: 0;
+}
+#testi-bottom .testi-single .testi-descrip.content {
   color: #031a28;
+}
+
+@media screen and (min-width: 1170px) {
+  .testi-col {
+    flex-basis: calc(50% - 45px);
+  }
+}
+.testi-col:last-of-type .testi-single:last-of-type {
+  margin-bottom: 0;
 }
 
 body.page-template-template-caseresults #page-container {

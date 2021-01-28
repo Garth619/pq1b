@@ -8,70 +8,102 @@ body.page-template-template-testimonials {
 #testi-top {
   background: $color-four;
   margin-top: 40px;
-  padding: 40px 40px;
+  padding: 40px 40px 1px;
   color: $color-seven;
   text-align: center;
+  @include mq(small-tablet) {
+    margin-top: 80px;
+    padding: 50px 40px 10px;
+  }
+  @include mq(small-laptop) {
+    padding: 60px 40px 20px;
+  }
 }
 
-#testi-top-inner {
-}
-
-img.stars {
-  @include image();
-  width: 158px;
+.testi-single {
+  margin-bottom: 40px;
+  max-width: 505px;
   @include margin_lr();
-}
-
-.testi-quote {
-  margin-top: 30px;
-  @include type(
-    (
-      size: 22px,
-      height: 32px,
-      spacing: 0.94px,
-      family: $primaryfont,
-      weight: 900,
-    )
-  );
-  p {
-    margin-bottom: 20px;
-  }
-}
-
-.testi-descrip {
-  &.content {
-    color: $color-seven;
-  }
-}
-
-.testi-name {
-  @include type(
-    (
-      size: 15px,
-      height: 20px,
-      spacing: 1.5px,
-      family: $primaryfont,
-      weight: 900,
-    )
-  );
-  &::before {
-    background: $color-two;
-    margin: 30px 0;
-    @include box(50px, 5px);
+  img.stars {
+    @include image();
+    width: 158px;
     @include margin_lr();
-    @include contentdisplay();
+  }
+  .testi-quote {
+    margin-top: 30px;
+    @include type(
+      (
+        size: 22px,
+        height: 32px,
+        spacing: 0.94px,
+        family: $primaryfont,
+        weight: 900,
+      )
+    );
+    @include mq(small-laptop) {
+      @include quick_type(25px, 35px, null);
+    }
+    p {
+      margin-bottom: 20px;
+    }
+  }
+  .testi-descrip {
+    &.content {
+      color: $color-seven;
+    }
+  }
+  .testi-name {
+    @include type(
+      (
+        size: 15px,
+        height: 20px,
+        spacing: 1.5px,
+        family: $primaryfont,
+        weight: 900,
+        transform: uppercase,
+      )
+    );
+    &::before {
+      background: $color-two;
+      margin: 30px 0;
+      @include box(50px, 5px);
+      @include margin_lr();
+      @include contentdisplay();
+    }
   }
 }
 
 #testi-bottom {
   text-align: center;
   padding: 40px 40px;
-  .testi-descrip {
-    &.content {
-      color: $color-four;
+  @include mq(small-laptop) {
+    padding: 60px 40px;
+    max-width: 1120px;
+    text-align: left;
+    @include margin_lr();
+    @include flex(space-between);
+  }
+  .testi-single {
+    img.stars {
+      @include margin_lr(0);
+    }
+    .testi-descrip {
+      &.content {
+        color: $color-four;
+      }
     }
   }
 }
 
 .testi-col {
+  @include mq(small-laptop) {
+    flex-basis: calc(50% - 45px);
+  }
+  &:last-of-type {
+    .testi-single {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
