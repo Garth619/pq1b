@@ -18,12 +18,18 @@ body.page-template-template-testimonials {
   @include mq(small-laptop) {
     padding: 60px 40px 20px;
   }
+  @include mq(large-laptop) {
+    padding: 67px 40px 36px;
+  }
 }
 
 .testi-single {
   margin-bottom: 40px;
   max-width: 505px;
   @include margin_lr();
+  @include mq(large-laptop) {
+    max-width: 742px;
+  }
   img.stars {
     @include image();
     width: 158px;
@@ -43,6 +49,11 @@ body.page-template-template-testimonials {
     @include mq(small-laptop) {
       @include quick_type(25px, 35px, null);
     }
+    @include mq(large-laptop) {
+      max-width: 620px;
+      @include margin_lr();
+      @include quick_type(35px, 45px, null);
+    }
     p {
       margin-bottom: 20px;
     }
@@ -50,6 +61,9 @@ body.page-template-template-testimonials {
   .testi-descrip {
     &.content {
       color: $color-seven;
+      @include mq(large-laptop) {
+        @include quick_type(22px, 41px, null);
+      }
     }
   }
   .testi-name {
@@ -63,12 +77,18 @@ body.page-template-template-testimonials {
         transform: uppercase,
       )
     );
+    @include mq(large-laptop) {
+      @include quick_type(18px, 30px, null);
+    }
     &::before {
       background: $color-two;
       margin: 30px 0;
       @include box(50px, 5px);
       @include margin_lr();
       @include contentdisplay();
+      @include mq(small-laptop) {
+        @include box(78px, 3px);
+      }
     }
   }
 }
@@ -83,13 +103,46 @@ body.page-template-template-testimonials {
     @include margin_lr();
     @include flex(space-between);
   }
+  @include mq(large-laptop) {
+    padding: 109px 130px 0;
+    max-width: 1690px;
+  }
+  @include mq(small-monitor) {
+  }
   .testi-single {
+    @include mq(large-laptop) {
+      margin-bottom: 100px;
+    }
     img.stars {
-      @include margin_lr(0);
+      @include mq(small-laptop) {
+        @include margin_lr(0);
+      }
+    }
+    .testi-quote {
+      max-width: 100%;
+      @include mq(large-laptop) {
+        margin-top: 18px;
+        @include quick_type(28px, 42px, null);
+      }
     }
     .testi-descrip {
       &.content {
         color: $color-four;
+        @include mq(large-laptop) {
+          @include quick_type(18px, 30px, null);
+        }
+      }
+    }
+    span {
+      &.testi-name {
+        &::before {
+          @include mq(small-laptop) {
+            @include margin_lr(0);
+          }
+          @include mq(large-laptop) {
+            margin: 30px 0 20px;
+          }
+        }
       }
     }
   }
@@ -98,6 +151,16 @@ body.page-template-template-testimonials {
 .testi-col {
   @include mq(small-laptop) {
     flex-basis: calc(50% - 45px);
+  }
+  @include mq(small-monitor) {
+    flex-basis: calc(50% - 125px);
+  }
+  &:first-of-type {
+    .testi-single {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
   }
   &:last-of-type {
     .testi-single {

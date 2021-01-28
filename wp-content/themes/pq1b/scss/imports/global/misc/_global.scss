@@ -151,6 +151,7 @@
     }
   }
   &.no-banner-title {
+    width: auto;
     @include mq(small-laptop) {
       padding: 30px 30px 0;
     }
