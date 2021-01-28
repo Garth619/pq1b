@@ -4626,6 +4626,11 @@ body.page-template-template-padirectory #page-container {
   }
 }
 
+body.page-template-template-testimonials #page-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 body.page-template-template-caseresults #page-container {
   padding-left: 0;
   padding-right: 0;

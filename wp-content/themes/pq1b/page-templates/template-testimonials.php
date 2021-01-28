@@ -6,9 +6,13 @@ get_header();?>
 
 <div id="internal-main">
 
-  <h1 class="page-title page-large-content-title"><?php the_title();?></h1>
-
   <div id="page-container">
+
+    <div id='large-title-wrapper'>
+
+      <h1 class="page-title large-title no-banner-title"><?php the_title();?></h1>
+
+    </div><!-- large-title-wrapper -->
 
     <div id='testi-top'>
 
@@ -26,7 +30,7 @@ get_header();?>
 
         </div><!-- testi-quote -->
 
-        <div class='testi-descrip'>
+        <div class='testi-descrip content'>
 
           <p>David right away set me at ease with the case he was handling for me, he explained in detail what was to be
             expected from the court the DA’s office, explained all my options. I felt that he was very competent and
@@ -36,7 +40,7 @@ get_header();?>
             expected from the court the DA’s office, explained all my options. I felt that he was very competent and
             with his confidence he set my mind at ease.”</p>
 
-        </div><!-- testi-descrip -->
+        </div><!-- testi-descrip content -->
 
         <span class='testi-name'>David Murphey</span><!-- testi-name -->
 
@@ -60,7 +64,7 @@ get_header();?>
 
         </div><!-- testi-quote -->
 
-        <div class='testi-descrip'>
+        <div class='testi-descrip content'>
 
           <p>David right away set me at ease with the case he was handling for me, he explained in detail what was to be
             expected from the court the DA’s office, explained all my options. I felt that he was very competent and
@@ -70,7 +74,7 @@ get_header();?>
             expected from the court the DA’s office, explained all my options. I felt that he was very competent and
             with his confidence he set my mind at ease.”</p>
 
-        </div><!-- testi-descrip -->
+        </div><!-- testi-descrip content -->
 
         <span class='testi-name'>David Murphey</span><!-- testi-name -->
 
@@ -90,7 +94,7 @@ get_header();?>
 
         </div><!-- testi-quote -->
 
-        <div class='testi-descrip'>
+        <div class='testi-descrip content'>
 
           <p>David right away set me at ease with the case he was handling for me, he explained in detail what was to be
             expected from the court the DA’s office, explained all my options. I felt that he was very competent and
@@ -100,7 +104,7 @@ get_header();?>
             expected from the court the DA’s office, explained all my options. I felt that he was very competent and
             with his confidence he set my mind at ease.”</p>
 
-        </div><!-- testi-descrip -->
+        </div><!-- testi-descrip content -->
 
         <span class='testi-name'>David Murphey</span><!-- testi-name -->
 
