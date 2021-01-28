@@ -4626,6 +4626,102 @@ body.page-template-template-padirectory #page-container {
   }
 }
 
+body.page-template-template-caseresults #page-container {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+#case-results-wrapper {
+  padding: 40px 0 0;
+}
+@media screen and (min-width: 768px) {
+  #case-results-wrapper {
+    padding-top: 55px;
+  }
+}
+@media screen and (min-width: 1170px) {
+  #case-results-wrapper {
+    padding-top: 75px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  #case-results-wrapper {
+    padding-top: 113px;
+  }
+}
+
+.single-case-result {
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .single-case-result {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  .single-case-result {
+    margin-bottom: 77px;
+  }
+}
+.single-case-result:nth-child(even) {
+  background: #efefef;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 1380px) {
+  .single-case-result:nth-child(even) {
+    padding-top: 76px;
+    padding-bottom: 76px;
+  }
+}
+.single-case-result:last-of-type {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 1170px) {
+  .single-case-result .single-case-result-inner {
+    max-width: 945px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.single-case-result span.single-case-result-title {
+  font-size: 20px;
+  line-height: 30px;
+  font-family: "Roboto", sans-serif;
+  color: #031a28;
+  font-weight: 900;
+  font-style: normal;
+  text-decoration: none;
+}
+@media screen and (min-width: 1380px) {
+  .single-case-result span.single-case-result-title {
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
+.single-case-result span.single-case-result-title::after {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #cc0d29;
+  width: 100%;
+  height: 5px;
+  content: "";
+  display: block;
+}
+@media screen and (min-width: 1380px) {
+  .single-case-result span.single-case-result-title::after {
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
+}
+.single-case-result .single-case-result-content.content {
+  font-size: 18px;
+}
+
 .contact-title-wrapper {
   display: flex;
   flex-direction: column;
