@@ -8,35 +8,110 @@
     grid-auto-rows: auto;
     //grid-gap: 0px 30px;
     max-width: 750px;
+    padding: 60px 0 0;
   }
   @include mq(small-laptop) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 1050px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  @include mq(large-laptop) {
+    padding: 90px 0 0;
+    max-width: 1260px;
   }
 }
 
 .single-video {
-  margin-bottom: 25px;
-  a {
-    text-decoration: none;
-    .pq-video-img {
-      position: relative;
-    }
-    .video-title-wrapper {
-      span.video-title {
-        padding: 10px 0 20px;
-        display: block;
-        @include type(
-          (
-            size: 16px,
-            height: 24px,
-            align: center,
-            family: $primaryfont,
-            color: $color-four,
-          )
-        );
+  margin-bottom: 35px;
+  @include mq(large-laptop) {
+    margin-bottom: 60px;
+  }
+  &:nth-of-type(2n + 1) {
+    .single-video-inner {
+      padding-right: 12px;
+      @include mq(small-laptop) {
+        padding-left: 10px;
+        padding-right: 10px;
       }
     }
   }
+  &:nth-of-type(2n + 2) {
+    .single-video-inner {
+      padding-left: 12px;
+      @include mq(small-laptop) {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+  &:nth-of-type(3n + 1) {
+    .pq-video-line {
+      @include mq(small-laptop) {
+        float: right;
+        width: calc(100% - 10px);
+      }
+    }
+  }
+  &:nth-of-type(3n + 3) {
+    .pq-video-line {
+      @include mq(small-laptop) {
+        position: relative;
+        left: 0px;
+        width: calc(100% - 10px);
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+    display: block;
+  }
+  .single-video-inner {
+  }
+  .pq-video-img {
+    position: relative;
+    .mywistia-thumbnail {
+      @include box(100%, 230px);
+    }
+    .pq-video-overlay {
+      z-index: 1;
+      span.pq-play-button {
+        @include mq(large-laptop) {
+          @include box(122px);
+        }
+        &::before {
+          @include mq(large-laptop) {
+            @include box(97px);
+          }
+        }
+        &::after {
+          @include mq(large-laptop) {
+            top: 47px;
+            left: 55px;
+            @include tri(right, 13px, 15px, $color-one);
+          }
+        }
+      }
+    }
+  }
+  .video-title-wrapper {
+    span.video-title {
+      padding: 10px 0 20px;
+      display: block;
+      @include type(
+        (
+          size: 16px,
+          height: 24px,
+          align: center,
+          family: $primaryfont,
+          color: $color-four,
+        )
+      );
+      @include mq(large-laptop) {
+        padding: 19px 0 33px;
+        @include quick_type(18px, 26px, null);
+      }
+    }
+  }
+
   .pq-video-line {
     width: 100%;
     height: 2px;
