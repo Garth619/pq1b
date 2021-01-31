@@ -79,10 +79,8 @@ span#sec-four-title {
     width: calc(100% - 234px);
   }
   .slick-track {
-    //@include flex(); makes slides the same height when side by side
   }
   .slick-slide {
-    //height:inherit; makes slides the same height when side by side
     margin: 0 20px;
     padding: 20px 0;
     @include mq(small-tablet) {

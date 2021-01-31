@@ -4,15 +4,17 @@
 
 get_header();?>
 
+<!-- is there is mock up for this page? ask jenn? -->
+
 <div id="internal-main">
 
-  <div class='page-title-wrapper'>
-
-    <h1 class="page-title page-large-content-title"><?php the_title();?></h1>
-
-  </div><!-- page-title-wrapper -->
-
   <div id="page-container">
+
+    <div id='large-title-wrapper'>
+
+      <h1 class="page-title large-title no-banner-title"><?php the_title();?></h1>
+
+    </div><!-- large-title-wrapper -->
 
     <div id='meet-team'>
 
