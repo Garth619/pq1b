@@ -16,9 +16,13 @@ get_header();?>
 
       <span id='att-bio-position'><?php the_field('position_title');?></span><!-- att-bio-position -->
 
-      <?php // mobile att profile
+      <div id='mobile-att-profile'>
+
+        <?php // mobile att profile
 
 get_template_part('page-templates/includes/template', 'att-profile-box');?>
+
+      </div><!-- mobile-att-profile -->
 
       <div class='page-content-inner content bio-content'>
 

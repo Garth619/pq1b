@@ -67,6 +67,7 @@
 .page-content {
   @include mq(small-laptop) {
     order: 1;
+    flex-grow: 1;
     padding-top: 66px;
   }
   @include mq(large-laptop) {

@@ -20,6 +20,53 @@ span#att-bio-position {
   }
 }
 
+#mobile-att-profile {
+  @include mq(small-laptop) {
+    display: none;
+  }
+}
+
+#desktop-att-profile {
+  display: none;
+  @include mq(small-laptop) {
+    display: block;
+  }
+}
+
+.att-profile-image {
+  overflow: hidden;
+  position: relative;
+  img {
+    @include image();
+    width: 100%;
+  }
+}
+
+.placeholder-wrapper {
+  background: #62676d;
+  @include box(100%);
+  @include abs(0, null, null, 0);
+  @include flex(center, center);
+  @include type(
+    (
+      size: 16px,
+      height: 19px,
+      family: $primaryfont,
+      color: $color-seven,
+      weight: 600,
+      align: center,
+      transform: uppercase,
+    )
+  );
+  &:after {
+    @include contentdisplay(block, "Profile Coming Soon");
+  }
+}
+
+a.att-profile-button {
+  font-size: 14px;
+}
+
 .content.bio-content {
   ul {
     li {

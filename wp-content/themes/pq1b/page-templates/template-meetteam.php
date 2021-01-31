@@ -28,7 +28,7 @@ get_header();?>
 
         <a href='<?php the_permalink();?>'>
 
-          <?php $attorney_profile = get_field('attorney_profile');?>
+          <?php $attorney_profile = get_field('attorney_bio_image');?>
 
           <div class='single-att-profile <?php if (!$attorney_profile) {echo 'placeholder';}
 ;?> '>
@@ -49,7 +49,7 @@ get_header();?>
 
           <span class='single-att-title'><?php the_title();?></span><!-- single-att-title -->
 
-          <span class='single-att-position'><?php the_field('attorney_position');?></span><!-- single-att-title -->
+          <span class='single-att-position'><?php the_field('position_title');?></span><!-- single-att-title -->
 
         </a>
 
