@@ -347,21 +347,7 @@ function ilaw_post_thumbnail_sizes_attr($attr, $attachment, $size)
 }
 add_filter('wp_get_attachment_image_attributes', 'ilaw_post_thumbnail_sizes_attr', 10, 3);
 
-// https://stackoverflow.com/questions/11104284/wordpress-custom-taxonomy-pagination
-
-// for case results taxonomy pagination
-
-function taxonomy_rewrite_fix($wp_rewrite)
-{
-    $r = array();
-    foreach ($wp_rewrite->rules as $k => $v) {
-        $r[$k] = str_replace('case_results_category=$matches[1]&paged=', 'case_results_category=$matches[1]&page=', $v);
-    }
-    $wp_rewrite->rules = $r;
-}
-add_filter('generate_rewrite_rules', 'taxonomy_rewrite_fix');
-
-// allows html in text editor and revents it from being stripped out
+// allows html in text editor and prevents it from being stripped out
 
 function override_mce_options($initArray)
 {
@@ -371,11 +357,3 @@ function override_mce_options($initArray)
     return $initArray;
 }
 add_filter('tiny_mce_before_init', 'override_mce_options');
-
-// Add Categories to Pages
-
-function add_categories_to_pages()
-{
-    register_taxonomy_for_object_type('category', 'page');
-}
-add_action('init', 'add_categories_to_pages');

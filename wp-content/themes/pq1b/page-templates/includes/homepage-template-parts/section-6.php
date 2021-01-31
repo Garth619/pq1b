@@ -10,7 +10,7 @@
 
         <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
 
-        <img src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
+        <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
 
       </a><!-- sec-six-single-pa -->
 
@@ -18,7 +18,7 @@
 
         <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
 
-        <img src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
+        <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
 
       </a><!-- sec-six-single-pa -->
 
@@ -26,7 +26,7 @@
 
         <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
 
-        <img src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
+        <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
 
       </a><!-- sec-six-single-pa -->
 
@@ -34,7 +34,7 @@
 
         <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
 
-        <img src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
+        <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
 
       </a><!-- sec-six-single-pa -->
 
@@ -42,7 +42,7 @@
 
         <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
 
-        <img src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
+        <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
 
       </a><!-- sec-six-single-pa -->
 
@@ -50,7 +50,7 @@
 
         <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
 
-        <img src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
+        <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
 
       </a><!-- sec-six-single-pa -->
 
@@ -58,7 +58,7 @@
 
         <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
 
-        <img src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
+        <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
 
       </a><!-- sec-six-single-pa -->
 
@@ -66,7 +66,7 @@
 
         <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
 
-        <img src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
+        <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
 
       </a><!-- sec-six-single-pa -->
 
@@ -74,7 +74,7 @@
 
         <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
 
-        <img src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
+        <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
 
       </a><!-- sec-six-single-pa -->
 

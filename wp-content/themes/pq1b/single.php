@@ -22,30 +22,21 @@ echo $sidebar; ?>">
 
     <div class="page-content">
 
-      <?php if (get_field('disable_banner_new')) {?>
-
       <h1 class="page-title default-title"><?php the_title();?></h1>
-
-      <?php }?>
-
-
-      <?php if (!get_field('disable_banner_new')): ?>
-
-      <?php if (get_field('banner_h1') == "Yes"): ?>
-
-      <h2 class="page-title default-title"><?php the_title();?></h2>
-
-      <?php else: ?>
-
-      <h1 class="page-title default-title"><?php the_title();?></h1>
-
-      <?php endif;?>
-
-      <?php endif;?>
 
       <div class='page-content-inner content'>
 
         <?php get_template_part('loop', 'single');?>
+
+        <?php if (get_field('media_&_broadcast_appearances_or_a_publications_&_lectures') == 'Media & Broadcast Appearances') {?>
+
+        <div class="embed-container">
+
+          <?php the_field('blog_video');?>
+
+        </div>
+
+        <?php }?>
 
       </div><!-- page-content-inner -->
 

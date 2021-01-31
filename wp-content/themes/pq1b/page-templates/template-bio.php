@@ -6,83 +6,138 @@ get_header();?>
 
 <div id="internal-main">
 
-  <div id="page-container" class="two-col">
+  <div id="page-container" class="two-col no-banner-layout">
+
+    <?php get_sidebar('bio');?>
 
     <div class="page-content">
 
-      <div class='page-title-wrapper'>
+      <h1 class="page-title default-title bio-title"><?php the_title();?></h1>
 
-        <h1 class="page-title bio-title"><?php the_title();?></h1>
+      <span id='att-bio-position'><?php the_field('position_title');?></span><!-- att-bio-position -->
 
-      </div><!-- bio-title-wrapper -->
+      <?php // mobile att profile
 
-      <div class='page-content-inner content'>
+get_template_part('page-templates/includes/template', 'att-profile-box');?>
 
-        <div id='att-top'>
+      <div class='page-content-inner content bio-content'>
 
-          <div id='bio-mobile'>
+        <?php
 
-            <?php get_template_part('page-templates/includes/template', 'att-profile-box');?>
+get_template_part('loop', 'page');
 
-          </div><!-- bio-mobile -->
+if (have_rows('news_media_and_publications')):
+    while (have_rows('news_media_and_publications')): the_row();?>
 
-          <div id='att-intro-wrapper'>
+        <h2><?php the_sub_field('title');?></h2>
 
-            <?php if (get_field('attorney_wistia_id')) {?>
+        <?php
 
-            <div class='single-video'>
+        $category_ids = get_sub_field('category');
+        $attorney_tag_ids = get_sub_field('attorney_tag');
 
-              <div class='video-thumb'>
+        $args = array(
+            'post_type' => 'post',
+            'posts_per_page' => -1,
+            'orderby' => 'date',
+            'tax_query' => array(
+                'relation' => 'AND',
+                array(
+                    'taxonomy' => 'category',
+                    'field' => 'id',
+                    'terms' => $category_ids,
+                ),
+                array(
+                    'taxonomy' => 'post_tag',
+                    'field' => 'id',
+                    'terms' => $attorney_tag_ids,
+                ),
+            ),
+        );
 
-                <div
-                  class='mywisita wistia_embed wistia_async_<?php the_field('attorney_wistia_id');?> popover=true popoverContent=thumbnail'>
-                </div><!-- wistia -->
+        $articles_query = new WP_Query($args);
+        echo "<ul>";
+        while ($articles_query->have_posts()): $articles_query->the_post();
 
-                <div class='video-overlay'>
+            if (get_field('video_news_media') == 'Video') {
 
-                  <div class='play-button'></div><!-- play-button -->
+                $video = get_field('blog_video');
 
-                </div><!-- video-overlay -->
+                preg_match('/src="(.+?)"/', $video, $matches_url);
+                $src = $matches_url[1];
 
-              </div><!-- video-thumb -->
+                preg_match('/embed(.*?)?feature/', $src, $matches_id);
+                $id = $matches_id[1];
+                $id = str_replace(str_split('?/'), '', $id);
 
-            </div><!-- single-video -->
+                ?>
 
-            <?php }?>
+        <li class="bio-video-wrapper">
 
-            <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+          <div class='bio-video-img'>
 
-            <?php if (get_field('attorney_intro')) {?>
+            <img src="http://img.youtube.com/vi/<?php echo $id; ?>/mqdefault.jpg">
 
-            <div id='att-intro'>
+          </div><!-- bio-video-img -->
 
-              <?php the_field('attorney_intro');?>
+          <div class='bio-video-content'>
 
-            </div><!-- att-intro -->
+            <?php the_content();?>
 
-            <?php }?>
+            <a href="<?php the_permalink();?>">View Video</a>
 
-          </div><!-- att-intro-wrapper -->
+          </div><!-- bio-video-content -->
 
-        </div><!-- att-top -->
+        </li>
 
-        <?php get_template_part('loop', 'page');?>
+        <?php }?>
+
+        <?php if (get_field('video_news_media') == 'PDF' || get_field('video_news_media') == null) {?>
+
+        <li>
+
+          <strong><?php the_title();?></strong><br />
+
+          <?php if (get_field('publication_name')) {
+
+                the_field('publication_name');?> |
+
+          <?php }
+
+                if (get_field('media_date')) {
+
+                    the_field('media_date');?> |
+
+          <?php }?>
+
+          <?php if (get_field('video_news_media') == 'PDF') {?>
+
+          <a href="<?php the_field('read_article_pdf');?>">Read Article</a>
+
+          <?php }?>
+
+          <?php if (get_field('video_news_media') == null) {?>
+
+          <a href="<?php the_permalink();?>">Read Article</a>
+
+          <?php }?>
+
+        </li>
+
+        <?php }
+
+        endwhile;
+        echo "</ul>";
+        wp_reset_postdata();
+    endwhile;
+endif;?>
 
       </div><!-- page-content-inner -->
 
     </div><!-- page-content -->
 
-    <?php if (!get_field('disable_sidebar')) {
-
-    get_sidebar('bio');
-
-}?>
-
   </div><!-- page-container -->
 
-  <?php get_template_part('page-templates/includes/template', 'morenews-slider');?>
-
 </div><!-- internal-main -->
-
 
 <?php get_footer();?>

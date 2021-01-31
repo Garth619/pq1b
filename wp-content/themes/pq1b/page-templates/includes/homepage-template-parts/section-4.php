@@ -16,7 +16,8 @@
 
             <div class='sec-four-img-wrapper'>
 
-              <img src='<?php bloginfo('template_directory');?>/images/att-greenberg.jpg' alt='' />
+              <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/att-greenberg.jpg'
+                alt='' />
 
             </div><!-- sec-four-img-wrapper -->
 
@@ -35,7 +36,8 @@
 
             <div class='sec-four-img-wrapper'>
 
-              <img src='<?php bloginfo('template_directory');?>/images/att-greenberg.jpg' alt='' />
+              <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/att-greenberg.jpg'
+                alt='' />
 
             </div><!-- sec-four-img-wrapper -->
 
@@ -54,7 +56,8 @@
 
             <div class='sec-four-img-wrapper'>
 
-              <img src='<?php bloginfo('template_directory');?>/images/att-greenberg.jpg' alt='' />
+              <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/att-greenberg.jpg'
+                alt='' />
 
             </div><!-- sec-four-img-wrapper -->
 
@@ -73,7 +76,8 @@
 
             <div class='sec-four-img-wrapper'>
 
-              <img src='<?php bloginfo('template_directory');?>/images/att-greenberg.jpg' alt='' />
+              <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/att-greenberg.jpg'
+                alt='' />
 
             </div><!-- sec-four-img-wrapper -->
 
@@ -92,7 +96,8 @@
 
             <div class='sec-four-img-wrapper'>
 
-              <img src='<?php bloginfo('template_directory');?>/images/att-greenberg.jpg' alt='' />
+              <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/att-greenberg.jpg'
+                alt='' />
 
             </div><!-- sec-four-img-wrapper -->
 
@@ -111,7 +116,8 @@
 
             <div class='sec-four-img-wrapper'>
 
-              <img src='<?php bloginfo('template_directory');?>/images/att-greenberg.jpg' alt='' />
+              <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/att-greenberg.jpg'
+                alt='' />
 
             </div><!-- sec-four-img-wrapper -->
 

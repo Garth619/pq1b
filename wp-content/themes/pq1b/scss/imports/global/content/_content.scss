@@ -102,6 +102,9 @@
         @include abs(8px, null, null, 0);
         @include box(7px);
         @include contentdisplay();
+        @include mq(large-laptop) {
+          top: 11px;
+        }
       }
     }
   }

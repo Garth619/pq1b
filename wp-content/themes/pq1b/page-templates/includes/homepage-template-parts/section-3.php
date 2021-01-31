@@ -21,7 +21,7 @@
 
           <div class='pq-video-img'>
 
-            <img src='<?php bloginfo('template_directory');?>/images/video-image.jpg' alt='' />
+            <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/video-image.jpg' alt='' />
 
             <div class='pq-video-overlay'>
 

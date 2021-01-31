@@ -16,7 +16,8 @@
 
         <div id='sec-seven-img-wrapper'>
 
-          <img src='<?php bloginfo('template_directory');?>/images/homepage-court-image.jpg' alt='' />
+          <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/homepage-court-image.jpg'
+            alt='' />
 
         </div><!-- sec-seven-img-wrapper -->
 

@@ -1,0 +1,38 @@
+body.page-template-template-bio {
+}
+
+.bio-title {
+  &::after {
+    display: none;
+  }
+}
+
+span#att-bio-position {
+  display: block;
+  &::after {
+    background: $color-two;
+    margin-top: 23px;
+    @include box(100%, 5px);
+    @include contentdisplay();
+    @include mq(large-laptop) {
+      margin-top: 31px;
+    }
+  }
+}
+
+.content.bio-content {
+  ul {
+    li {
+      font-weight: normal;
+    }
+  }
+}
+
+#sidebar-wrapper {
+  &.sidebar-bio {
+    background: $color-six;
+    @include mq(small-laptop) {
+      order: 2;
+    }
+  }
+}
