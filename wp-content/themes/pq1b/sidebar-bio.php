@@ -12,28 +12,53 @@ get_template_part('page-templates/includes/template', 'att-profile-box');?>
 
     </div><!-- desktop-att-profile -->
 
+    <?php if (get_field('att_email') || get_field('att_phone')) {?>
+
     <div id='att-bio-contact-info'>
 
-      email phone
+      <?php if (get_field('att_email')) {?>
+
+      <span><?php the_field('email_call_to_action');?> <a
+          href="mailto:<?php the_field('att_email');?>s"><?php the_field('att_email');?></a></span>
+
+      <?php }?>
+
+      <?php if (get_field('att_phone')) {?>
+
+      <span><?php the_field('phone_call_to_action');?> <a
+          href="tel:+1<?php echo str_replace(['-', '(', ')', ' '], '', get_field('att_phone')); ?>"><?php the_field('att_phone');?></a></span>
+
+      <?php }?>
 
     </div><!-- att-bio-contact-info -->
 
+    <?php }?>
+
+    <?php if (have_rows('sidebar_locations')): ?>
+
     <div id='att-bio-location-wrapper'>
 
-      <div class='att-bio-location'>
-
-        la
-
-      </div><!-- att-bio-location -->
+      <?php while (have_rows('sidebar_locations')): the_row();?>
 
       <div class='att-bio-location'>
 
-        oc
+        <span class='att-bio-location-title'><?php the_sub_field('att_city_title');?></span>
+        <!-- att-bio-location-title -->
+
+        <span class='att-bio-location-address'><?php the_sub_field('att_address');?></span>
+        <!-- att-bio-location-address -->
+
+        <span class='att-bio-location-phone'><?php the_sub_field('phone_call_to_action');?> <a
+            href="tel:+1<?php echo str_replace(['-', '(', ')', ' '], '', get_field('att_phone')); ?>"><?php the_sub_field('att_phone');?></a></span>
+        <!-- att-bio-location-phone -->
 
       </div><!-- att-bio-location -->
 
+      <?php endwhile;?>
 
     </div><!-- att-bio-location-wrapper -->
+
+    <?php endif;?>
 
     <?php if (have_rows('sidebar_accolades')): ?>
 
@@ -76,8 +101,6 @@ get_template_part('page-templates/includes/template', 'att-profile-box');?>
         </ul>
 
         <?php endif;?>
-
-
 
       </div><!-- sidebar-accolades-section -->
 
