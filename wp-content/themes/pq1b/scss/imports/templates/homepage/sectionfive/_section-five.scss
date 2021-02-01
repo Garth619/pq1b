@@ -91,8 +91,9 @@
       margin-top: 45px;
       margin-bottom: 28px;
       background: $color-one;
-      margin-left: -20px;
-      @include box(calc(100% + 40px), 3px);
+      //margin-left: -20px;
+      @include box(100%, 3px);
+      //@include box(calc(100% + 40px), 3px);
       @include contentdisplay();
       @include mq(small-tablet) {
         margin-top: 55px;

@@ -37,10 +37,6 @@ function merge_include_css()
 
     $mergedCSS .= $styles;
 
-    // $mergedCSS = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $mergedCSS);
-    // $mergedCSS = str_replace(': ', ':', $mergedCSS);
-    // $mergedCSS = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '    '), '', $mergedCSS);
-
     $mergedCSS = preg_replace('/\/\*((?!\*\/).)*\*\//', '', $mergedCSS);
     $mergedCSS = preg_replace('/\s{2,}/', ' ', $mergedCSS);
     $mergedCSS = preg_replace('/\s*([:;{}])\s*/', '$1', $mergedCSS);

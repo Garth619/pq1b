@@ -60,7 +60,7 @@ span#sec-seven-title {
     @include margin_lr(0);
   }
   br {
-    display: none;
+    //display: none;
     @include mq(small-monitor) {
       display: inline-block;
     }

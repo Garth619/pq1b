@@ -1,5 +1,5 @@
 #sec-three-inner {
-  padding: 55px 40px;
+  padding: 51px 40px;
   @include mq(small-tablet) {
     padding: 63px 90px 45px;
   }
@@ -173,7 +173,7 @@ h1#sec-three-header {
 }
 
 #sec-three-content {
-  padding-top: 10px;
+  //padding-top: 10px;
   @include mq(small-laptop) {
     margin-left: 57px;
   }
