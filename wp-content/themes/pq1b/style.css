@@ -2321,6 +2321,11 @@ span#footer-form-descrip {
     margin-left: 17px;
   }
 }
+@media screen and (min-width: 1695px) {
+  #footer-logo {
+    margin-top: 65px;
+  }
+}
 #footer-logo a {
   max-width: 273px;
   display: block;

@@ -261,6 +261,9 @@ span#footer-form-descrip {
     margin-top: 90px;
     margin-left: 17px;
   }
+  @include mq(small-monitor) {
+    margin-top: 65px;
+  }
   a {
     max-width: 273px;
     display: block;
