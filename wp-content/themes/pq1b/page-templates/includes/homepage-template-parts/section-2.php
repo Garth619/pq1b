@@ -75,7 +75,7 @@
 
     <div id="sec-two-right">
 
-      <div id="sec-two-right-inner">
+      <div id="sec-two-right-inner" class="preload-section">
 
         <span id='sec-two-title'>case results</span><!-- sec-two-title -->
 
@@ -83,7 +83,7 @@
 
           <div class="sec-two-tablet-arrow sec-two-tablet-arrow-left"></div><!-- /.sec-two-mobile-arrow -->
 
-          <div id="sec-two-slider">
+          <div id="sec-two-slider" class="preload-slider">
 
             <div class='sec-two-single-slide'>
 
@@ -97,9 +97,9 @@
 
             <div class='sec-two-single-slide'>
 
-              <span class='sec-two-slide-title'>$17 Million Settlement</span><!-- sec-two-slide-title -->
+              <span class='sec-two-slide-title'>$20 Million Settlement</span><!-- sec-two-slide-title -->
 
-              <span class='sec-two-slide-content'>Nationwide Real Estate Kickback Class Action</span>
+              <span class='sec-two-slide-content'>Lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
               <!-- sec-two-slide-content -->
 
             </div>
@@ -107,7 +107,7 @@
 
             <div class='sec-two-single-slide'>
 
-              <span class='sec-two-slide-title'>$17 Million Settlement</span><!-- sec-two-slide-title -->
+              <span class='sec-two-slide-title'>$25 Million Settlement</span><!-- sec-two-slide-title -->
 
               <span class='sec-two-slide-content'>Nationwide Real Estate Kickback Class Action</span>
               <!-- sec-two-slide-content -->

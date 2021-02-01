@@ -188,6 +188,7 @@
   background: $color-four;
   position: relative;
   padding: 36px 21px 23px;
+  min-height: 255px;
   @include mq(small-tablet) {
     margin-top: -65px;
     min-height: 307px;

@@ -170,9 +170,9 @@ $('.at-above-post').wrapInner('<span class="myshare">Share</span>');
     arrows: true,
     prevArrow:".sec-four-mobile-arrow-left",
     nextArrow:".sec-four-mobile-arrow-right",
-    adaptiveHeight:true,
+    //adaptiveHeight:true,
     dots: false,
-    fade:true,
+    //fade:true,
     mobileFirst:true,
     responsive: [
       {
@@ -186,6 +186,8 @@ $('.at-above-post').wrapInner('<span class="myshare">Share</span>');
           prevArrow:".sec-four-tablet-arrow-left",
           nextArrow:".sec-four-tablet-arrow-right",
         },
+      },
+        {
         breakpoint: 1180,
         settings: {
           slidesToShow: 3,

@@ -2961,6 +2961,7 @@ img#hero {
   background: #031a28;
   position: relative;
   padding: 36px 21px 23px;
+  min-height: 255px;
 }
 @media screen and (min-width: 768px) {
   #sec-two-right-inner {
@@ -3575,12 +3576,14 @@ span#sec-four-title:after {
 #sec-four-slider-wrapper {
   max-width: 385px;
   position: relative;
+  min-height: 438px;
   margin-left: auto;
   margin-right: auto;
 }
 @media screen and (min-width: 768px) {
   #sec-four-slider-wrapper {
     max-width: 805px;
+    min-height: 422px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -3589,16 +3592,19 @@ span#sec-four-title:after {
 @media screen and (min-width: 1170px) {
   #sec-four-slider-wrapper {
     max-width: 100%;
+    min-height: 447px;
   }
 }
 @media screen and (min-width: 1380px) {
   #sec-four-slider-wrapper {
     max-width: 1250px;
+    min-height: 477px;
   }
 }
 @media screen and (min-width: 1695px) {
   #sec-four-slider-wrapper {
     max-width: 1780px;
+    min-height: 519px;
   }
 }
 

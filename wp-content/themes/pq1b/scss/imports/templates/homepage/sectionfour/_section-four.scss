@@ -51,19 +51,24 @@ span#sec-four-title {
 #sec-four-slider-wrapper {
   max-width: 385px;
   position: relative;
+  min-height: 438px;
   @include margin_lr();
   @include mq(small-tablet) {
     max-width: 805px;
+    min-height: 422px;
     @include flex(space-between, center);
   }
   @include mq(small-laptop) {
     max-width: 100%;
+    min-height: 447px;
   }
   @include mq(large-laptop) {
     max-width: 1250px;
+    min-height: 477px;
   }
   @include mq(small-monitor) {
     max-width: 1780px;
+    min-height: 519px;
   }
 }
 

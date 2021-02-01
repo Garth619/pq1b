@@ -4,11 +4,11 @@
 
     <span id='sec-four-title'>Meet the Partners</span><!-- sec-four-title -->
 
-    <div id='sec-four-slider-wrapper'>
+    <div id='sec-four-slider-wrapper' class="preload-section">
 
       <div class='sec-four-tablet-arrow sec-four-tablet-arrow-left'></div><!-- sec-four-tablet-arrow -->
 
-      <div id='sec-four-slider'>
+      <div id='sec-four-slider' class="preload-slider">
 
         <div class='sec-four-single-slide'>
 
