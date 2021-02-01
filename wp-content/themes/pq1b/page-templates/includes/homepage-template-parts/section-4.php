@@ -2,7 +2,7 @@
 
   <div id='sec-four-inner'>
 
-    <span id='sec-four-title'>Meet the Partners</span><!-- sec-four-title -->
+    <span id='sec-four-title'><?php the_field('section_four_title');?></span><!-- sec-four-title -->
 
     <div id='sec-four-slider-wrapper' class="preload-section">
 
@@ -10,125 +10,37 @@
 
       <div id='sec-four-slider' class="preload-slider">
 
+        <?php $section_four_slider = get_field('section_four_slider');?>
+        <?php if ($section_four_slider): ?>
+        <?php foreach ($section_four_slider as $post): ?>
+        <?php setup_postdata($post);?>
+
         <div class='sec-four-single-slide'>
 
-          <a href="">
+          <a href="<?php the_permalink();?>">
 
             <div class='sec-four-img-wrapper'>
 
-              <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/att-greenberg.jpg'
-                alt='' />
+              <?php $attorney_bio_image = get_field('attorney_bio_image');?>
+              <?php if ($attorney_bio_image) {?>
+              <img class="lazyload" data-src="<?php echo $attorney_bio_image['url']; ?>"
+                alt="<?php echo $attorney_bio_image['alt']; ?>" />
+              <?php }?>
 
             </div><!-- sec-four-img-wrapper -->
 
-            <span class='sec-four-single-att-title'>Alan A. Greenberg</span><!-- sec-four-single-att-title -->
+            <span class='sec-four-single-att-title'><?php the_title();?></span><!-- sec-four-single-att-title -->
 
-            <span class='sec-four-single-position-title'>Co-Founding Partner</span>
+            <span class='sec-four-single-position-title'><?php the_field('position_title');?></span>
             <!-- sec-four-single-position-title -->
 
           </a>
 
         </div><!-- sec-four-single-slide -->
 
-        <div class='sec-four-single-slide'>
-
-          <a href="">
-
-            <div class='sec-four-img-wrapper'>
-
-              <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/att-greenberg.jpg'
-                alt='' />
-
-            </div><!-- sec-four-img-wrapper -->
-
-            <span class='sec-four-single-att-title'>Alan A. Greenberg</span><!-- sec-four-single-att-title -->
-
-            <span class='sec-four-single-position-title'>Co-Founding Partner</span>
-            <!-- sec-four-single-position-title -->
-
-          </a>
-
-        </div><!-- sec-four-single-slide -->
-
-        <div class='sec-four-single-slide'>
-
-          <a href="">
-
-            <div class='sec-four-img-wrapper'>
-
-              <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/att-greenberg.jpg'
-                alt='' />
-
-            </div><!-- sec-four-img-wrapper -->
-
-            <span class='sec-four-single-att-title'>Alan A. Greenberg</span><!-- sec-four-single-att-title -->
-
-            <span class='sec-four-single-position-title'>Co-Founding Partner</span>
-            <!-- sec-four-single-position-title -->
-
-          </a>
-
-        </div><!-- sec-four-single-slide -->
-
-        <div class='sec-four-single-slide'>
-
-          <a href="">
-
-            <div class='sec-four-img-wrapper'>
-
-              <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/att-greenberg.jpg'
-                alt='' />
-
-            </div><!-- sec-four-img-wrapper -->
-
-            <span class='sec-four-single-att-title'>Alan A. Greenberg</span><!-- sec-four-single-att-title -->
-
-            <span class='sec-four-single-position-title'>Co-Founding Partner</span>
-            <!-- sec-four-single-position-title -->
-
-          </a>
-
-        </div><!-- sec-four-single-slide -->
-
-        <div class='sec-four-single-slide'>
-
-          <a href="">
-
-            <div class='sec-four-img-wrapper'>
-
-              <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/att-greenberg.jpg'
-                alt='' />
-
-            </div><!-- sec-four-img-wrapper -->
-
-            <span class='sec-four-single-att-title'>Alan A. Greenberg</span><!-- sec-four-single-att-title -->
-
-            <span class='sec-four-single-position-title'>Co-Founding Partner</span>
-            <!-- sec-four-single-position-title -->
-
-          </a>
-
-        </div><!-- sec-four-single-slide -->
-
-        <div class='sec-four-single-slide'>
-
-          <a href="">
-
-            <div class='sec-four-img-wrapper'>
-
-              <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/att-greenberg.jpg'
-                alt='' />
-
-            </div><!-- sec-four-img-wrapper -->
-
-            <span class='sec-four-single-att-title'>Alan A. Greenberg</span><!-- sec-four-single-att-title -->
-
-            <span class='sec-four-single-position-title'>Co-Founding Partner</span>
-            <!-- sec-four-single-position-title -->
-
-          </a>
-
-        </div><!-- sec-four-single-slide -->
+        <?php endforeach;?>
+        <?php wp_reset_postdata();?>
+        <?php endif;?>
 
       </div><!-- sec-four-slider -->
 

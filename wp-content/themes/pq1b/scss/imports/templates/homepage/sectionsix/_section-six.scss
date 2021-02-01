@@ -83,7 +83,6 @@ span#sec-six-title {
     transition: background 200ms ease-in-out;
     @include margin_lr();
     @include mq(small-tablet) {
-      //height: 90px;
       margin-bottom: 22px;
       padding: 19px 40px;
       max-width: 100%;
@@ -136,6 +135,14 @@ span#sec-six-title {
       @include image();
       height: 100%;
       @include abs(0, null, null, 0);
+    }
+    &.bg-hover {
+      &:hover {
+        background: transparent;
+        img {
+          opacity: 1; // future sites want to have this
+        }
+      }
     }
   }
 }

@@ -4226,6 +4226,12 @@ span#sec-six-title::after {
   top: 0;
   left: 0;
 }
+#sec-six-pa-wrapper a.sec-six-single-pa.bg-hover:hover {
+  background: transparent;
+}
+#sec-six-pa-wrapper a.sec-six-single-pa.bg-hover:hover img {
+  opacity: 1;
+}
 
 a.sec-six-button {
   margin-top: 32px;

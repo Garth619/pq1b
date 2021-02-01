@@ -2,85 +2,34 @@
 
   <div id='sec-six-inner'>
 
-    <span id='sec-six-title'>Our Practice Areas</span><!-- sec-six-title -->
+    <span id='sec-six-title'><?php the_field('section_six_title');?></span><!-- sec-six-title -->
 
     <div id='sec-six-pa-wrapper'>
 
-      <a class='sec-six-single-pa' href=''>
+      <?php if (have_rows('section_six_pa_links')): ?>
+      <?php while (have_rows('section_six_pa_links')): the_row();?>
 
-        <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
+      <?php $background_hover_image = get_sub_field('background_hover_image');?>
 
-        <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
+      <a class='sec-six-single-pa <?php if ($background_hover_image) {echo "bg-hover";}?>'
+        href='<?php the_sub_field('link');?>'>
 
-      </a><!-- sec-six-single-pa -->
-
-      <a class='sec-six-single-pa' href=''>
-
-        <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
-
-        <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
-
-      </a><!-- sec-six-single-pa -->
-
-      <a class='sec-six-single-pa' href=''>
-
-        <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
-
-        <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
+        <span class='sec-six-pa-title'><?php the_sub_field('title');?></span><!-- sec-six-pa-title -->
+        <?php if ($background_hover_image) {?>
+        <img class="lazyload" data-src="<?php echo $background_hover_image['url']; ?>"
+          alt="<?php echo $background_hover_image['alt']; ?>" />
+        <?php }?>
 
       </a><!-- sec-six-single-pa -->
 
-      <a class='sec-six-single-pa' href=''>
-
-        <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
-
-        <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
-
-      </a><!-- sec-six-single-pa -->
-
-      <a class='sec-six-single-pa' href=''>
-
-        <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
-
-        <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
-
-      </a><!-- sec-six-single-pa -->
-
-      <a class='sec-six-single-pa' href=''>
-
-        <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
-
-        <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
-
-      </a><!-- sec-six-single-pa -->
-
-      <a class='sec-six-single-pa' href=''>
-
-        <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
-
-        <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
-
-      </a><!-- sec-six-single-pa -->
-
-      <a class='sec-six-single-pa' href=''>
-
-        <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
-
-        <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
-
-      </a><!-- sec-six-single-pa -->
-
-      <a class='sec-six-single-pa' href=''>
-
-        <span class='sec-six-pa-title'>Sex abuse & Trafficking</span><!-- sec-six-pa-title -->
-
-        <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg' alt='' />
-
-      </a><!-- sec-six-single-pa -->
+      <?php endwhile;?>
+      <?php endif;?>
 
     </div><!-- sec-six-pa-wrapper -->
 
-    <a class='button-two sec-six-button' href=''>See All Practice Areas</a><!-- button-two -->
+    <a class='button-two sec-six-button'
+      href='<?php the_field('section_six_see_all_button_link');?>'><?php the_field('section_six_see_all_button_verbiage');?></a>
+    <!-- button-two -->
 
   </div><!-- sec-six-inner -->
 
