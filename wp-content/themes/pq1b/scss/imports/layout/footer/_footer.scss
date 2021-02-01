@@ -43,7 +43,7 @@ footer {
     padding: 0px 84px 42px;
   }
   @include mq(large-laptop) {
-    padding: 0px 84px 100px;
+    padding: 0px 144px 100px;
   }
   ul {
     margin-top: 35px;
@@ -259,6 +259,7 @@ span#footer-form-descrip {
   }
   @include mq(large-laptop) {
     margin-top: 90px;
+    margin-left: 17px;
   }
   a {
     max-width: 273px;
@@ -289,7 +290,7 @@ span#footer-form-descrip {
     @include margin_lr(0);
   }
   @include mq(large-laptop) {
-    margin-left: 55px;
+    margin-left: 25px;
   }
   @include mq(small-monitor) {
     padding: 0 157px;

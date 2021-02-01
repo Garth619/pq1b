@@ -2057,7 +2057,7 @@ footer {
 }
 @media screen and (min-width: 1380px) {
   #footer-form-wrapper {
-    padding: 0px 84px 100px;
+    padding: 0px 144px 100px;
   }
 }
 #footer-form-wrapper ul {
@@ -2318,6 +2318,7 @@ span#footer-form-descrip {
 @media screen and (min-width: 1380px) {
   #footer-logo {
     margin-top: 90px;
+    margin-left: 17px;
   }
 }
 #footer-logo a {
@@ -2360,7 +2361,7 @@ span#footer-form-descrip {
 }
 @media screen and (min-width: 1380px) {
   #footer-location-inner {
-    margin-left: 55px;
+    margin-left: 25px;
   }
 }
 @media screen and (min-width: 1695px) {
@@ -2782,7 +2783,7 @@ img#hero {
 }
 @media screen and (min-width: 1380px) {
   #sec-two-left {
-    padding: 70px 87px 65px 160px;
+    padding: 70px 87px 65px 108px;
   }
 }
 @media screen and (min-width: 1695px) {
@@ -3282,7 +3283,7 @@ span#sec-two-title:after {
 }
 @media screen and (min-width: 1380px) {
   #sec-three-inner {
-    padding: 106px 137px 205px;
+    padding: 106px 137px 136px;
   }
 }
 
