@@ -74,19 +74,51 @@
 
     <?php }?>
 
-
-
   </div><!-- internal-banner-content -->
+
+  <?php $banner_image_small_laptop = get_field('banner_image_small_laptop');?>
+  <?php $banner_image_large_laptop = get_field('banner_image_large_laptop');?>
+  <?php $banner_image_monitor = get_field('banner_image_monitor');?>
+
+  <?php $global_banner_image_monitor = get_field('global_banner_image_monitor', 'option');?>
+  <?php $global_banner_image_large_laptop = get_field('global_banner_image_large_laptop', 'option');?>
+  <?php $global_banner_image_small_laptop = get_field('global_banner_image_small_laptop', 'option');?>
+
+  <?php if ($banner_image_small_laptop || $banner_image_large_laptop || $banner_image_monitor): ?>
 
   <picture>
 
-    <source media='(min-width: 1695px)' srcset='<?php bloginfo('template_directory');?>/images/int-hero-hd.jpg'>
+    <?php if ($banner_image_monitor) {?>
+    <source media='(min-width: 1695px)' srcset='<?php echo $banner_image_monitor['url']; ?>'>
+    <?php }?>
 
-    <source media='(min-width: 1380px)' srcset='<?php bloginfo('template_directory');?>/images/int-hero-1400.jpg'>
+    <?php if ($banner_image_large_laptop) {?>
+    <source media='(min-width: 1380px)' srcset='<?php echo $banner_image_large_laptop['url']; ?>'>
+    <?php }?>
 
-    <img id='banner-img' src='<?php bloginfo('template_directory');?>/images/int-hero-1200.jpg' alt='' />
+    <img id='banner-img' src="<?php echo $banner_image_small_laptop['url']; ?>"
+      alt="<?php echo $banner_image_small_laptop['alt']; ?>" />
 
   </picture>
+
+  <?php else: ?>
+
+  <picture>
+
+    <?php if ($global_banner_image_monitor) {?>
+    <source media='(min-width: 1695px)' srcset='<?php echo $global_banner_image_monitor['url']; ?>'>
+    <?php }?>
+
+    <?php if ($global_banner_image_large_laptop) {?>
+    <source media='(min-width: 1380px)' srcset='<?php echo $global_banner_image_large_laptop['url']; ?>'>
+    <?php }?>
+
+    <img id='banner-img' src="<?php echo $global_banner_image_small_laptop['url']; ?>"
+      alt="<?php echo $global_banner_image_small_laptop['alt']; ?>" />
+
+  </picture>
+
+  <?php endif;?>
 
 </div><!-- internal-banner -->
 
