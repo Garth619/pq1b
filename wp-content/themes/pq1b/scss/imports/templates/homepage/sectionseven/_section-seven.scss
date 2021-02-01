@@ -110,10 +110,10 @@ span#sec-seven-title {
   @include mq(small-laptop) {
     flex-shrink: 0;
     margin-top: 0;
-    max-width: 425px;
+    max-width: 100%;
+    width: 425px;
   }
   @include mq(large-laptop) {
-    max-width: 100%;
     width: 520px;
   }
   @include mq(small-monitor) {
@@ -165,6 +165,7 @@ span#sec-seven-title {
 #sec-seven-bottom {
   @include mq(small-laptop) {
     margin-left: 57px;
+    flex-grow: 1;
   }
   @include mq(small-monitor) {
     margin-left: 98px;

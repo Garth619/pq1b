@@ -4,9 +4,9 @@
 
     <div id='footer-form-wrapper'>
 
-      <span id='footer-form-title'>Request a Consultation</span><!-- footer-form-title -->
+      <span id='footer-form-title'><?php the_field('form_title', 'option');?></span><!-- footer-form-title -->
 
-      <span id='footer-form-descrip'>Fill out the form below and we’ll get back to you shortly.</span>
+      <span id='footer-form-descrip'><?php the_field('form_title_description', 'option');?></span>
       <!-- footer-form-descrip -->
 
       <?php gravity_form(3, false, false, false, '', true, 1345);?>
@@ -23,7 +23,22 @@
 
         <a href='<?php bloginfo('url');?>'>
 
-          <?php echo file_get_contents(get_template_directory() . '/images/logo.svg'); ?>
+          <?php // for private directory demo site, this can be deleted after going live
+
+    $auth = stream_context_create(array(
+        'http' => array(
+            'header' => "Authorization: Basic " . base64_encode("ilawyer:ilawyer")),
+    )
+    );?>
+
+          <?php $logom = get_field('logo', 'option');?>
+
+          <?php if ($logom) {
+
+        echo file_get_contents($logom, false, $auth);
+
+    }?>
+
 
         </a>
 
@@ -42,9 +57,16 @@
     <div id='copyright-wrapper'>
 
       <ul>
-        <li>Copyright &copy; <?php echo date('Y'); ?> Greenberg Gross</li>
-        <li><a href="">Policies & Disclaimer</a></li>
-        <li><a href="">Privacy Policy</a></li>
+        <li>Copyright &copy; <?php echo date('Y'); ?> <?php the_field('copyright_law_firm_name', 'option');?></li>
+        <?php if (get_field('disclaimer', 'option') || get_field('disclaimer_title', 'option')) {?>
+        <li><a href="<?php the_field('disclaimer', 'option');?>"><?php the_field('disclaimer_title', 'option');?></a>
+          <?php }?>
+        </li>
+        <?php if (get_field('privacy_policy', 'option') || get_field('privacy_policy_title', 'option')) {?>
+        <li><a
+            href="<?php the_field('privacy_policy', 'option');?>"><?php the_field('privacy_policy_title', 'option');?></a>
+        </li>
+        <?php }?>
       </ul>
 
       <a id='ilawyer' href='//ilawyermarketing.com' target="_blank" rel="noopener">

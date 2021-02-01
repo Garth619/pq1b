@@ -4,11 +4,15 @@
 
     <h1 id='sec-three-header'><?php the_field('section_three_title');?></h1><!-- sec-three-header -->
 
+    <?php if (get_field('section_three_description')) {?>
+
     <div id='sec-three-intro' class="content">
 
       <?php the_field('section_three_description');?>
 
     </div><!-- sec-three-intro -->
+
+    <?php }?>
 
     <div id='sec-three-content-wrapper'>
 
@@ -58,11 +62,15 @@
 
         <?php }?>
 
+        <?php if (get_field('section_three_large_description')) {?>
+
         <div id='sec-three-sidebar-quote' class="content">
 
           <?php the_field('section_three_large_description');?>
 
         </div><!-- sec-three-sidebar-quote -->
+
+        <?php }?>
 
       </div><!-- sec-three-sidebar -->
 

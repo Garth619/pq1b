@@ -4387,12 +4387,12 @@ span#sec-seven-title::after {
   #sec-seven-top {
     flex-shrink: 0;
     margin-top: 0;
-    max-width: 425px;
+    max-width: 100%;
+    width: 425px;
   }
 }
 @media screen and (min-width: 1380px) {
   #sec-seven-top {
-    max-width: 100%;
     width: 520px;
   }
 }
@@ -4463,6 +4463,7 @@ span#sec-seven-title::after {
 @media screen and (min-width: 1170px) {
   #sec-seven-bottom {
     margin-left: 57px;
+    flex-grow: 1;
   }
 }
 @media screen and (min-width: 1695px) {
