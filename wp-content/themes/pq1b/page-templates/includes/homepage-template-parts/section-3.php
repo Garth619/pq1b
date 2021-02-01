@@ -2,12 +2,11 @@
 
   <div id='sec-three-inner'>
 
-    <h1 id='sec-three-header'>Trial Lawyers for<br /> High-Stakes Cases</h1><!-- sec-three-header -->
+    <h1 id='sec-three-header'><?php the_field('section_three_title');?></h1><!-- sec-three-header -->
 
     <div id='sec-three-intro' class="content">
 
-      <p>Greenberg Gross LLP is a boutique trial law firm that represents public and private companies, prominent law
-        firms, high net worth individuals, and celebrities in their most significant matters.</p>
+      <?php the_field('section_three_description');?>
 
     </div><!-- sec-three-intro -->
 
@@ -15,30 +14,53 @@
 
       <div id='sec-three-sidebar'>
 
+        <?php if (get_field('section_three_wistia_or_youtube_3')) {?>
+
         <div id='sec-three-video' class="pq-video">
 
-          <div class='mywistia'></div><!-- mywistia -->
+          <?php if (get_field('section_three_wistia_or_youtube_3') == "Youtube") {?>
 
-          <div class='pq-video-img'>
+          <a href="https://www.youtube.com/embed/<?php the_field('sec_three_youtube_id');?>" data-lity>
 
-            <img class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/video-image.jpg' alt='' />
+            <?php }?>
 
-            <div class='pq-video-overlay'>
+            <?php if (get_field('section_three_wistia_or_youtube_3') == "Wistia") {?>
 
-              <span class='pq-play-button'></span><!-- pq-play-button -->
+            <div
+              class='mywistia wistia_embed wistia_async_<?php the_field('wistia_id_new');?> popover=true popoverContent=html'>
+            </div><!-- mywistia -->
 
-            </div><!-- pq-video-overlay -->
+            <?php }?>
 
-          </div><!-- pq-video-img -->
+            <div class='pq-video-img'>
+
+              <?php $section_three_video_thumnail = get_field('section_three_video_thumnail');?>
+              <?php if ($section_three_video_thumnail) {?>
+              <img class="lazyload" data-src="<?php echo $section_three_video_thumnail['url']; ?>"
+                alt="<?php echo $section_three_video_thumnail['alt']; ?>" />
+              <?php }?>
+
+              <div class='pq-video-overlay'>
+
+                <span class='pq-play-button'></span><!-- pq-play-button -->
+
+              </div><!-- pq-video-overlay -->
+
+            </div><!-- pq-video-img -->
+
+            <?php if (get_field('section_three_wistia_or_youtube_3') == "Youtube") {?>
+
+          </a>
+
+          <?php }?>
 
         </div><!-- sec-three-video -->
 
+        <?php }?>
+
         <div id='sec-three-sidebar-quote' class="content">
 
-          <p><strong>We listen to people.</strong> We have taken and prevailed on cases that other lawyers have
-            dismissed
-            because we put in
-            the work and <strong>are not afraid to fight for our clients.</strong></p>
+          <?php the_field('section_three_large_description');?>
 
         </div><!-- sec-three-sidebar-quote -->
 
@@ -46,32 +68,7 @@
 
       <div id='sec-three-content' class="content">
 
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-        </p>
-
-        <h2>Why choose us?</h2>
-
-        <ul>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.</li>
-          <li>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</li>
-          <li>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</li>
-        </ul>
-
-        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum.
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-        </p>
-        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-          dolores
-          eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-          consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
-          aliquam
-          quaerat voluptatem.</p>
+        <?php the_field('section_three_content');?>
 
       </div><!-- sec-three-content -->
 

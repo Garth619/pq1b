@@ -6,68 +6,41 @@
 
       <div id="sec-two-left-inner">
 
+        <?php if (have_rows('section_two_featured_posts')): ?>
+        <?php while (have_rows('section_two_featured_posts')): the_row();?>
+
+        <?php $post_object = get_sub_field('mypost');?>
+        <?php if ($post_object): ?>
+        <?php $post = $post_object;?>
+        <?php setup_postdata($post);?>
+
         <div class="sec-two-single-post">
 
-          <a href="" class="single-cat-title">News</a><!-- /.single-cat-title -->
+          <a class="single-cat-title"><?php the_sub_field('blue_bar_title');?></a><!-- /.single-cat-title -->
 
-          <a href="" class="single-post-content">
+          <a href="<?php the_permalink();?>" class="single-post-content">
 
-            <span class="single-content">Childhood Sexual Abuse Case Filed Against Santa Ana Unified School
-              District</span><!-- /.single-content -->
+            <span class="single-content"><?php the_title();?></span><!-- /.single-content -->
 
             <span class="learn-more">Learn more</span><!-- /.learn-more -->
           </a>
 
         </div><!-- /.sec-two-single-post -->
 
-        <div class="sec-two-single-post">
-
-          <a href="" class="single-cat-title">News</a><!-- /.single-cat-title -->
-
-          <a href="" class="single-post-content">
-
-            <span class="single-content">Childhood Sexual Abuse Case Filed Against Santa Ana Unified School
-              District </span><!-- /.single-content -->
-
-            <span class="learn-more">Learn more</span><!-- /.learn-more -->
-
-          </a>
-
-        </div><!-- /.sec-two-single-post -->
-
-        <div class="sec-two-single-post">
-
-          <a href="" class="single-cat-title">News</a><!-- /.single-cat-title -->
-
-          <a href="" class="single-post-content">
-
-            <span class="single-content">Childhood Sexual Abuse Case Filed Against Santa Ana Unified School
-              District</span><!-- /.single-content -->
-
-            <span class="learn-more">Learn more</span><!-- /.learn-more -->
-
-          </a>
-
-        </div><!-- /.sec-two-single-post -->
-
-        <div class="sec-two-single-post">
-
-          <a href="" class="single-cat-title">News</a><!-- /.single-cat-title -->
-
-          <a href="" class="single-post-content">
-
-            <span class="single-content">Childhood Sexual Abuse Case Filed Against Santa Ana Unified School
-              District</span><!-- /.single-content -->
-
-            <span class="learn-more">Learn more</span><!-- /.learn-more -->
-
-          </a>
-
-        </div><!-- /.sec-two-single-post -->
+        <?php wp_reset_postdata();?>
+        <?php endif;?>
+        <?php the_sub_field('description');?>
+        <?php endwhile;?>
+        <?php endif;?>
 
       </div><!-- /.sec-two-left-inner -->
 
-      <a href="" class="button sec-two-button">View More News</a>
+      <?php if (get_field('section_two_mobile_button_verbiage') && get_field('section_two_mobile_button_verbiage')) {?>
+
+      <a href="<?php the_field('section_two_mobile_button_link');?>"
+        class="button sec-two-button"><?php the_field('section_two_mobile_button_verbiage');?></a>
+
+      <?php }?>
 
     </div> <!-- /.sec-two-left -->
 
