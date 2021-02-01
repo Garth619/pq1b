@@ -79,7 +79,6 @@
     }
     @include mq(small-laptop) {
       margin-top: -35px;
-      padding: 0px 20px;
     }
     @include mq(large-laptop) {
       @include quick_type(27px, 40px, null);

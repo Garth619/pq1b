@@ -2772,7 +2772,7 @@ img#hero {
 }
 @media screen and (min-width: 1170px) {
   #sec-two-left {
-    padding: 70px 70px 65px 39px;
+    padding: 70px 90px 65px 69px;
   }
 }
 @media screen and (min-width: 1380px) {
@@ -2950,7 +2950,7 @@ img#hero {
 @media screen and (min-width: 1170px) {
   #sec-two-right {
     width: 387px;
-    margin-right: 65px;
+    margin-right: 75px;
   }
 }
 @media screen and (min-width: 1380px) {
@@ -3507,6 +3507,11 @@ h1#sec-three-header:after {
   color: #00afcc;
 }
 
+@media screen and (min-width: 768px) {
+  #sec-three-content {
+    padding-top: 10px;
+  }
+}
 @media screen and (min-width: 1170px) {
   #sec-three-content {
     margin-left: 57px;
@@ -3524,7 +3529,7 @@ h1#sec-three-header:after {
 }
 @media screen and (min-width: 768px) {
   #section-four {
-    padding: 58px 35px 80px;
+    padding: 58px 35px 58px;
   }
 }
 @media screen and (min-width: 1170px) {
@@ -3999,7 +4004,6 @@ span#sec-four-title:after {
 @media screen and (min-width: 1170px) {
   #sec-five-quote span#sec-five-quote-content {
     margin-top: -35px;
-    padding: 0px 20px;
   }
 }
 @media screen and (min-width: 1380px) {
@@ -4150,7 +4154,7 @@ span#sec-six-title::after {
 @media screen and (min-width: 768px) {
   #sec-six-pa-wrapper a.sec-six-single-pa {
     margin-bottom: 22px;
-    padding: 19px 40px;
+    padding: 27px 11px;
     max-width: 100%;
     display: flex;
     justify-content: center;
@@ -4160,7 +4164,7 @@ span#sec-six-title::after {
 @media screen and (min-width: 1170px) {
   #sec-six-pa-wrapper a.sec-six-single-pa {
     margin-bottom: 30px;
-    padding: 25px 40px;
+    padding: 32px 17px;
   }
 }
 @media screen and (min-width: 1380px) {
@@ -4244,7 +4248,7 @@ a.sec-six-button {
 }
 @media screen and (min-width: 768px) {
   #section-seven {
-    padding: 70px 95px 42px;
+    padding: 70px 125px 42px;
   }
 }
 @media screen and (min-width: 1170px) {
@@ -4297,7 +4301,7 @@ span#sec-seven-title {
 }
 @media screen and (min-width: 768px) {
   span#sec-seven-title {
-    max-width: 412px;
+    max-width: 501px;
     margin-left: auto;
     margin-right: auto;
     font-size: 40px;
@@ -4317,6 +4321,11 @@ span#sec-seven-title {
     width: calc(100% - 721px);
     margin-left: 0;
     margin-right: 0;
+  }
+}
+@media screen and (min-width: 1170px) {
+  span#sec-seven-title br {
+    display: none;
   }
 }
 @media screen and (min-width: 1695px) {
@@ -4415,6 +4424,8 @@ span#sec-seven-title::after {
 @media screen and (min-width: 1170px) {
   #sec-seven-intro {
     margin-top: 0px;
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 @media screen and (min-width: 1380px) {
@@ -4455,7 +4466,7 @@ span#sec-seven-title::after {
 
 @media screen and (min-width: 1170px) {
   #sec-seven-bottom {
-    margin-left: 57px;
+    margin-left: 47px;
     flex-grow: 1;
   }
 }

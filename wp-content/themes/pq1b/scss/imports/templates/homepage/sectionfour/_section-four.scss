@@ -2,7 +2,7 @@
   background: $color-four;
   padding: 39px 40px 55px;
   @include mq(small-tablet) {
-    padding: 58px 35px 80px;
+    padding: 58px 35px 58px;
   }
   @include mq(small-laptop) {
     padding: 74px 26px 80px;

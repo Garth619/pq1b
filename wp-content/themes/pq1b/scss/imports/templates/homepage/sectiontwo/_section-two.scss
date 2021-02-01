@@ -31,7 +31,7 @@
     flex-grow: 1;
   }
   @include mq(small-laptop) {
-    padding: 70px 70px 65px 39px;
+    padding: 70px 90px 65px 69px;
   }
   @include mq(large-laptop) {
     padding: 70px 87px 65px 79px;
@@ -173,7 +173,7 @@
   }
   @include mq(small-laptop) {
     width: 387px;
-    margin-right: 65px;
+    margin-right: 75px;
   }
   @include mq(large-laptop) {
     margin-right: 104px;

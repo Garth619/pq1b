@@ -173,7 +173,9 @@ h1#sec-three-header {
 }
 
 #sec-three-content {
-  //padding-top: 10px;
+  @include mq(small-tablet) {
+    padding-top: 10px;
+  }
   @include mq(small-laptop) {
     margin-left: 57px;
   }
