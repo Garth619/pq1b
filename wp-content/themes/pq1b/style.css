@@ -2629,12 +2629,14 @@ a#ilawyer svg {
 }
 @media screen and (min-width: 768px) {
   .sec-one-inner span.sec-one-title {
+    text-align: center;
     font-size: 40px;
     line-height: 50px;
   }
 }
 @media screen and (min-width: 1170px) {
   .sec-one-inner span.sec-one-title {
+    text-align: left;
     max-width: 666px;
     font-size: 50px;
     line-height: 60px;
@@ -2657,8 +2659,14 @@ a#ilawyer svg {
 }
 @media screen and (min-width: 768px) {
   .sec-one-inner span.sec-one-name {
+    text-align: center;
     font-size: 25px;
     line-height: 27px;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .sec-one-inner span.sec-one-name {
+    text-align: left;
   }
 }
 @media screen and (min-width: 1380px) {
@@ -2680,7 +2688,7 @@ a#ilawyer svg {
 }
 @media screen and (min-width: 768px) {
   .sec-one-inner span.sec-one-name:before {
-    max-width: 476px;
+    max-width: 495px;
     margin-top: 23px;
   }
 }

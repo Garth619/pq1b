@@ -2,19 +2,43 @@
 
   <div class="sec-one-inner">
 
-    <span class="sec-one-title">“Aggressive, unorthodox and top-notch, a record of high-stakes wins, and top
-      talent.”</span> <!-- /.sec-one-title -->
+    <span class="sec-one-title"><?php the_field('section_one_title');?></span> <!-- /.sec-one-title -->
 
-    <span class="sec-one-name">-Daily Journal</span> <!-- /.sec-one-name -->
+    <span class="sec-one-name"><?php the_field('section_one_name');?></span> <!-- /.sec-one-name -->
 
   </div><!-- /.sec-one-inner -->
 
   <picture>
-    <source media='(min-width: 1180px)' srcset='<?php bloginfo('template_directory');?>/images/main-hero-1400.jpg'>
-    <source media='(min-width: 1180px)' srcset='<?php bloginfo('template_directory');?>/images/main-hero-1200.jpg'>
-    <source media='(min-width: 768px)' srcset='<?php bloginfo('template_directory');?>/images/hero-tablet.jpg'>
-    <img id='hero' src='<?php bloginfo('template_directory');?>/images/main-hero-mobile.jpg' alt='' />
-  </picture>
+
+    <?php $section_one_monitor_image = get_field('section_one_monitor_image');?>
+    <?php if ($section_one_monitor_image) {?>
+    <source media='(min-width: 1695px)' srcset='<?php echo $section_one_monitor_image['url']; ?>'>
+    <?php }?>
+
+    <?php $section_one_large_laptop_image = get_field('section_one_large_laptop_image');?>
+    <?php if ($section_one_large_laptop_image) {?>
+    <source media='(min-width: 1380px)' srcset='<?php echo $section_one_large_laptop_image['url']; ?>'>
+    <?php }?>
+
+
+    <?php $section_one_small_laptop_image = get_field('section_one_small_laptop_image');?>
+    <?php if ($section_one_small_laptop_image) {?>
+    <source media='(min-width: 1170px)' srcset='<?php echo $section_one_small_laptop_image['url']; ?>'>
+    <?php }?>
+
+
+    <?php $section_one_tablet_image = get_field('section_one_tablet_image');?>
+    <?php if ($section_one_tablet_image) {?>
+    <source media='(min-width: 768px)' srcset='<?php echo $section_one_tablet_image['url']; ?>'>
+    <?php }?>
+
+    <?php $section_one_mobile_image = get_field('section_one_mobile_image');?>
+
+    <img id='hero' src="<?php echo $section_one_mobile_image['url']; ?>"
+      alt="<?php echo $section_one_mobile_image['alt']; ?>" />
+
+
+
 
 
 </section><!-- /#section-one -->

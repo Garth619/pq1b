@@ -36,9 +36,11 @@
         )
       );
       @include mq(small-tablet) {
+        text-align: center;
         @include quick_type(40px, 50px, null);
       }
       @include mq(small-laptop) {
+        text-align: left;
         max-width: 666px;
         @include quick_type(50px, 60px, null);
       }
@@ -58,7 +60,11 @@
         )
       );
       @include mq(small-tablet) {
+        text-align: center;
         @include quick_type(25px, 27px, null);
+      }
+      @include mq(small-laptop) {
+        text-align: left;
       }
       @include mq(large-laptop) {
         font-size: 30px;
@@ -72,7 +78,7 @@
         @include contentdisplay();
         @include box(100%, 4px);
         @include mq(small-tablet) {
-          max-width: 476px;
+          max-width: 495px;
           margin-top: 23px;
         }
         @include mq(small-laptop) {

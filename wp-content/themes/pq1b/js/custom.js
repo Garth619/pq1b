@@ -188,7 +188,7 @@ $('.at-above-post').wrapInner('<span class="myshare">Share</span>');
         },
       },
         {
-        breakpoint: 1180,
+        breakpoint: 1170,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,

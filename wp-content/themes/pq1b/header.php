@@ -92,7 +92,23 @@ if (($paged >= 2 || $page >= 2) && !is_404()) {
       <div class="header-left">
 
         <a class='logo' href='<?php bloginfo('url');?>'>
-          <?php echo file_get_contents(get_template_directory() . '/images/logo.svg'); ?>
+
+          <?php // for private directory demo site, this can be deleted after going live
+
+$auth = stream_context_create(array(
+    'http' => array(
+        'header' => "Authorization: Basic " . base64_encode("ilawyer:ilawyer")),
+)
+);?>
+
+          <?php $logom = get_field('logo', 'option');?>
+
+          <?php if ($logom) {
+
+    echo file_get_contents($logom, false, $auth);
+
+}?>
+
         </a><!-- / logo -->
 
       </div><!-- /.header-left -->
