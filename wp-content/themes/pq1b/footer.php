@@ -71,7 +71,7 @@
 
       <a id='ilawyer' href='//ilawyermarketing.com' target="_blank" rel="noopener">
 
-        <?php echo file_get_contents(get_template_directory() . '/images/ilawyer.svg'); ?>
+        <?php echo file_get_contents(get_template_directory() . '/images/ilawyer.svg', false, $auth); ?>
 
       </a><!-- ilawyer -->
 
