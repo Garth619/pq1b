@@ -110,6 +110,20 @@ span#sec-four-title {
   padding: 30px 30px 40px;
   //height: 353px;
   box-shadow: 0px 1px 20px #000000;
+  &:hover {
+    a {
+      .sec-four-img-wrapper {
+        img {
+          transform: scale(1.1);
+        }
+      }
+      span {
+        &.sec-four-single-att-title {
+          color: $color-two;
+        }
+      }
+    }
+  }
   @include mq(small-tablet) {
     padding: 30px 30px 40px;
     box-shadow: 0px 1px 10px #000000;
@@ -121,6 +135,8 @@ span#sec-four-title {
       img {
         @include image();
         width: 100%;
+        transform: scale(1);
+        transition: all 800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
       }
     }
     span {
@@ -128,6 +144,7 @@ span#sec-four-title {
       text-align: center;
       &.sec-four-single-att-title {
         margin-top: 30px;
+        transition: all 200ms ease-in-out;
         @include type(
           (
             size: 16px,

@@ -55,6 +55,12 @@
 
 .sec-two-single-post {
   flex-basis: 45%;
+  &:hover {
+    span.learn-more {
+      color: $color-two;
+      border-top: 2px solid $color-two;
+    }
+  }
   @include mq(small-laptop) {
     flex-basis: 28%;
   }
@@ -130,6 +136,7 @@
       margin: 11px 0 0 0;
       padding-top: 9px;
       border-top: 2px solid $color-one;
+      transition: all 200ms ease-in-out;
       @include type(
         (
           size: 10px,

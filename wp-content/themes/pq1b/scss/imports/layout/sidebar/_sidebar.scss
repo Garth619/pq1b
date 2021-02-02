@@ -112,10 +112,22 @@
           padding-left: 117px;
           padding-right: 117px;
         }
+        &:hover {
+          @include mq(small-laptop) {
+            color: $color-two;
+          }
+        }
       }
     }
     &.menu {
       > li.menu-item-has-children {
+        &:hover {
+          > a {
+            &::after {
+              @include tri(down, 4px, 7px, $color-two);
+            }
+          }
+        }
         &.active {
           > a {
             color: $color-two;

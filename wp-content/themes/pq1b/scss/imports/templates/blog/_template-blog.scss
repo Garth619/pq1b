@@ -156,9 +156,18 @@ a.read-more {
       margin-bottom: 0;
     }
     ul {
-      li.blog-active {
+      li {
         a {
-          color: $color-two;
+          color: $color-four;
+          transition: all 200ms ease-in-out;
+          &:hover {
+            color: $color-two;
+          }
+        }
+        &.blog-active {
+          a {
+            color: $color-two;
+          }
         }
       }
     }

@@ -2,6 +2,9 @@
   position: relative;
   &:hover {
     .pq-video-img {
+      img {
+        transform: scale(1.1);
+      }
       .pq-video-overlay {
         span.pq-play-button {
           &::after {
@@ -26,6 +29,8 @@
     img {
       @include image();
       width: 100%;
+      transform: scale(1);
+      transition: all 800ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
     }
     .pq-video-overlay {
       @include box(100%);
