@@ -12,7 +12,7 @@ get_header();?>
 
       <h1 class="page-title large-title no-banner-title"><?php the_title();?></h1>
 
-      <span id='contact-description'>Call today or fill out consultation form below</span><!-- contact-description -->
+      <span id='contact-description'><?php the_field('contact_description');?></span><!-- contact-description -->
 
     </div><!-- large-title-wrapper -->
 

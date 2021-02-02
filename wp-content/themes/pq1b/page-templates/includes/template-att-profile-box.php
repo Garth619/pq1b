@@ -20,9 +20,11 @@
 
   <div class='att-profile-button-wrapper'>
 
-    <a class='button-three att-profile-button' href=''>DoWNLOAD VCARD</a><!-- button-two  -->
+    <a class='button-three att-profile-button' href=''><?php the_field('download_vcard_verbiage');?></a>
+    <!-- button-two  -->
 
-    <a class='button-three att-profile-button' href=''>DOWNLOAD BIO PDF</a><!-- button-two  -->
+    <a class='button-three att-profile-button' href=''><?php the_field('download_bio_pdf_verbiage');?></a>
+    <!-- button-two  -->
 
   </div><!-- att-profile-button-wrapper -->
 

@@ -139,6 +139,11 @@ a.read-more {
           color: $color-two;
         }
       }
+      &.active {
+        a {
+          color: $color-two;
+        }
+      }
     }
   }
 }

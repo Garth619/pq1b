@@ -7,6 +7,8 @@ body.page-template-template-padirectory {
 
 #pa-directory {
   text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
   @include mq(large-laptop) {
     padding: 22px 0;
   }
@@ -90,13 +92,16 @@ body.page-template-template-padirectory {
             grid-auto-rows: auto;
             grid-gap: 0px 30px;
             @include mq(small-laptop) {
-              max-width: 790px;
+              max-width: 1190px;
               grid-template-columns: repeat(3, minmax(0, 1fr));
             }
             @include mq(large-laptop) {
               max-width: 1190px;
               grid-template-columns: repeat(4, minmax(0, 1fr));
               grid-gap: 0px 40px;
+            }
+            @include mq(small-monitor) {
+              max-width: 1590px;
             }
           }
           li {
@@ -133,7 +138,7 @@ body.page-template-template-padirectory {
               }
             }
             a {
-              padding: 10px 10px;
+              padding: 16px 10px;
               display: block;
               color: $color-four;
               text-decoration: none;
