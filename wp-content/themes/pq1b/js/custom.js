@@ -230,6 +230,52 @@ $('.at-above-post').wrapInner('<span class="myshare">Share</span>');
 
   $(".sidebar-box ul.menu > li.current-menu-ancestor").addClass('active');
 
+/* Featured Attorneys Show Next Five 
+--------------------------------------------------------------------------------------- */
+
+  var trs = $("a.single-featured-att");
+  var btnMore = $("#att-more");
+  //var btnLess = $("#att-less");
+  var trsLength = trs.length;
+  var currentIndex = 5;
+
+  trs.hide();
+  trs.slice(0, 5).show();
+  checkButton();
+
+  btnMore.click(function(e) {
+    e.preventDefault();
+    $("a.single-featured-att").slice(currentIndex, currentIndex + 5).fadeIn();
+    currentIndex += 5;
+    checkButton();
+  });
+
+  // btnLess.click(function(e) {
+  //   e.preventDefault();
+  //   $("a.single-featured-att").slice(currentIndex - 10, currentIndex).fadeOut();
+  //   currentIndex -= 10;
+  //   checkButton();
+  // });
+
+  function checkButton() {
+    var currentLength = $("a.single-featured-att:visible").length;
+
+    if (currentLength >= trsLength) {
+      btnMore.hide();
+    } else {
+      btnMore.show();
+    }
+
+    // if (trsLength > 10 && currentLength > 10) {
+    //   btnLess.show();
+    // } else {
+    //   btnLess.hide();
+    // }
+
+  }
+
+
+
 /* Resize Nav Functions
 --------------------------------------------------------------------------------------- */
 

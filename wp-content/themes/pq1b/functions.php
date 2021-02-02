@@ -306,6 +306,9 @@ function my_numeric_posts_nav()
 
 }
 
+/* Remove Block Library
+-------------------------------------------------------------- */
+
 function smartwp_remove_wp_block_library_css()
 {
     wp_dequeue_style('wp-block-library');
@@ -313,7 +316,8 @@ function smartwp_remove_wp_block_library_css()
 }
 add_action('wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css');
 
-// Responsive Content Images */
+/* Responsive Content Images
+-------------------------------------------------------------- */
 
 function ilaw_content_image_sizes_attr($sizes, $size)
 {
@@ -343,7 +347,8 @@ function ilaw_post_thumbnail_sizes_attr($attr, $attachment, $size)
 }
 add_filter('wp_get_attachment_image_attributes', 'ilaw_post_thumbnail_sizes_attr', 10, 3);
 
-// allows html in text editor and prevents it from being stripped out
+/* Allows html in text editor and prevents it from being stripped out
+-------------------------------------------------------------- */
 
 function override_mce_options($initArray)
 {
@@ -353,3 +358,37 @@ function override_mce_options($initArray)
     return $initArray;
 }
 add_filter('tiny_mce_before_init', 'override_mce_options');
+
+/* Generate Vcard
+-------------------------------------------------------------- */
+
+// https://support.advancedcustomfields.com/forums/topic/dynamically-create-vcard-from-acf-data-and-download-with-button-click/
+
+function create_vCard($post_id)
+{
+
+    //$post_type = get_post_type($post_id);
+
+    if ($_REQUEST['page_template'] !== 'page-templates/template-bio.php') {
+        return;
+    }
+
+    $vpost = get_post($post->ID);
+    $filename = $vpost->post_name . ".vcf";
+    header('Content-type: text/x-vcard; charset=utf-8');
+    header("Content-Disposition: attachment; filename=" . $filename);
+    $data = null;
+    $data .= "BEGIN:VCARD\n";
+    $data .= "VERSION:3.0\n";
+    $data .= "FN:" . $vpost->post_title . "\n"; // get post title
+    $data .= "ORG:Greenberg Gross LLP\n";
+    $data .= "EMAIL;TYPE=work:" . get_field('att_email', $vpost->ID) . "\n";
+    $data .= "TEL;WORK;VOICE:" . get_field('att_phone', $vpost->ID) . "\n";
+    $data .= "ADR;WORK;PREF:" . get_field('location_one_address', $vpost->ID) . "\n";
+    $data .= "END:VCARD";
+    $filePath = get_template_directory() . "/vcard/" . $filename;
+    $file = fopen($filePath, "w");
+    fwrite($file, $data);
+    fclose($file);
+}
+add_action('save_post', 'create_vCard');

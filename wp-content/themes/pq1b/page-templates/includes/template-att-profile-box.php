@@ -20,8 +20,18 @@
 
   <div class='att-profile-button-wrapper'>
 
-    <a class='button-three att-profile-button' href=''><?php the_field('download_vcard_verbiage');?></a>
+    <?php
+global $post;
+$vcfname = $post->post_name;
+?>
+
+    <?php if (get_field('location_one_address')) {?>
+
+    <a class='button-three att-profile-button'
+      href='<?php echo get_template_directory_uri(); ?>/vcard/<?php echo $vcfname; ?>.vcf'><?php the_field('download_vcard_verbiage');?></a>
     <!-- button-two  -->
+
+    <?php }?>
 
     <a class='button-three att-profile-button' href=''><?php the_field('download_bio_pdf_verbiage');?></a>
     <!-- button-two  -->

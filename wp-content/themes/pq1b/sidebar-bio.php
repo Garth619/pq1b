@@ -34,27 +34,45 @@ get_template_part('page-templates/includes/template', 'att-profile-box');?>
 
     <?php }?>
 
-    <?php if (have_rows('sidebar_locations')): ?>
+    <?php if (get_field('location_one_address') || get_field('location_two_address')): ?>
 
     <div id='att-bio-location-wrapper'>
 
-      <?php while (have_rows('sidebar_locations')): the_row();?>
+      <?php if (get_field('location_one_address')) {?>
 
       <div class='att-bio-location'>
 
-        <span class='att-bio-location-title'><?php the_sub_field('att_city_title');?></span>
+        <span class='att-bio-location-title'><?php the_field('location_one_city_title');?></span>
         <!-- att-bio-location-title -->
 
-        <span class='att-bio-location-address'><?php the_sub_field('att_address');?></span>
+        <span class='att-bio-location-address'><?php the_field('location_one_address');?></span>
         <!-- att-bio-location-address -->
 
-        <span class='att-bio-location-phone'><?php the_sub_field('phone_call_to_action');?> <a
-            href="tel:+1<?php echo str_replace(['-', '(', ')', ' '], '', get_field('att_phone')); ?>"><?php the_sub_field('att_phone');?></a></span>
+        <span class='att-bio-location-phone'><?php the_field('location_one_phone_call_to_action');?> <a
+            href="tel:+1<?php echo str_replace(['-', '(', ')', ' '], '', get_field('location_one_phone')); ?>"><?php the_field('location_one_phone');?></a></span>
         <!-- att-bio-location-phone -->
 
       </div><!-- att-bio-location -->
 
-      <?php endwhile;?>
+      <?php }?>
+
+      <?php if (get_field('location_two_address')) {?>
+
+      <div class='att-bio-location'>
+
+        <span class='att-bio-location-title'><?php the_field('location_two_city_title');?></span>
+        <!-- att-bio-location-title -->
+
+        <span class='att-bio-location-address'><?php the_field('location_two_address');?></span>
+        <!-- att-bio-location-address -->
+
+        <span class='att-bio-location-phone'><?php the_field('location_two_phone_call_to_action');?> <a
+            href="tel:+1<?php echo str_replace(['-', '(', ')', ' '], '', get_field('location_two_phone')); ?>"><?php the_field('location_two_phone');?></a></span>
+        <!-- att-bio-location-phone -->
+
+      </div><!-- att-bio-location -->
+
+      <?php }?>
 
     </div><!-- att-bio-location-wrapper -->
 

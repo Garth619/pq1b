@@ -1857,6 +1857,9 @@ a.single-featured-att {
   margin-bottom: 27px;
   padding-bottom: 27px;
 }
+a.single-featured-att:hover .single-featured-att-inner .single-featured-att-content span.single-featured-att-title {
+  color: #00afcc;
+}
 a.single-featured-att .single-featured-att-inner {
   display: flex;
   justify-content: space-between;
@@ -1912,6 +1915,7 @@ a.single-featured-att .single-featured-att-inner .single-featured-att-content sp
 }
 a.single-featured-att .single-featured-att-inner .single-featured-att-content span.single-featured-att-title {
   margin-top: 10px;
+  transition: all 200ms ease-in-out;
   font-size: 18px;
   line-height: 20px;
   font-family: "Roboto", sans-serif;

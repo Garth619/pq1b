@@ -211,6 +211,15 @@ a.single-featured-att {
   border-bottom: 1px $color-five solid;
   margin-bottom: 27px;
   padding-bottom: 27px;
+  &:hover {
+    .single-featured-att-inner {
+      .single-featured-att-content {
+        span.single-featured-att-title {
+          color: $color-two;
+        }
+      }
+    }
+  }
   .single-featured-att-inner {
     @include flex(space-between);
     .single-featured-att-img {
@@ -246,6 +255,7 @@ a.single-featured-att {
         display: block;
         &.single-featured-att-title {
           margin-top: 10px;
+          transition: all 200ms ease-in-out;
           @include type(
             (
               size: 18px,
